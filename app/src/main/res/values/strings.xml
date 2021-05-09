@@ -8,23 +8,23 @@
 
 
     <!-- Tags referentes a TelaCadastrar.java e activity_tela_cadastrar.xml (((FUNCIONARIO)))-->
-        <!-- Tags referentes aos TextView-->
-            <string name="txtCPFFunc"> CPF do Funcionário (ID):</string>
-            <string name="txtLogin">Login:</string>
-            <string name="txtSenha">Senha:</string>
-            <string name="txtEmail">Email:</string>
-            <string name="txtFone">Telefone:</string>
-            <string name="txtComissao">Comissão:</string>
-        <!-- Tags referentes aos Button-->
-            <string name="btn_CadFunc">CADASTRAR</string>
-            <string name="btn_VoltarCad">VOLTAR</string>
-        <!-- Tags referentes aos EditText-->
-            <string name="edt_CPFFunc"></string>
-            <string name="edt_Login"></string>
-            <string name="edt_Senha"></string>
-            <string name="edt_Email"></string>
-            <string name="edt_Fone"></string>
-            <string name="edt_Comissao"></string>
+    <!-- Tags referentes aos TextView-->
+    <string name="txtCPFFunc"> CPF do Funcionário (ID):</string>
+    <string name="txtLogin">Login:</string>
+    <string name="txtSenha">Senha:</string>
+    <string name="txtEmail">Email:</string>
+    <string name="txtFone">Telefone:</string>
+    <string name="txtComissao">Comissão:</string>
+    <!-- Tags referentes aos Button-->
+    <string name="btn_CadFunc">CADASTRAR</string>
+    <string name="btn_VoltarCad">VOLTAR</string>
+    <!-- Tags referentes aos EditText-->
+    <string name="edt_CPFFunc"></string>
+    <string name="edt_Login"></string>
+    <string name="edt_Senha"></string>
+    <string name="edt_Email"></string>
+    <string name="edt_Fone"></string>
+    <string name="edt_Comissao"></string>
 
 
 </resources>
