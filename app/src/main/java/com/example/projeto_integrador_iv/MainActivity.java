@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(telaCadastrar);
         }
         else if (v==btnEntrar){
-            //AINDA A SER IMPLEMENTADO
+
+            Intent telaEntrar = new Intent(this,TelaLogin.class);
+            startActivity(telaEntrar);
         }
 
     }
