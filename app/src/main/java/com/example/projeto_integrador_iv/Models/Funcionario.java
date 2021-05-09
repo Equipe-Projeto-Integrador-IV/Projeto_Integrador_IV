@@ -1,6 +1,8 @@
 package com.example.projeto_integrador_iv.Models;
 
-public class Funcionario {
+import java.io.Serializable;
+
+public class Funcionario implements Serializable {
     private String cpf;
     private String senha;
     private String email;
