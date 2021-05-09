@@ -9,9 +9,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
-    Button btnEntrar;
     Button btnCadastrar;
+    Button btnEntrar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnCadastrar = findViewById(R.id.btn_Cadastrar);
         btnCadastrar.setOnClickListener(this);
+
     }
 
     @Override
