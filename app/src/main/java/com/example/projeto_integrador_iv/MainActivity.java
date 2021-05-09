@@ -12,15 +12,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnCadastrar;
     Button btnEntrar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnCadastrar = findViewById(R.id.btn_Cadastrar);
-        btnCadastrar.setOnClickListener(this);
         btnEntrar = findViewById(R.id.btn_Entrar);
         btnEntrar.setOnClickListener(this);
+
+        btnCadastrar = findViewById(R.id.btn_Cadastrar);
+        btnCadastrar.setOnClickListener(this);
+
     }
 
     @Override
