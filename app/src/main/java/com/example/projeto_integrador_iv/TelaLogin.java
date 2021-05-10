@@ -48,6 +48,11 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
                 Toast.makeText(this, "ATENÇÃO TODOS OS CAMPOS DEVEM SER PREENCHIDOS!!!", Toast.LENGTH_SHORT).show();
 
             }
+            //ESSE ELSE SERA MODIFICADO, APENAS FOI IMPLEMENTADO AGORA PARA TESTAR UMA TELA
+            else{
+                Intent telaCadUsu = new Intent(this, TelaCadastroUsuario.class);
+                startActivity(telaCadUsu);
+            }
         }
 
         else if(v==btnLogin_voltar){
