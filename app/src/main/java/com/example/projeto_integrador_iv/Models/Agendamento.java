@@ -14,16 +14,18 @@ public class Agendamento implements Serializable {
     private Servico servico;
 
     public Agendamento() {
-        cliente = new Cliente();
-        respAgendamento = new Funcionario();
+
     }
 
-    public Agendamento(Long id, Date date, Date hora, String status, String obs) {
+    public Agendamento(Long id, Date date, Date hora, String status, String obs,
+                       Funcionario respAgendamento, Servico servico) {
         this.id = id;
         this.date = date;
         this.hora = hora;
         this.status = status;
         this.obs = obs;
+        this.respAgendamento = respAgendamento;
+        this.servico = servico;
     }
 
     public Long getId() {
