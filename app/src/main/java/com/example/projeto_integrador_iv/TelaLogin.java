@@ -63,8 +63,8 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
             else{
                 isValid = validacao(inputLogin, inputSenha);
                 if(isValid){
-                    Intent telaCadUsu = new Intent(this, TelaCadastroUsuario.class);
-                    startActivity(telaCadUsu);
+                    Intent telaPain = new Intent(this, TelaPainelControle.class);
+                    startActivity(telaPain);
                 }
                 else{
                     Toast.makeText(this, "LOGIN OU SENHA INCORRETO!!!", Toast.LENGTH_SHORT).show();
