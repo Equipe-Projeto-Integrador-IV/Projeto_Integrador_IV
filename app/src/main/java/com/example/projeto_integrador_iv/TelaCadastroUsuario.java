@@ -27,7 +27,7 @@ public class TelaCadastroUsuario extends AppCompatActivity implements View.OnCli
     public void onClick(View v) {
 
         if(v==btnVoltarUsuario){
-            Intent telaVoltar = new Intent(this, MainActivity.class);
+            Intent telaVoltar = new Intent(this, TelaPainelControle.class);
             startActivity(telaVoltar);
         }
 
