@@ -4,12 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+
 public class TelaLogin extends AppCompatActivity implements View.OnClickListener {
+
+
+    private String login="admin@admin.com";
+    private String senha="admin";
+    boolean isValid=false;
 
 
     EditText edtLogin;
@@ -24,6 +32,7 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
 
         edtLogin = findViewById(R.id.edt_LOGIN_usuario);
         edtSenha = findViewById(R.id.edt_LOGIN_senha);
+        edtSenha.setTransformationMethod(new PasswordTransformationMethod());
 
         btnLogin_logar = findViewById(R.id.btn_LOGIN_entrar);
         btnLogin_logar.setOnClickListener(this);
@@ -39,19 +48,27 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
         String inputLogin = edtLogin.getText().toString();
         String inputSenha = edtSenha.getText().toString();
 
-
+        //TELA DO BUTTON LOGAR - O USUARIO DEVE TER O LOGIN E SENHA
         if(v==btnLogin_logar){
-            //A SER IMPLEMENTANDO
 
+            //CASO O LOGIN OU SENHA OU AMBOS ESTEJAM EM BRANCO, SERA APRESENTADO UM TOAST DE QUE OS CAMPOS DEVEM SER PREENCHIDOS
             if(inputLogin.isEmpty() || inputSenha.isEmpty()){
 
                 Toast.makeText(this, "ATENÇÃO TODOS OS CAMPOS DEVEM SER PREENCHIDOS!!!", Toast.LENGTH_SHORT).show();
 
             }
-            //ESSE ELSE SERA MODIFICADO, APENAS FOI IMPLEMENTADO AGORA PARA TESTAR UMA TELA
+            /* AQUI E A VALIDAÇAO, FUTURAMENTE SERA MODIFICADO, ATUALMENTE E admin@admin.com E SENHA admin
+             *
+             */
             else{
-                Intent telaCadUsu = new Intent(this, TelaCadastroUsuario.class);
-                startActivity(telaCadUsu);
+                isValid = validacao(inputLogin, inputSenha);
+                if(isValid){
+                    Intent telaCadUsu = new Intent(this, TelaCadastroUsuario.class);
+                    startActivity(telaCadUsu);
+                }
+                else{
+                    Toast.makeText(this, "LOGIN OU SENHA INCORRETO!!!", Toast.LENGTH_SHORT).show();
+                }
             }
         }
 
@@ -60,5 +77,14 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
             startActivity(telaVOltar);
         }
 
+    }
+    private boolean validacao(String loginF, String senhaF){
+
+
+        if(loginF.equals(login) && senhaF.equals(senha)){
+            return true;
+        }
+
+        return false;
     }
 }
