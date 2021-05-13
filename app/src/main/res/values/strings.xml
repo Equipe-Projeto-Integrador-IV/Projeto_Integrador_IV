@@ -8,62 +8,62 @@
 
 
     <!-- Tags referentes a TelaCadastrar.java e activity_tela_cadastrar.xml (((FUNCIONARIO)))-->
-        <!-- Tags referentes aos TextView-->
-        <string name="txtCPFFunc"> CPF do Funcionário (ID):</string>
-        <string name="txtSenha">Senha:</string>
-        <string name="txtEmail">Email:</string>
-        <string name="txtFone">Telefone:</string>
-        <string name="txtComissao">Comissão:</string>
-        <!-- Tags referentes aos Button-->
-        <string name="btn_CadFunc">CADASTRAR</string>
-        <string name="btn_VoltarCad">VOLTAR</string>
-        <!-- Tags referentes aos EditText-->
-        <string name="edt_CPFFunc"></string>
-        <string name="edt_Login"></string>
-        <string name="edt_Senha"></string>
-        <string name="edt_Email"></string>
-        <string name="edt_Fone"></string>
-        <string name="edt_Comissao"></string>
+    <!-- Tags referentes aos TextView-->
+    <string name="txtCPFFunc"> CPF do Funcionário (ID):</string>
+    <string name="txtSenha">Senha:</string>
+    <string name="txtEmail">Email:</string>
+    <string name="txtFone">Telefone:</string>
+    <string name="txtComissao">Comissão:</string>
+    <!-- Tags referentes aos Button-->
+    <string name="btn_CadFunc">CADASTRAR</string>
+    <string name="btn_VoltarCad">VOLTAR</string>
+    <!-- Tags referentes aos EditText-->
+    <string name="edt_CPFFunc"></string>
+    <string name="edt_Login"></string>
+    <string name="edt_Senha"></string>
+    <string name="edt_Email"></string>
+    <string name="edt_Fone"></string>
+    <string name="edt_Comissao"></string>
 
     <!-- Tags referente a TelaLogin.java e activity_tela_login.xml-->
-        <!-- Tags referentes ao TextView-->
-        <string name="txt_TextoLOGIN">TELA LOGIN</string>
-        <string name="txt_TextoLOGIN_usuario">Usuario:</string>
-        <string name="txt_TextoLOGIN_SENHA">Senha:</string>
-        <!-- Tags referentes ao EditText-->
-        <string name="edt_LOGIN_usuario"></string>
-        <string name="edt_LOGIN_senha"></string>
-        <!-- Tags referentes ao Button-->
-        <string name="btn_LOGIN_voltar">VOLTAR</string>
-        <string name="btn_LOGIN_entrar">LOGAR</string>
+    <!-- Tags referentes ao TextView-->
+    <string name="txt_TextoLOGIN">TELA LOGIN</string>
+    <string name="txt_TextoLOGIN_usuario">Usuario:</string>
+    <string name="txt_TextoLOGIN_SENHA">Senha:</string>
+    <!-- Tags referentes ao EditText-->
+    <string name="edt_LOGIN_usuario"></string>
+    <string name="edt_LOGIN_senha"></string>
+    <!-- Tags referentes ao Button-->
+    <string name="btn_LOGIN_voltar">VOLTAR</string>
+    <string name="btn_LOGIN_entrar">LOGAR</string>
 
     <!-- Tags referentes a TelaCadastroUsuario.java e activity-tela-cadastro-usuario.xml-->
-      <!--Tags referentes aos TextView-->
-        <string name="txtCADASTRO_USU_msg">CADASTRAR USUÁRIO</string>
-        <string name="txtCADASTRO_USU_cpf">CPF:</string>
-        <string name="txtCADASTRO_USU_nome">NOME:</string>
-        <string name="txtCADASTRO_USU_telefone">TELEFONE:</string>
-        <string name="txtCADASTRO_USU_email">EMAIL:</string>
-        <string name="txtCADASTRO_USU_uf">UF:</string>
-       <!--Tags referentes aos EditText-->
-        <string name="edtCADASTRO_USU_cpf"></string>
-        <string name="edtCADASTRO_USU_nome"></string>
-        <string name="edtCADASTRO_USU_telefone"></string>
-        <string name="edtCADASTRO_USU_email"></string>
-        <string name="edtCADASTRO_USU_uf"></string>
-        <!--Tags referentes aos Button-->
-        <string name="btnCADASTRO_USU_cad">CADASTRAR</string>
-        <string name="btnCADASTRO_USU_voltar">VOLTAR</string>
-
-
-
-
-
-
-
-
-
+    <!--Tags referentes aos TextView-->
+    <string name="txtCADASTRO_USU_msg">CADASTRAR USUÁRIO</string>
+    <string name="txtCADASTRO_USU_cpf">CPF:</string>
+    <string name="txtCADASTRO_USU_nome">NOME:</string>
+    <string name="txtCADASTRO_USU_telefone">TELEFONE:</string>
+    <string name="txtCADASTRO_USU_email">EMAIL:</string>
+    <string name="txtCADASTRO_USU_uf">UF:</string>
     <!--Tags referentes aos EditText-->
-      <!--Tags referentes aos Button-->
+    <string name="edtCADASTRO_USU_cpf"></string>
+    <string name="edtCADASTRO_USU_nome"></string>
+    <string name="edtCADASTRO_USU_telefone"></string>
+    <string name="edtCADASTRO_USU_email"></string>
+    <string name="edtCADASTRO_USU_uf"></string>
+    <!--Tags referentes aos Button-->
+    <string name="btnCADASTRO_USU_cad">CADASTRAR</string>
+    <string name="btnCADASTRO_USU_voltar">VOLTAR</string>
+
+    <!-- Tags referentes a TelaPainelControle.java e activity-tela-painel-controle.xml-->
+    <!--Tags referentes aos TextView-->
+    <string name="txtBemVindo">Boas vindas, </string>
+    <string name="txtPainelCOntrole">Painel de Controle</string>
+    <!--Tags referentes aos EditText-->
+    <!--Tags referentes aos Button-->
+    <string name="btnPainelCliente">Cadastrar Cliente</string>
+    <string name="btnPainelAgendamento">Cadastrar Agendamento</string>
+    <string name="btnPainelServico">Cadastrar Ordem de Serviço</string>
+    <string name="btnPainelVoltar">Voltar</string>
 
 </resources>
