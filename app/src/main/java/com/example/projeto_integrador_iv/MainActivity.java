@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //EM PRODUÇO, TESTANDO....
+
     Button btnCadastrar;
     Button btnEntrar;
 
