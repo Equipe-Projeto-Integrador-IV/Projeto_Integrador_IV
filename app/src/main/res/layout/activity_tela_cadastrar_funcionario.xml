@@ -1,179 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
     tools:context=".TelaCadastrarFuncionario">
 
     <TextView
-        android:id="@+id/txtComissao"
-        android:layout_width="76dp"
-        android:layout_height="63dp"
-        android:text="@string/txtComissao"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/txtFone"
-        android:layout_width="76dp"
-        android:layout_height="64dp"
-        android:text="@string/txtFone"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <TextView
-        android:id="@+id/txtEmail"
-        android:layout_width="98dp"
-        android:layout_height="52dp"
-        android:text="@string/txtEmail"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
-
-    <TextView
-        android:id="@+id/txtSenha"
-        android:layout_width="93dp"
-        android:layout_height="42dp"
-        android:text="@string/txtSenha"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0303"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197" />
+        android:id="@+id/txtMsgFunc"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/txtMsgFunc"
+        android:textAlignment="center"
+        android:textColor="#5C00FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txtCPFFunc"
-        android:layout_width="160dp"
-        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:text="@string/txtCPFFunc"
         android:textAlignment="viewStart"
         android:textColor="#FF0000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edt_CPFFunc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:maxLength="11"
-        android:text="@string/edt_CPFFunc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toEndOf="@+id/txtCPFFunc"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:text="@string/edt_CPFFunc" />
+
+    <TextView
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtSenha"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0303"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edt_Senha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_Senha"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.379"
-        app:layout_constraintStart_toEndOf="@+id/txtSenha"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        android:text="@string/edt_Senha" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtEmail"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edt_Email"
-        android:layout_width="210dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_Email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtEmail"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        android:text="@string/edt_Email" />
+
+    <TextView
+        android:id="@+id/txtFone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtFone"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edt_Fone"
-        android:layout_width="236dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_Fone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtFone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        android:text="@string/edt_Fone" />
+
+    <TextView
+        android:id="@+id/txtComissao"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtComissao"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edt_Comissao"
-        android:layout_width="235dp"
-        android:layout_height="61dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/edt_Comissao"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
-        app:layout_constraintStart_toEndOf="@+id/txtComissao"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
-
-    <Button
-        android:id="@+id/btn_VoltarCad"
-        android:layout_width="134dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/btn_VoltarCad"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/edt_Comissao" />
 
     <Button
         android:id="@+id/btn_CadFunc"
-        android:layout_width="159dp"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/btn_CadFunc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_VoltarCad" />
+        android:text="@string/btn_CadFunc" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_VoltarCad"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="@string/btn_VoltarCad" />
+
+</LinearLayout>
+</ScrollView>
