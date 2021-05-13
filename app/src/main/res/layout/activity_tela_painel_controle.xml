@@ -44,10 +44,26 @@
         android:layout_height="67dp"
         android:text="@string/btnPainelServico" />
 
+    <TextView
+        android:id="@+id/txtSincronizar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/txtSincronizar"
+        android:textColor="#FF0000"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSincronizar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnSincronizar"
+        app:backgroundTint="#EF2020" />
+
     <Button
         android:id="@+id/btnPainelVoltar"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelVoltar" />
+        android:text="@string/btnPainelVoltar"
+        app:backgroundTint="#020202" />
 
 </LinearLayout>

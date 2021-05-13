@@ -40,11 +40,11 @@
     <!-- Tags referentes a TelaCadastroUsuario.java e activity-tela-cadastro-usuario.xml-->
     <!--Tags referentes aos TextView-->
     <string name="txtCADASTRO_USU_msg">CADASTRAR USUÁRIO</string>
-    <string name="txtCADASTRO_USU_cpf">CPF:</string>
-    <string name="txtCADASTRO_USU_nome">NOME:</string>
-    <string name="txtCADASTRO_USU_telefone">TELEFONE:</string>
-    <string name="txtCADASTRO_USU_email">EMAIL:</string>
-    <string name="txtCADASTRO_USU_uf">UF:</string>
+    <string name="txtCADASTRO_USU_cpf">CPF</string>
+    <string name="txtCADASTRO_USU_nome">NOME</string>
+    <string name="txtCADASTRO_USU_telefone">TELEFONE</string>
+    <string name="txtCADASTRO_USU_email">EMAIL</string>
+    <string name="txtCADASTRO_USU_uf">UF</string>
     <!--Tags referentes aos EditText-->
     <string name="edtCADASTRO_USU_cpf"></string>
     <string name="edtCADASTRO_USU_nome"></string>
@@ -59,11 +59,13 @@
     <!--Tags referentes aos TextView-->
     <string name="txtBemVindo">Boas vindas, </string>
     <string name="txtPainelCOntrole">Painel de Controle</string>
+    <string name="txtSincronizar">Atenção!! Não esqueça de sincronizar os dados do aplicativo antes de sair do Painel de Controle!!!</string>
+    <string name="btnSincronizar">Sincronizar</string>
     <!--Tags referentes aos EditText-->
     <!--Tags referentes aos Button-->
     <string name="btnPainelCliente">Cadastrar Cliente</string>
     <string name="btnPainelAgendamento">Cadastrar Agendamento</string>
     <string name="btnPainelServico">Cadastrar Ordem de Serviço</string>
-    <string name="btnPainelVoltar">Voltar</string>
+    <string name="btnPainelVoltar">Sair</string>
 
 </resources>
