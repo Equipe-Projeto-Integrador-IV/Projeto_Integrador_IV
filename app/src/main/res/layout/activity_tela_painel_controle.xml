@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -34,23 +32,113 @@
         android:textColor="#FF1100"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/txtClientePAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtClientePAINEL"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/btnPainelCliente"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelCliente" />
+        android:text="@string/btnPainelCliente"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/btnPainelListarCLiente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelListarCLiente" />
+
+    <Button
+        android:id="@+id/btnPainelEditarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelEditarCliente" />
+
+    <Button
+        android:id="@+id/btnPainelExcluirCliente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelExcluirCliente"
+        app:backgroundTint="#673AB7" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoPAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtAgendamentoPAINEL"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnPainelAgendamento"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelAgendamento" />
+        android:text="@string/btnPainelAgendamento"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/btnPainelListarAgendamentos"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelListarAgendamentos" />
+
+    <Button
+        android:id="@+id/btnPainelEditarAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelEditarAgendamento" />
+
+    <Button
+        android:id="@+id/btnPainelExcluirAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelExcluirAgendamento"
+        app:backgroundTint="#673AB7" />
+
+    <TextView
+        android:id="@+id/txtOrdemPAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtOrdemPAINEL"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnPainelServico"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelServico" />
+        android:text="@string/btnPainelServico"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/btnPainelListarOrdensServicos"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelListarOrdensServicos" />
+
+    <Button
+        android:id="@+id/btnPainelEditarOrdem"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelEditarOrdem" />
+
+    <Button
+        android:id="@+id/btnPainelExcluirOrdem"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelExcluirOrdem"
+        app:backgroundTint="#673AB7" />
 
     <TextView
         android:id="@+id/txtSincronizar"
