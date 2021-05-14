@@ -1,7 +1,7 @@
 package com.example.projeto_integrador_iv.Models;
 
 public class Servico {
-    private Long id;
+    private Long id_servico;
     private String nome;
     private String descricao;
     private Float precoCusto;
@@ -11,19 +11,19 @@ public class Servico {
 
     }
 
-    public Servico(Long id, String nome, Float precoCusto, Float precoVenda) {
-        this.id = id;
+    public Servico(Long id_servico, String nome, Float precoCusto, Float precoVenda) {
+        this.id_servico = id_servico;
         this.nome = nome;
         this.precoCusto = precoCusto;
         this.precoVenda = precoVenda;
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdServico() {
+        return id_servico;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdServico(Long id_servico) {
+        this.id_servico = id_servico;
     }
 
     public String getNome() {
@@ -60,7 +60,7 @@ public class Servico {
 
     @Override
     public String toString() {
-        return "ID: " + getId() + "\n" + " Nome: " + getNome() + "\n " +
+        return "ID: " + getIdServico() + "\n" + " Nome: " + getNome() + "\n " +
                 "Descrição: " + getDescricao() + "\n " + "Preço-Custo: " + getPrecoCusto() + "\n " +
                 "Preço-Venda: " + getPrecoVenda();
     }
