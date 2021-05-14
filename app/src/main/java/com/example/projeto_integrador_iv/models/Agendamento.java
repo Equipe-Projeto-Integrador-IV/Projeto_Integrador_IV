@@ -1,4 +1,4 @@
-package com.example.projeto_integrador_iv.Models;
+package com.example.projeto_integrador_iv.models;
 
 import java.io.Serializable;
 import java.util.Date;
