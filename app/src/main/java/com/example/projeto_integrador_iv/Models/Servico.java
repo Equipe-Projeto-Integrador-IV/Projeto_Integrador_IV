@@ -1,8 +1,5 @@
 package com.example.projeto_integrador_iv.Models;
 
-public class Servico {
-    
-
 import java.io.Serializable;
 
 public class Servico implements Serializable {
