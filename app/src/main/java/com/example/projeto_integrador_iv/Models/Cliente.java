@@ -1,7 +1,7 @@
 package com.example.projeto_integrador_iv.Models;
 
 public class Cliente {
-    private String cpf;
+    private String cpf_cliente;
     private String nome;
     private String telefone;
     private String email;
@@ -11,20 +11,20 @@ public class Cliente {
 
     }
 
-    public Cliente(String cpf, String nome, String telefone, String email, String uf) {
-        this.cpf = cpf;
+    public Cliente(String cpf_cliente, String nome, String telefone, String email, String uf) {
+        this.cpf_cliente = cpf_cliente;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.uf = uf;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfCliente() {
+        return cpf_cliente;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfCliente(String cpf_cliente) {
+        this.cpf_cliente = cpf_cliente;
     }
 
     public String getNome() {
@@ -61,7 +61,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "CPF: " + getCpf() + "\n" + " Nome: " + getNome() + "\n " +
+        return "CPF: " + getCpfCliente() + "\n" + " Nome: " + getNome() + "\n " +
                 "Fone: " + getTelefone() + "\n " + "E-mail: " + getEmail() + "\n " +
                 "UF: " + getUf();
     }
