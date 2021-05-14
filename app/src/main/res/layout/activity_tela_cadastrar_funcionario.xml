@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
+    tools:context=".TelaCadastrarFuncionario">
+
+    <TextView
+        android:id="@+id/txtMsgFunc"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/txtMsgFunc"
+        android:textAlignment="center"
+        android:textColor="#5C00FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtCPFFunc"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtCPFFunc"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_CPFFunc"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="11"
+        android:text="@string/edt_CPFFunc" />
+
+    <TextView
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtSenha"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0303"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_Senha"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_Senha" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtEmail"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_Email"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_Email" />
+
+    <TextView
+        android:id="@+id/txtFone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtFone"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_Fone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_Fone" />
+
+    <TextView
+        android:id="@+id/txtComissao"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtComissao"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_Comissao"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_Comissao" />
+
+    <Button
+        android:id="@+id/btn_CadFunc"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/btn_CadFunc" />
+
+    <Button
+        android:id="@+id/btn_VoltarCad"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="@string/btn_VoltarCad" />
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
+    tools:context=".TelaPainelControle">
+
+    <TextView
+        android:id="@+id/txtBemVindo"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:text="@string/txtBemVindo"
+        android:textColor="#FF0101"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/txtPainelCOntrole"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/txtPainelCOntrole"
+        android:textAlignment="center"
+        android:textColor="#FF1100"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtClientePAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtClientePAINEL"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPainelCliente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelCliente"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/btnPainelListarCLiente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelListarCLiente" />
+
+    <Button
+        android:id="@+id/btnPainelEditarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelEditarCliente" />
+
+    <Button
+        android:id="@+id/btnPainelExcluirCliente"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelExcluirCliente"
+        app:backgroundTint="#673AB7" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoPAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtAgendamentoPAINEL"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPainelAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelAgendamento"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/btnPainelListarAgendamentos"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelListarAgendamentos" />
+
+    <Button
+        android:id="@+id/btnPainelEditarAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelEditarAgendamento" />
+
+    <Button
+        android:id="@+id/btnPainelExcluirAgendamento"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelExcluirAgendamento"
+        app:backgroundTint="#673AB7" />
+
+    <TextView
+        android:id="@+id/txtOrdemPAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtOrdemPAINEL"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPainelServico"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelServico"
+        app:backgroundTint="#FF5722" />
+
+    <Button
+        android:id="@+id/btnPainelListarOrdensServicos"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelListarOrdensServicos" />
+
+    <Button
+        android:id="@+id/btnPainelEditarOrdem"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelEditarOrdem" />
+
+    <Button
+        android:id="@+id/btnPainelExcluirOrdem"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelExcluirOrdem"
+        app:backgroundTint="#673AB7" />
+
+    <TextView
+        android:id="@+id/txtSincronizar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/txtSincronizar"
+        android:textColor="#FF0000"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSincronizar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnSincronizar"
+        app:backgroundTint="#EF2020" />
+
+    <Button
+        android:id="@+id/btnPainelVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelVoltar"
+        app:backgroundTint="#020202" />
+
+</LinearLayout>
+</ScrollView>

@@ -1,6 +1,11 @@
 package com.example.projeto_integrador_iv.Models;
 
 public class Servico {
+    
+
+import java.io.Serializable;
+
+public class Servico implements Serializable {
     private Long id_servico;
     private String nome;
     private String descricao;
@@ -11,7 +16,7 @@ public class Servico {
 
     }
 
-    public Servico(Long id_servico, String nome, Float precoCusto, Float precoVenda) {
+   public Servico(Long id_servico, String nome, Float precoCusto, Float precoVenda) {
         this.id_servico = id_servico;
         this.nome = nome;
         this.precoCusto = precoCusto;
@@ -24,6 +29,7 @@ public class Servico {
 
     public void setIdServico(Long id_servico) {
         this.id_servico = id_servico;
+
     }
 
     public String getNome() {
@@ -59,7 +65,7 @@ public class Servico {
     }
 
     @Override
-    public String toString() {
+    public String toString() {        
         return "ID: " + getIdServico() + "\n" + " Nome: " + getNome() + "\n " +
                 "Descrição: " + getDescricao() + "\n " + "Preço-Custo: " + getPrecoCusto() + "\n " +
                 "Preço-Venda: " + getPrecoVenda();
