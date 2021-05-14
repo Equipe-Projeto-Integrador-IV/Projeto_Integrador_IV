@@ -1,7 +1,7 @@
 package com.example.projeto_integrador_iv.Models;
 
 public class Funcionario {
-    private String cpf;
+    private String cpf_funcionario;
     private String senha;
     private String email;
     private String telefone;
@@ -11,20 +11,20 @@ public class Funcionario {
 
     }
 
-    public Funcionario(String cpf, String senha, String email, String telefone, Float comissao) {
-        this.cpf = cpf;
+    public Funcionario(String cpf_funcionario, String senha, String email, String telefone, Float comissao) {
+        this.cpf_funcionario = cpf_funcionario;
         this.senha = senha;
         this.email = email;
         this.telefone = telefone;
         this.comissao = comissao;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfFuncionario() {
+        return cpf_funcionario;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfFuncionario(String cpf_funcionario) {
+        this.cpf_funcionario = cpf_funcionario;
     }
 
     public String getSenha() {
@@ -61,7 +61,7 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "CPF: " + getCpf() + "\n" + " E-mail: " + getEmail() + "\n " +
+        return "CPF: " + getCpfFuncionario() + "\n" + " E-mail: " + getEmail() + "\n " +
                 "Fone: " + getTelefone() + "\n " + "Comissão: " + getComissao();
     }
 }
