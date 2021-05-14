@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
+    tools:context=".TelaLogin">
+
+    <TextView
+        android:id="@+id/txt_TextoLOGIN"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:text="@string/txt_TextoLOGIN"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_TextoLOGIN_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/txt_TextoLOGIN_usuario"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_LOGIN_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_LOGIN_usuario" />
+
+    <TextView
+        android:id="@+id/txt_TextoLOGIN_SENHA"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/txt_TextoLOGIN_SENHA"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_LOGIN_senha"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edt_LOGIN_senha" />
+
+    <Button
+        android:id="@+id/btn_LOGIN_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/btn_LOGIN_entrar" />
+
+    <Button
+        android:id="@+id/btn_LOGIN_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="@string/btn_LOGIN_voltar" />
+</LinearLayout>

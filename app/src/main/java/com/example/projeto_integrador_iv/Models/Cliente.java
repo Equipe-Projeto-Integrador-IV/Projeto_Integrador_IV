@@ -1,6 +1,9 @@
 package com.example.projeto_integrador_iv.Models;
 
 public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
     private String cpf_cliente;
     private String nome;
     private String telefone;
