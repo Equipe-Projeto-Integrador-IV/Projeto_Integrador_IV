@@ -13,7 +13,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15px"
-    tools:context=".TelaCadastrarFuncionario">
+    tools:context=".Telas.TelaCadastrarFuncionario">
 
     <TextView
         android:id="@+id/txtMsgFunc"

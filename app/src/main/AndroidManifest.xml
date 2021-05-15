@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Integrador_IV">
-        <activity android:name=".TelaPainelControle"></activity>
-        <activity android:name=".TelaCadastroUsuario" />
-        <activity android:name=".TelaLogin" />
-        <activity android:name=".TelaCadastrarFuncionario" />
+        <activity android:name=".Telas.TelaPainelControle"></activity>
+        <activity android:name=".Telas.TelaCadastroUsuario" />
+        <activity android:name=".Telas.TelaLogin" />
+        <activity android:name=".Telas.TelaCadastrarFuncionario" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15px"
-    tools:context=".TelaLogin">
+    tools:context=".Telas.TelaLogin">
 
     <TextView
         android:id="@+id/txt_TextoLOGIN"

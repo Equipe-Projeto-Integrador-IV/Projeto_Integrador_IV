@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15px"
-    tools:context=".TelaPainelControle">
+    tools:context=".Telas.TelaPainelControle">
 
     <TextView
         android:id="@+id/txtBemVindo"
@@ -69,6 +69,42 @@
         app:backgroundTint="#673AB7" />
 
     <TextView
+        android:id="@+id/txtServicoPAINEL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtServicoPAINEL" />
+
+    <Button
+        android:id="@+id/btnPainelServicoCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:backgroundTint="#FF5722"
+        android:text="@string/btnPainelServicoCadastrar" />
+
+    <Button
+        android:id="@+id/btnPainelServicoListar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelServicoListar" />
+
+    <Button
+        android:id="@+id/btnPainelServicoEditar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnPainelServicoEditar" />
+
+    <Button
+        android:id="@+id/btnPainelServicoExcluir"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:backgroundTint="#673AB7"
+        android:text="@string/btnPainelServicoExcluir" />
+
+    <TextView
         android:id="@+id/txtAgendamentoPAINEL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -115,10 +151,10 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnPainelServico"
+        android:id="@+id/btnPainelOrdem"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelServico"
+        android:text="@string/btnPainelOrdem"
         app:backgroundTint="#FF5722" />
 
     <Button
