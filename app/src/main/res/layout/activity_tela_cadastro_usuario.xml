@@ -113,13 +113,13 @@
         <Button
             android:id="@+id/btnCADASTRO_USU_cad"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="67dp"
             android:text="@string/btnCADASTRO_USU_cad" />
 
         <Button
             android:id="@+id/btnCADASTRO_USU_voltar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="67dp"
             android:text="@string/btnCADASTRO_USU_voltar" />
 
     </LinearLayout>
