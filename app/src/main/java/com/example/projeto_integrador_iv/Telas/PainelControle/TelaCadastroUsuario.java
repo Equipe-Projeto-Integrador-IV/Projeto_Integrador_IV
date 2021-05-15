@@ -1,4 +1,4 @@
-package com.example.projeto_integrador_iv.Telas;
+package com.example.projeto_integrador_iv.Telas.PainelControle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.projeto_integrador_iv.R;
+import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
 
 public class TelaCadastroUsuario extends AppCompatActivity implements View.OnClickListener {
 
