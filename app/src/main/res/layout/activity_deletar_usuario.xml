@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
+    tools:context=".Telas.PainelControle.DeletarUsuario">
+
+    <TextView
+        android:id="@+id/TextViewDeletarUsuarioMESSAGE"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:text="@string/TextViewDeletarUsuarioMESSAGE"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TxtDELETE_CPF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TxtDELETE_CPF"
+        android:textColor="#673AB7"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtDELETE_inputCPF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="11"
+        android:numeric="integer"
+        android:text="@string/edtDELETE_inputCPF" />
+
+    <Button
+        android:id="@+id/btnDELETAR_excluir"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:backgroundTint="#673AB7"
+        android:text="@string/btnDELETAR_excluir" />
+
+    <Button
+        android:id="@+id/btnDELETAR_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnDELETAR_voltar" />
+</LinearLayout>

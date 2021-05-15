@@ -83,11 +83,45 @@
     <string name="btnPainelServicoListar">Listar Serviços</string>
     <string name="btnPainelServicoEditar">Editar Serviço</string>
     <string name="btnPainelServicoExcluir">Excluir Serviço</string>
-
-
-
     <string name="btnSincronizar">Sincronizar</string>
-
     <string name="btnPainelVoltar">Sair</string>
+
+    <!--EditarUsuarioInput-->
+    <!--TextView-->
+    <string name="TextViewTelaEditUsuario">Editar Cliente</string>
+    <string name="TextViewDigiteCPF">Digite o CPF do cliente que deseja alterar informações</string>
+    <!--EditText-->
+    <string name="EdtCPFprocurar"></string>
+    <!--Button-->
+    <string name="btnProcurarCPFCliente">Procurar</string>
+    <string name="btnVoltarInput">Voltar</string>
+
+    <!--EditarUsuarioOutput-->
+    <!--TextView-->
+    <string name="TextViewTelaEditUsuarioOut">Editar Cliente</string>
+    <string name="TextViewCPF_out">CPF</string>
+    <string name="TextViewNome_out">Nome</string>]
+    <string name="TextViewTelefone_out">Telefone</string>
+    <string name="TextViewEmail_out">Email</string>
+    <string name="TextViewUF_out">UF</string>
+    <!--EditText-->
+    <string name="EditCPF_out"></string>
+    <string name="EditNome_out"></string>
+    <string name="EditTelefone_out"></string>
+    <string name="EditEmail_out"></string>
+    <string name="EditUF_out"></string>
+    <!--Button-->
+    <string name="ButtonAlterarOut">Alterar</string>
+    <string name="ButtonVoltarOut">Voltar</string>
+
+    <!--DeletarUsuario-->
+    <!--TextView-->
+    <string name="TextViewDeletarUsuarioMESSAGE">Excluir Cliente</string>
+    <string name="TxtDELETE_CPF">CPF</string>
+    <!--EditText-->
+    <string name="edtDELETE_inputCPF"></string>
+    <!--Button-->
+    <string name="btnDELETAR_excluir">Excluir</string>
+    <string name="btnDELETAR_voltar">Voltar</string>
 
 </resources>

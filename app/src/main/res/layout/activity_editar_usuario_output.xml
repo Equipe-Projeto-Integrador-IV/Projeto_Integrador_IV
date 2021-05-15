@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,115 +10,115 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15px"
-        tools:context=".Telas.PainelControle.TelaCadastroUsuario">
+        tools:context=".Telas.PainelControle.EditarUsuarioOutput">
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_msg"
+            android:id="@+id/TextViewTelaEditUsuarioOut"
             android:layout_width="match_parent"
             android:layout_height="77dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/txtCADASTRO_USU_msg"
+            android:text="@string/TextViewTelaEditUsuarioOut"
             android:textAlignment="center"
-            android:textColor="#FF0000"
+            android:textColor="#0027FF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_cpf"
+            android:id="@+id/TextViewCPF_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_cpf"
-            android:textColor="#F40000"
+            android:text="@string/TextViewCPF_out"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_cpf"
-            android:layout_width="401dp"
+            android:id="@+id/EditCPF_out"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number|textPersonName"
             android:maxLength="11"
-            android:text="@string/edtCADASTRO_USU_cpf" />
+            android:text="@string/EditCPF_out" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_nome"
+            android:id="@+id/TextViewNome_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_nome"
-            android:textColor="#FF0000"
+            android:text="@string/TextViewNome_out"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_nome"
+            android:id="@+id/EditNome_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_nome" />
+            android:text="@string/EditNome_out" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_telefone"
+            android:id="@+id/TextViewTelefone_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_telefone"
-            android:textColor="#FF0000"
+            android:text="@string/TextViewTelefone_out"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_telefone"
+            android:id="@+id/EditTelefone_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_telefone" />
+            android:text="@string/EditTelefone_out" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_email"
+            android:id="@+id/TextViewEmail_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_email"
-            android:textColor="#FF0000"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtCADASTRO_USU_email"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_email" />
-
-        <TextView
-            android:id="@+id/txtCADASTRO_USU_uf"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_uf"
-            android:textColor="#F60000"
+            android:text="@string/TextViewEmail_out"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_uf"
+            android:id="@+id/EditEmail_out"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_uf" />
+            android:text="@string/EditEmail_out" />
+
+        <TextView
+            android:id="@+id/TextViewUF_out"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/TextViewUF_out"
+            android:textColor="#0027FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/EditUF_out"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/EditUF_out" />
 
         <Button
-            android:id="@+id/btnCADASTRO_USU_cad"
+            android:id="@+id/ButtonAlterarOut"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:text="@string/btnCADASTRO_USU_cad" />
+            android:text="@string/ButtonAlterarOut" />
 
         <Button
-            android:id="@+id/btnCADASTRO_USU_voltar"
+            android:id="@+id/ButtonVoltarOut"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:text="@string/btnCADASTRO_USU_voltar" />
+            android:text="@string/ButtonVoltarOut" />
 
     </LinearLayout>
-    </ScrollView>
+</ScrollView>
