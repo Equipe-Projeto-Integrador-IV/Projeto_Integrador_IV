@@ -1,4 +1,4 @@
-package com.example.projeto_integrador_iv;
+package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.projeto_integrador_iv.MainActivity;
+import com.example.projeto_integrador_iv.R;
 
 
 public class TelaLogin extends AppCompatActivity implements View.OnClickListener {

@@ -61,15 +61,15 @@
     <string name="txtBemVindo">Boas vindas, </string>
     <string name="txtPainelCOntrole">Painel de Controle</string>
     <string name="txtSincronizar">Atenção!! Não esqueça de sincronizar os dados do aplicativo antes de sair do Painel de Controle!!!</string>
-    <string name="btnSincronizar">Sincronizar</string>
     <string name="txtClientePAINEL">Cliente</string>
     <string name="txtAgendamentoPAINEL">Agendamento</string>
     <string name="txtOrdemPAINEL">Ordem de Serviço</string>
+    <string name="txtServicoPAINEL">Serviço</string>
     <!--Tags referentes aos EditText-->
     <!--Tags referentes aos Button-->
     <string name="btnPainelCliente">Cadastrar Cliente</string>
     <string name="btnPainelAgendamento">Cadastrar Agendamento</string>
-    <string name="btnPainelServico">Cadastrar Ordem de Serviço</string>
+    <string name="btnPainelOrdem">Cadastrar Ordem de Serviço</string>
     <string name="btnPainelListarCLiente">Listar Clientes</string>
     <string name="btnPainelListarAgendamentos">Listar Agendamentos</string>
     <string name="btnPainelListarOrdensServicos">Listar Ordens de Serviço</string>
@@ -79,6 +79,14 @@
     <string name="btnPainelExcluirAgendamento">Excluir Agendamento</string>
     <string name="btnPainelExcluirOrdem">Excluir Ordem de Serviço</string>
     <string name="btnPainelEditarOrdem">Editar Ordem de Serviço</string>
+    <string name="btnPainelServicoCadastrar">Cadastrar Serviço</string>
+    <string name="btnPainelServicoListar">Listar Serviços</string>
+    <string name="btnPainelServicoEditar">Editar Serviço</string>
+    <string name="btnPainelServicoExcluir">Excluir Serviço</string>
+
+
+
+    <string name="btnSincronizar">Sincronizar</string>
 
     <string name="btnPainelVoltar">Sair</string>
 

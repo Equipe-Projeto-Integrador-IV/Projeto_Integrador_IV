@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15px"
-        tools:context=".TelaCadastroUsuario">
+        tools:context=".Telas.TelaCadastroUsuario">
 
         <TextView
             android:id="@+id/txtCADASTRO_USU_msg"
