@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.projeto_integrador_iv.R;
+import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoCadastrar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoListar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoCadastrar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoDeletar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoEditarInput;
@@ -31,6 +33,10 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
     Button btn_PainListarServico;
     Button btn_PainEditServico;
     Button btn_PainExcluirServico;
+
+    //AGENDAMENTO
+    Button btn_PainCadAgendamento;
+    Button btn_PainListarAgendamento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,13 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         btn_PainEditServico.setOnClickListener(this);
         btn_PainExcluirServico = findViewById(R.id.btnPainelServicoExcluir);
         btn_PainExcluirServico.setOnClickListener(this);
+
+        //AGENDAMENTO
+        btn_PainCadAgendamento = findViewById(R.id.btnAgendamentoCad_cadastrar);
+        btn_PainCadAgendamento.setOnClickListener(this);
+        btn_PainListarAgendamento = findViewById(R.id.btnPainelListarAgendamentos);
+        btn_PainListarAgendamento.setOnClickListener(this);
+
 
 
     }
@@ -102,6 +115,15 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         else if (v==btn_PainExcluirServico){
             Intent tela9 = new Intent(this, ServicoDeletar.class);
             startActivity(tela9);
+        }
+        //açoes do agendamento
+        else if (v==btn_PainCadAgendamento){
+            Intent tela10 = new Intent(this, AgendamentoCadastrar.class);
+            startActivity(tela10);
+        }
+        else if (v==btn_PainListarAgendamento){
+            Intent tela11 = new Intent(this, AgendamentoListar.class);
+            startActivity(tela11);
         }
     }
 }

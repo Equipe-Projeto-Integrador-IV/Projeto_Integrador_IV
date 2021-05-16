@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Integrador_IV">
-        <activity android:name=".Telas.PainelControle.AgendamentoCadastrar"></activity>
+        <activity android:name=".Telas.PainelControle.AgendamentoEditarOutput"></activity>
+        <activity android:name=".Telas.PainelControle.AgendamentoEditarInput" />
+        <activity android:name=".Telas.PainelControle.AgendamentoListar" />
+        <activity android:name=".Telas.PainelControle.AgendamentoCadastrar" />
         <activity android:name=".Telas.PainelControle.painelServico.ServicoDeletar" />
         <activity android:name=".Telas.PainelControle.painelServico.ServicoEditarOutput" />
         <activity android:name=".Telas.PainelControle.painelServico.ServicoEditarInput" />
