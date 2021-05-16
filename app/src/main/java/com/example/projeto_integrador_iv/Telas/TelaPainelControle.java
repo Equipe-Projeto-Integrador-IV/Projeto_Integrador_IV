@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoCadastrar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoDeletar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoEditarInput;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoListar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelUsuario.DeletarUsuario;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelUsuario.EditarUsuarioInput;
@@ -92,6 +94,14 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         else if(v==btn_PainListarServico){
             Intent tela7 = new Intent(this, ServicoListar.class);
             startActivity(tela7);
+        }
+        else if (v==btn_PainEditServico){
+            Intent tela8 = new Intent(this, ServicoEditarInput.class);
+            startActivity(tela8);
+        }
+        else if (v==btn_PainExcluirServico){
+            Intent tela9 = new Intent(this, ServicoDeletar.class);
+            startActivity(tela9);
         }
     }
 }
