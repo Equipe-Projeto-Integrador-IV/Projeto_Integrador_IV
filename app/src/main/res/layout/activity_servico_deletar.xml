@@ -6,46 +6,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15px"
-    tools:context=".Telas.PainelControle.painelUsuario.EditarUsuarioInput">
+    tools:context=".Telas.PainelControle.painelServico.ServicoDeletar">
 
     <TextView
-        android:id="@+id/TextViewTelaEditUsuario"
+        android:id="@+id/txtServicoExcluir_MESSAGE"
         android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:text="@string/TextViewTelaEditUsuario"
+        android:layout_height="51dp"
+        android:text="@string/txtServicoExcluir_MESSAGE"
         android:textAlignment="center"
-        android:textColor="#FF1100"
+        android:textColor="#673AB7"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/TextViewDigiteCPF"
+        android:id="@+id/txtServicoExcluir_id"
         android:layout_width="match_parent"
-        android:layout_height="78dp"
-        android:text="@string/TextViewDigiteCPF"
-        android:textColor="#000000"
-        android:textSize="24sp" />
+        android:layout_height="45dp"
+        android:text="@string/txtServicoExcluir_id"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/EdtCPFprocurar"
+        android:id="@+id/edtServicoExcluir_id"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:maxLength="11"
-        android:numeric="integer"
-        android:text="@string/EdtCPFprocurar" />
+        android:text="@string/edtServicoExcluir_id" />
 
     <Button
-        android:id="@+id/btnProcurarCPFCliente"
+        android:id="@+id/btnServicoExcluir_deleted"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnProcurarCPFCliente" />
+        android:text="@string/btnServicoExcluir_deleted"
+        app:backgroundTint="#673AB7" />
 
     <Button
-        android:id="@+id/btnVoltarInput"
+        android:id="@+id/btnServicoExcluir_voltar"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnVoltarInput" />
-
+        android:text="@string/btnServicoExcluir_voltar" />
 </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15px"
-    tools:context=".Telas.PainelControle.DeletarUsuario">
+    tools:context=".Telas.PainelControle.painelUsuario.DeletarUsuario">
 
     <TextView
         android:id="@+id/TextViewDeletarUsuarioMESSAGE"
@@ -21,15 +21,16 @@
     <TextView
         android:id="@+id/TxtDELETE_CPF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:text="@string/TxtDELETE_CPF"
         android:textColor="#673AB7"
+        android:textStyle="bold"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/edtDELETE_inputCPF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:maxLength="11"

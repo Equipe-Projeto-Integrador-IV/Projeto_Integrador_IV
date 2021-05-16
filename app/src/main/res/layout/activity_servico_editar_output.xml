@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,117 +10,113 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15px"
-        tools:context=".Telas.PainelControle.painelUsuario.CadastrarUsuario">
+        tools:context=".Telas.PainelControle.painelServico.ServicoEditarOutput">
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_msg"
+            android:id="@+id/ServicoMESSAGE_output"
             android:layout_width="match_parent"
             android:layout_height="77dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/txtCADASTRO_USU_msg"
+            android:text="@string/ServicoMESSAGE_output"
             android:textAlignment="center"
-            android:textColor="#FF5722"
+            android:textColor="#0027FF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_cpf"
+            android:id="@+id/txtServicoIdOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_cpf"
-            android:textColor="#FF5722"
+            android:text="@string/txtServicoIdOutput"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_cpf"
-            android:layout_width="401dp"
+            android:id="@+id/edtServicoIdOutput"
+            android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:maxLength="11"
-            android:text="@string/edtCADASTRO_USU_cpf" />
+            android:text="@string/edtServicoIdOutput" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_nome"
+            android:id="@+id/txtServicoNomeOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_nome"
-            android:textColor="#FF5722"
+            android:text="@string/txtServicoNomeOutput"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_nome"
+            android:id="@+id/edtServicoNomeOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_nome" />
+            android:text="@string/edtServicoNomeOutput" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_telefone"
+            android:id="@+id/txtServicoDescricaoOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_telefone"
-            android:textColor="#FF5722"
+            android:text="@string/txtServicoDescricaoOutput"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_telefone"
+            android:id="@+id/edtServicoDescricaoOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_telefone" />
+            android:text="@string/edtServicoDescricaoOutput" />
 
         <TextView
-            android:id="@+id/txtCADASTRO_USU_email"
+            android:id="@+id/txtServicoPrecoCustoOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_email"
-            android:textStyle="bold"
-            android:textColor="#FF5722"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edtCADASTRO_USU_email"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_email" />
-
-        <TextView
-            android:id="@+id/txtCADASTRO_USU_uf"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:text="@string/txtCADASTRO_USU_uf"
-            android:textColor="#FF5722"
+            android:text="@string/txtServicoPrecoCustoOutput"
+            android:textColor="#0027FF"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtCADASTRO_USU_uf"
+            android:id="@+id/edtServicoPrecoCustoOutput"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/edtCADASTRO_USU_uf" />
+            android:text="@string/edtServicoPrecoCustoOutput" />
+
+        <TextView
+            android:id="@+id/txtServicoPrecoVendaOutput"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtServicoPrecoVendaOutput"
+            android:textColor="#0027FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtServicoPrecoVendaOutput"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtServicoPrecoVendaOutput" />
 
         <Button
-            android:id="@+id/btnCADASTRO_USU_cad"
+            android:id="@+id/btnServicoAlterarOutput"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            app:backgroundTint="#FF5722"
-            android:text="@string/btnCADASTRO_USU_cad" />
+            android:text="@string/btnServicoAlterarOutput" />
 
         <Button
-            android:id="@+id/btnCADASTRO_USU_voltar"
+            android:id="@+id/btnServicoVoltarOutput"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            android:text="@string/btnCADASTRO_USU_voltar" />
-
+            android:text="@string/btnServicoVoltarOutput" />
     </LinearLayout>
-    </ScrollView>
+</ScrollView>
