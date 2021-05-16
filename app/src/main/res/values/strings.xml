@@ -214,6 +214,18 @@
     <string name="btnAgendamentoCad_cadastrar">Cadastrar Agendamento</string>
     <string name="btnAgendamentoCad_voltar">Voltar</string>
 
+    <!--Listar Agendamento tela AgendamentoListar -->
+    <!--Button-->
+    <string name="btnAgendamentoListar_voltar">Voltar</string>
 
+    <!--Editar Agendamento tela AgendamentoEditar-->
+    <!--TextView-->
+    <string name="txtAgendamentoEditarInput_MESSAGE">Editar Agendamento</string>
+    <string name="txtAgendamentoInput_id">Digite o Id do Agendamento para editar o agendamento, caso não saiba, retorne ao Painel de Controle e clique em Listar Agendamentos</string>
+    <!--EditText-->
+    <string name="edtAgendamentoInput_id"></string>
+    <!--ButtonText-->
+    <string name="btnAgendamentoInput_procurar">Procurar Agendamento</string>
+    <string name="btnAgendamentoInput_voltar">Voltar</string>
 
 </resources>

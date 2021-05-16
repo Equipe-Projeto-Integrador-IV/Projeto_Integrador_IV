@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
+    tools:context=".Telas.PainelControle.AgendamentoEditarInput">
+
+    <TextView
+        android:id="@+id/txtAgendamentoEditarInput_MESSAGE"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:text="@string/txtAgendamentoEditarInput_MESSAGE"
+        android:textAlignment="center"
+        android:textColor="#FF1100"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoInput_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtAgendamentoInput_id"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoInput_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoInput_id" />
+
+    <Button
+        android:id="@+id/btnAgendamentoInput_procurar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnAgendamentoInput_procurar" />
+
+    <Button
+        android:id="@+id/btnAgendamentoInput_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnAgendamentoInput_voltar" />
+</LinearLayout>
