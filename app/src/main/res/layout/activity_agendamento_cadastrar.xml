@@ -1,0 +1,158 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15px"
+        tools:context=".Telas.PainelControle.AgendamentoCadastrar">
+
+        <TextView
+            android:id="@+id/txtAgendamentoMESSAGEcad"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:padding="15px"
+            android:text="@string/txtAgendamentoMESSAGEcad"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoDateCad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoDateCad"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoDateCad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoDateCad" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoHoraCad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoHoraCad"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoHoraCad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoHoraCad" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoStatus"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoStatus"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoStatus"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoStatus" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoObsCad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoObsCad"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoObsCad"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoObsCad" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoClienteCad_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoClienteCad_cpf"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoClienteCad_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoClienteCad_cpf" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoFuncionarioResponsavelCad_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoFuncionarioResponsavelCad_cpf"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoFuncionarioResponsavelCad_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoFuncionarioResponsavelCad_cpf" />
+
+        <TextView
+            android:id="@+id/txtAgendamentoServico_cad_id"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/txtAgendamentoServico_cad_id"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtAgendamentoServico_cad_id"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/edtAgendamentoServico_cad_id" />
+
+        <Button
+            android:id="@+id/btnAgendamentoCad_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:text="@string/btnAgendamentoCad_cadastrar"
+            app:backgroundTint="#FF5722" />
+
+        <Button
+            android:id="@+id/btnAgendamentoCad_voltar"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:text="@string/btnAgendamentoCad_voltar" />
+    </LinearLayout>
+</ScrollView>

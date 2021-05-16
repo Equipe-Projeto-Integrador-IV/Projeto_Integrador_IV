@@ -40,11 +40,11 @@
 
     <!-- Tags referentes a TelaCadastroUsuario.java e activity-tela-cadastro-usuario.xml-->
     <!--Tags referentes aos TextView-->
-    <string name="txtCADASTRO_USU_msg">CADASTRAR USUÁRIO</string>
+    <string name="txtCADASTRO_USU_msg">Cadastrar Usuário</string>
     <string name="txtCADASTRO_USU_cpf">CPF</string>
-    <string name="txtCADASTRO_USU_nome">NOME</string>
-    <string name="txtCADASTRO_USU_telefone">TELEFONE</string>
-    <string name="txtCADASTRO_USU_email">EMAIL</string>
+    <string name="txtCADASTRO_USU_nome">Nome</string>
+    <string name="txtCADASTRO_USU_telefone">Telefone</string>
+    <string name="txtCADASTRO_USU_email">Email</string>
     <string name="txtCADASTRO_USU_uf">UF</string>
     <!--Tags referentes aos EditText-->
     <string name="edtCADASTRO_USU_cpf"></string>
@@ -86,6 +86,14 @@
     <string name="btnSincronizar">Sincronizar</string>
     <string name="btnPainelVoltar">Sair</string>
 
+
+    <!--Tags referente a tela ListarUsuarios -->
+    <!--TxtView-->
+    <!--EditView-->
+    <!--Button-->
+    <string name="btnVoltar_TelaListarUsuarios">Voltar</string>
+
+
     <!--EditarUsuarioInput-->
     <!--TextView-->
     <string name="TextViewTelaEditUsuario">Editar Cliente</string>
@@ -123,5 +131,89 @@
     <!--Button-->
     <string name="btnDELETAR_excluir">Excluir</string>
     <string name="btnDELETAR_voltar">Voltar</string>
+
+
+    <!--Cadastrar Servico referente a tela ServicoCadastrar -->
+    <!--TextView-->
+    <string name="txtServicoMESSAGECad">Cadastrar Serviço</string>
+    <string name="txtServicoNomeCad">Nome</string>
+    <string name="txtServicoPrecoCustoCad">Preço de Custo</string>
+    <string name="txtServicoPrecoVendaCad">Preço de venda</string>
+    <string name="txtServicoDescricaoCad">Descrição do Serviço</string>
+    <!--EditText-->
+    <string name="edtNomeServicoCad"></string>
+    <string name="edtPrecoCustoServicoCad"></string>
+    <string name="edtPrecoVendaServicoCad"></string>
+    <string name="edtDescricaoCad"></string>
+    <!--Button-->
+    <string name="btnServicoCadastrarServicoCad">Cadastrar Serviço</string>
+    <string name="btnServicoVoltarServicoCad">Voltar</string>
+
+    <!--Cadastrar Servico referente a tela ServicoListar -->
+    <!--TextView-->
+    <!--Button-->
+    <string name="btnServicoVoltarListar">Voltar</string>
+
+
+    <!--Editar Servico tela ServicoEditarInput -->
+    <!--TextView-->
+    <string name="ServicoMESSAGE_input">Editar Serviço</string>
+    <string name="Servico_id_input_TelaEDITservico">Digite o ID referente ao serviço que deseja editar, caso tenha dúvida, retornar a tela Painel de Controle e clicar listar Serviços para ter acesso ao ID.</string>
+    <!--EditText-->
+    <string name="edtServio_id_input"></string>
+    <!--Button-->
+    <string name="btnServico_Procurar_input">Procurar Serviço</string>
+    <string name="btnServico_voltar_input">Voltar</string>
+    <!--Editar Serviço tela ServicoEditarOutput -->
+    <!--TextView-->
+    <string name="ServicoMESSAGE_output">Editar Serviço</string>
+    <string name="txtServicoIdOutput">Id</string>
+    <string name="txtServicoNomeOutput">Nome</string>
+    <string name="txtServicoDescricaoOutput">Descrição</string>
+    <string name="txtServicoPrecoCustoOutput">Preço de Custo</string>
+    <string name="txtServicoPrecoVendaOutput">Preço de Venda</string>
+    <!--EditText-->
+    <string name="edtServicoIdOutput"></string>
+    <string name="edtServicoNomeOutput"></string>
+    <string name="edtServicoDescricaoOutput"></string>
+    <string name="edtServicoPrecoCustoOutput"></string>
+    <string name="edtServicoPrecoVendaOutput"></string>
+    <!--Button-->
+    <string name="btnServicoAlterarOutput">Alterar Serviço</string>
+    <string name="btnServicoVoltarOutput">Voltar</string>
+
+    <!--Exluir Serviço tela ServicoDeletar -->
+    <!--TextView-->
+    <string name="txtServicoExcluir_MESSAGE">Excluir Serviço</string>
+    <string name="txtServicoExcluir_id">Id</string>
+    <!--EditText-->
+    <string name="edtServicoExcluir_id"></string>
+    <!--Button-->
+    <string name="btnServicoExcluir_deleted">Excluir</string>
+    <string name="btnServicoExcluir_voltar">Voltar</string>
+
+    <!--Cadastrar Agendamento tela AgendamentoCadastrar -->
+    <!--TextView -->
+    <string name="txtAgendamentoMESSAGEcad">Cadastrar Agendamento</string>
+    <string name="txtAgendamentoDateCad">Data</string>
+    <string name="txtAgendamentoHoraCad">Hora</string>
+    <string name="txtAgendamentoStatus">Status</string>
+    <string name="txtAgendamentoObsCad">Observação</string>
+    <string name="txtAgendamentoClienteCad_cpf">Cliente (CPF_fk)</string>
+    <string name="txtAgendamentoFuncionarioResponsavelCad_cpf">Funcionário (CPF_fk)</string>
+    <string name="txtAgendamentoServico_cad_id">Serviço (Id_fk)</string>
+    <!--EditText-->
+    <string name="edtAgendamentoDateCad"></string>
+    <string name="edtAgendamentoHoraCad"></string>
+    <string name="edtAgendamentoStatus"></string>
+    <string name="edtAgendamentoObsCad"></string>
+    <string name="edtAgendamentoClienteCad_cpf"></string>
+    <string name="edtAgendamentoFuncionarioResponsavelCad_cpf"></string>
+    <string name="edtAgendamentoServico_cad_id"></string>
+    <!--Button-->
+    <string name="btnAgendamentoCad_cadastrar">Cadastrar Agendamento</string>
+    <string name="btnAgendamentoCad_voltar">Voltar</string>
+
+
 
 </resources>

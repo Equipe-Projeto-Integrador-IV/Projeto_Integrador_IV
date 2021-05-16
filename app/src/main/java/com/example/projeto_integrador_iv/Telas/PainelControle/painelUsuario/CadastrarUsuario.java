@@ -1,4 +1,4 @@
-package com.example.projeto_integrador_iv.Telas.PainelControle;
+package com.example.projeto_integrador_iv.Telas.PainelControle.painelUsuario;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
 
-public class TelaCadastroUsuario extends AppCompatActivity implements View.OnClickListener {
+public class CadastrarUsuario extends AppCompatActivity implements View.OnClickListener {
 
     Button btnVoltarUsuario;
 

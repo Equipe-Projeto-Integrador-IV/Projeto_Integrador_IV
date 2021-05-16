@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15px"
-        tools:context=".Telas.PainelControle.EditarUsuarioOutput">
+        tools:context=".Telas.PainelControle.painelUsuario.EditarUsuarioOutput">
 
         <TextView
             android:id="@+id/TextViewTelaEditUsuarioOut"

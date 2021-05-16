@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15px"
+    tools:context=".Telas.PainelControle.painelServico.ServicoCadastrar">
+
+    <TextView
+        android:id="@+id/txtServicoMESSAGECad"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:text="@string/txtServicoMESSAGECad" />
+
+    <TextView
+        android:id="@+id/txtServicoNomeCad"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="45dp"
+        android:textColor="#FF5722"
+        android:text="@string/txtServicoNomeCad" />
+
+    <EditText
+        android:id="@+id/edtNomeServicoCad"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtNomeServicoCad" />
+
+    <TextView
+        android:id="@+id/txtServicoDescricaoCad"
+        android:textColor="#FF5722"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtServicoDescricaoCad" />
+
+    <EditText
+        android:id="@+id/edtDescricaoCad"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtDescricaoCad" />
+
+    <TextView
+        android:id="@+id/txtServicoPrecoCustoCad"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/txtServicoPrecoCustoCad" />
+
+    <EditText
+        android:id="@+id/edtPrecoCustoServicoCad"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtPrecoCustoServicoCad" />
+
+    <TextView
+        android:id="@+id/txtServicoPrecoVendaCad"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:layout_height="45dp"
+        android:text="@string/txtServicoPrecoVendaCad" />
+
+    <EditText
+        android:id="@+id/edtPrecoVendaServicoCad"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtPrecoVendaServicoCad" />
+
+    <Button
+        android:id="@+id/btnServicoCadastrarServicoCad"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:backgroundTint="#FF5722"
+        android:text="@string/btnServicoCadastrarServicoCad" />
+
+    <Button
+        android:id="@+id/btnServicoVoltarServicoCad"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnServicoVoltarServicoCad" />
+</LinearLayout>
+</ScrollView>

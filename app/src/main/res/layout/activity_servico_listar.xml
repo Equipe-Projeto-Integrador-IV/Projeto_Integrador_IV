@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15px"
-    tools:context=".Telas.PainelControle.painelUsuario.ListarUsuarios">
+    tools:context=".Telas.PainelControle.painelServico.ServicoListar">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="123dp"
-        android:text="AQUI APARECE A LISTAGEM" />
+        android:layout_height="175dp"
+        android:text="AQUI LISTARA TODOS SERVICOS CADASTRADOS" />
 
     <Button
-        android:id="@+id/btnVoltar_TelaListarUsuarios"
+        android:id="@+id/btnServicoVoltarListar"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnVoltar_TelaListarUsuarios" />
+        android:text="@string/btnServicoVoltarListar" />
 </LinearLayout>

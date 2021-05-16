@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.projeto_integrador_iv.R;
 
-public class ListarUsuarios extends AppCompatActivity {
+public class AgendamentoCadastrar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listar_usuarios);
+        setContentView(R.layout.activity_agendamento_cadastrar);
     }
 }
