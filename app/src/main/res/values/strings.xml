@@ -218,7 +218,7 @@
     <!--Button-->
     <string name="btnAgendamentoListar_voltar">Voltar</string>
 
-    <!--Editar Agendamento tela AgendamentoEditar-->
+    <!--Editar Agendamento tela AgendamentoEditarInput-->
     <!--TextView-->
     <string name="txtAgendamentoEditarInput_MESSAGE">Editar Agendamento</string>
     <string name="txtAgendamentoInput_id">Digite o Id do Agendamento para editar o agendamento, caso não saiba, retorne ao Painel de Controle e clique em Listar Agendamentos</string>
@@ -227,5 +227,36 @@
     <!--ButtonText-->
     <string name="btnAgendamentoInput_procurar">Procurar Agendamento</string>
     <string name="btnAgendamentoInput_voltar">Voltar</string>
+
+    <!--Editar Agendamento tela AgendamentoEditarOutput-->
+    <!--TextView-->
+    <string name="txtAgendamentoOutput_MESSAGE">Editar Agendamento</string>
+    <string name="txtAgendamentoOutput_id">Id</string>
+    <string name="txtAgendamentoOutput_date">Data</string>
+    <string name="txtAgendamentoOutput_hora">Hora</string>
+    <string name="txtAgendamentoOutput_status">Status</string>
+    <string name="txtAgendamentoOutput_obs">Observação</string>
+    <string name="txtAgendamentoOutput_Cliente_cpf_FK">Cliente (CPF_Cliente_FK)</string>
+    <string name="txtAgendamentoOutput_Funcionario_cpf_FK">Funcionario Responsavel (CPF_Funcionario_FK)</string>
+    <string name="txtAgendamentoOutput_Servico_id_FK">Tipo de Serviço (Id_Serviço_FK)</string>
+    <!--EditText-->
+    <string name="edtAgendamentoOutput_id"></string>
+    <string name="edtAgendamentoOutput_date"></string>
+    <string name="edtAgendamentoOutput_hora"></string>
+    <string name="edtAgendamentoOutput_status"></string>
+    <string name="edtAgendamentoOutput_obs"></string>
+    <string name="edtAgendamentoOutput_Cliente_cpf_FK"></string>
+    <string name="edtAgendamentoOutput_Funcionario_cpf_FK"></string>
+    <string name="edtAgendamentoOutput_Servico_id_FK"></string>
+    <!--Button-->
+    <string name="btnAgendamentoOutput_alterar">Alterar</string>
+    <string name="btnAgendamentoOutput_voltar">Voltar</string>
+
+
+
+
+
+
+
 
 </resources>

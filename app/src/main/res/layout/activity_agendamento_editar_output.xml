@@ -1,9 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+
+    android:padding="15px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Telas.PainelControle.AgendamentoEditarOutput">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_MESSAGE"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:textAlignment="center"
+        android:textColor="#0027FF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_MESSAGE" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_Servico_id_FK" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_Servico_id_FK" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_date"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_date" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_date"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_date" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_hora"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_hora" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_hora"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_hora" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_status"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_status" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_status"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_status" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_obs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_obs" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_obs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_obs" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_Cliente_cpf_FK"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_Cliente_cpf_FK" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_Cliente_cpf_FK"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_Cliente_cpf_FK" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_Funcionario_cpf_FK"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_Funcionario_cpf_FK" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_Funcionario_cpf_FK"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_Funcionario_cpf_FK" />
+
+    <TextView
+        android:id="@+id/txtAgendamentoOutput_Servico_id_FK"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtAgendamentoOutput_Servico_id_FK" />
+
+    <EditText
+        android:id="@+id/edtAgendamentoOutput_Servico_id_FK"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtAgendamentoOutput_Servico_id_FK" />
+
+    <Button
+        android:id="@+id/btnAgendamentoOutput_alterar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:padding="15px"
+        android:text="@string/btnAgendamentoOutput_alterar" />
+
+    <Button
+        android:id="@+id/btnAgendamentoOutput_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnAgendamentoOutput_voltar" />
+</LinearLayout>
+</ScrollView>

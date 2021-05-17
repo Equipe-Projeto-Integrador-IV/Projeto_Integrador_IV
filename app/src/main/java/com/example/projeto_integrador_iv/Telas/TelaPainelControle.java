@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoCadastrar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoEditarInput;
 import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoListar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoCadastrar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoDeletar;
@@ -37,6 +38,7 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
     //AGENDAMENTO
     Button btn_PainCadAgendamento;
     Button btn_PainListarAgendamento;
+    Button btn_PainEditarAgendamento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,8 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         btn_PainCadAgendamento.setOnClickListener(this);
         btn_PainListarAgendamento = findViewById(R.id.btnPainelListarAgendamentos);
         btn_PainListarAgendamento.setOnClickListener(this);
+        btn_PainEditarAgendamento = findViewById(R.id.btnPainelEditarAgendamento);
+        btn_PainEditarAgendamento.setOnClickListener(this);
 
 
 
@@ -124,6 +128,10 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         else if (v==btn_PainListarAgendamento){
             Intent tela11 = new Intent(this, AgendamentoListar.class);
             startActivity(tela11);
+        }
+        else if (v==btn_PainEditarAgendamento){
+            Intent tela12 = new Intent(this, AgendamentoEditarInput.class);
+            startActivity(tela12);
         }
 
     }
