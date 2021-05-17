@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.projeto_integrador_iv.Telas.TelaCadastrarFuncionario;
 import com.example.projeto_integrador_iv.Telas.TelaLogin;
+import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,10 +19,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnEntrar;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         btnEntrar = findViewById(R.id.btn_Entrar);
         btnEntrar.setOnClickListener(this);
@@ -43,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent telaEntrar = new Intent(this, TelaLogin.class);
             startActivity(telaEntrar);
         }
+
 
     }
 }

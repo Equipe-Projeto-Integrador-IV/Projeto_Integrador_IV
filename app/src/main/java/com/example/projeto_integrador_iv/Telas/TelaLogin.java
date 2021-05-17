@@ -63,6 +63,7 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
              *
              */
             else{
+
                 isValid = validacao(inputLogin, inputSenha);
                 if(isValid){
                     Intent telaPain = new Intent(this, TelaPainelControle.class);
@@ -71,6 +72,8 @@ public class TelaLogin extends AppCompatActivity implements View.OnClickListener
                 else{
                     Toast.makeText(this, "LOGIN OU SENHA INCORRETO!!!", Toast.LENGTH_SHORT).show();
                 }
+
+
             }
         }
 

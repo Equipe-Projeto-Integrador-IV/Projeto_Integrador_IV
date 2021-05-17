@@ -66,7 +66,7 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         btn_PainExcluirServico.setOnClickListener(this);
 
         //AGENDAMENTO
-        btn_PainCadAgendamento = findViewById(R.id.btnAgendamentoCad_cadastrar);
+        btn_PainCadAgendamento = findViewById(R.id.btnPainelAgendamento);
         btn_PainCadAgendamento.setOnClickListener(this);
         btn_PainListarAgendamento = findViewById(R.id.btnPainelListarAgendamentos);
         btn_PainListarAgendamento.setOnClickListener(this);
@@ -125,5 +125,6 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
             Intent tela11 = new Intent(this, AgendamentoListar.class);
             startActivity(tela11);
         }
+
     }
 }
