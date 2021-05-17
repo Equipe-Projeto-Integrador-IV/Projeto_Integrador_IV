@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="15px"
-        tools:context=".Telas.PainelControle.AgendamentoCadastrar">
+        tools:context=".Telas.PainelControle.painelAgendamento.AgendamentoCadastrar">
 
         <TextView
             android:id="@+id/txtAgendamentoMESSAGEcad"

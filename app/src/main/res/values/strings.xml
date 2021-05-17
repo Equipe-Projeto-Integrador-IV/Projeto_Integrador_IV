@@ -253,7 +253,99 @@
     <string name="btnAgendamentoOutput_voltar">Voltar</string>
 
 
+    <!--Deletar da Classe AgendamentoDeletar -->
+    <!--TextVIew-->
+    <string name="txtAgendamentoDeletarMESSAGE">Deletar Agendamento</string>
+    <string name="txtAgendamentoDeletar_id">Id do Agendamento</string>
+    <!--EditTex-->
+    <string name="edtAgendamentoDeletar_id"></string>
+    <!--Button-->
+    <string name="btnAgendamentoDeletar_DELETAR">Excluir</string>
+    <string name="btnAgendamentoDeletar_VOLTAR">Voltar</string>
 
+
+    <!--Cadastrar da Classe OrdemServicoCadastrar -->
+    <!--TextView-->
+    <string name="txtOrdemServico_Cadastrar_MESSAGE">Cadastrar Ordem de Serviço</string>
+    <string name="txtOrdemServico_Cadastrar_DATA_INICIO">Data Inicio</string>
+    <string name="txtOrdemServico_Cadastrar_DATA_FIM">Data Fim</string>
+    <string name="txtOrdemServico_Cadastrar_HORA_INICIO">Hora Inicio</string>
+    <string name="txtOrdemServico_Cadastrar_HORA_FIM">Hora Fim</string>
+    <string name="txtOrdemServico_Cadastrar_STATUS">Status</string>
+    <string name="txtOrdemServico_Cadastrar_VALOR">Valor</string>
+    <string name="txtOrdemServico_Cadastrar_AGENDAMENTO_ID">Agendamento (Id_FK)</string>
+    <string name="txtOrdemServico_Cadastrar_SERVICO_ID">Serviço (Id_FK)</string>
+    <string name="txtOrdemServico_Cadastrar_FUNCIONARIO_CPF_os">Funcionario responsavel pela OS (CPF_FK)</string>
+    <string name="txtOrdemServico_Cadastrar_FUNCIONARIO_CPF_servico">Funcionario responsavel pelo Serviço (CPF_FK)</string>
+    <!--EditText-->
+    <string name="edtOrdemServico_Cadastrar_DATA_INICIO"></string>
+    <string name="edtOrdemServico_Cadastrar_DATA_FIM"></string>
+    <string name="edtOrdemServico_Cadastrar_HORA_INICIO"></string>
+    <string name="edtOrdemServico_Cadastrar_HORA_FIM"></string>
+    <string name="edtOrdemServico_Cadastrar_STATUS"></string>
+    <string name="edtOrdemServico_Cadastrar_VALOR"></string>
+    <string name="edtOrdemServico_Cadastrar_AGENDAMENTO_ID"></string>
+    <string name="edtOrdemServico_Cadastrar_SERVICO_ID"></string>
+    <string name="edtOrdemServico_Cadastrar_FUNCIONARIO_CPF_os"></string>
+    <string name="edtOrdemServico_Cadastrar_FUNCIONARIO_CPF_servico"></string>
+    <!--Button-->
+    <string name="btnOrdemServico_Cadastrar_CADASTRAR">Cadastrar Ordem de Serviço</string>
+    <string name="btnOrdemServico_Cadastrar_VOLTAR">Voltar</string>
+
+
+    <!-- Listar da Classe OrdemServicoListar-->
+    <!--Buttom-->
+    <string name="btnOrdemServicoListar_VOLTAR">Voltar</string>
+
+    <!--Editar da Classe OrdemServicoEditarInput-->
+    <!--textView-->
+    <string name="txtOrdemServicoEditarInput_MESSAGE">Editar Ordem de Serviço</string>
+    <string name="txtOrdemServicoEditarInput_Id">Digite o Id da Ordem de Serviço, em caso de duvida consultar Listar Ordem de Serviços</string>
+    <!--EditText-->
+    <string name="edtOrdemServicoEditarInput_Id"></string>
+    <!--Button-->
+    <string name="btnOrdemServicoEditarInput_procurar">Procurar Ordem de Serviço</string>
+    <string name="btnOrdemServicoEditarInput_voltar">Voltar</string>
+
+    <!--Editar da Classe OrdemServicoEditarOutput-->
+    <!--TextView-->
+    <string name="txtOrdemServicoOUTPUT_MESSAGE">Editar Ordem de Serviço</string>
+    <string name="txtOrdemServivoOUTPUT_id">Id</string>
+    <string name="txtOrdemServivoOUTPUT_dataInicio">Data Inicio</string>
+    <string name="txtOrdemServivoOUTPUT_dataFim">Data Fim</string>
+    <string name="txtOrdemServivoOUTPUT_horaInicio">Hora Inicio</string>
+    <string name="txtOrdemServivoOUTPUT_horaFim">Hora Fim</string>
+    <string name="txtOrdemServivoOUTPUT_status">Status</string>
+    <string name="txtOrdemServivoOUTPUT_valor">Valor</string>
+    <string name="txtOrdemServivoOUTPUT_agendamento_id">Agendamento (Id_FK)</string>
+    <string name="txtOrdemServivoOUTPUT_servico_id">Serviço (Id_FK)</string>
+    <string name="txtOrdemServivoOUTPUT_funcionario_cpf_responsavelOS">Funcionario responsavel pela OS (CPF_FK)</string>
+    <string name="txtOrdemServivoOUTPUT_funcionario_cpf_responsavelSERVICO">Funcionario responsavel pelo Serviço (CPF_FK)</string>
+    <!--EditText-->
+    <string name="edtOrdemServivoOUTPUT_id"></string>
+    <string name="edtOrdemServivoOUTPUT_dataInicio"></string>
+    <string name="edtOrdemServivoOUTPUT_dataFim"></string>
+    <string name="edtOrdemServivoOUTPUT_horaInicio"></string>
+    <string name="edtOrdemServivoOUTPUT_horaFim"></string>
+    <string name="edtOrdemServivoOUTPUT_status"></string>
+    <string name="edtOrdemServivoOUTPUT_valor"></string>
+    <string name="edtOrdemServivoOUTPUT_agendamento_id"></string>
+    <string name="edtOrdemServivoOUTPUT_servico_id"></string>
+    <string name="edtOrdemServivoOUTPUT_funcionario_cpf_responsavelOS"></string>
+    <string name="edtOrdemServivoOUTPUT_funcionario_cpf_responsavelSERVICO"></string>
+    <!--Button-->
+    <string name="btnOrdemServicoOUTPUT_ALTERAR">Alterar</string>
+    <string name="btnOrdemServicoOUTPUT_VOLTAR">Voltar</string>
+
+    <!--Deletar da Classe DeletarOrdemServico -->
+    <!--TextView-->
+    <string name="txtOrdemServicoDELETAR_MESSAGE">Deletar Ordem de Serviço</string>
+    <string name="txtOrdemServicoDELETAR_id">Id</string>
+    <!--EditView-->
+    <string name="edtOrdemServicoDELETAR_id"></string>
+    <!--Button-->
+    <string name="btnOrdemServicoDELETAR_deletar">Excluir</string>
+    <string name="btnOrdemServicoDELETAR_voltar">Voltar</string>
 
 
 

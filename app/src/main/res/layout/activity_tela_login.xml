@@ -56,7 +56,8 @@
         android:id="@+id/btn_LOGIN_entrar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:text="@string/btn_LOGIN_entrar" />
+        android:text="@string/btn_LOGIN_entrar"
+        app:backgroundTint="#4CAF50" />
 
     <Button
         android:id="@+id/btn_LOGIN_voltar"
