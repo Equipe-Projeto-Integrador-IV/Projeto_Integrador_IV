@@ -1,4 +1,4 @@
-package com.example.projeto_integrador_iv.Telas.PainelControle;
+package com.example.projeto_integrador_iv.Telas.PainelControle.painelAgendamento;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -8,9 +8,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.projeto_integrador_iv.R;
-import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoCadastrar;
-import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoEditarInput;
-import com.example.projeto_integrador_iv.Telas.PainelControle.AgendamentoListar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.DeletarOrdemServico;
+import com.example.projeto_integrador_iv.Telas.PainelControle.OrdemServicoCadastrar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.OrdemServicoEditarInput;
+import com.example.projeto_integrador_iv.Telas.PainelControle.OrdemServicoListar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.painelAgendamento.AgendamentoCadastrar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.painelAgendamento.AgendamentoDeletar;
+import com.example.projeto_integrador_iv.Telas.PainelControle.painelAgendamento.AgendamentoEditarInput;
+import com.example.projeto_integrador_iv.Telas.PainelControle.painelAgendamento.AgendamentoListar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoCadastrar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoDeletar;
 import com.example.projeto_integrador_iv.Telas.PainelControle.painelServico.ServicoEditarInput;
@@ -39,6 +44,13 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
     Button btn_PainCadAgendamento;
     Button btn_PainListarAgendamento;
     Button btn_PainEditarAgendamento;
+    Button btn_PainExcluirAgendamento;
+
+    //ORDEM DE SERVIÇO
+    Button btn_PainCadOrdemServico;
+    Button btn_PainListarOrdemServico;
+    Button btn_PainOrdemServicoEditInput;
+    Button btn_PainOrdemServicoDeletar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +86,19 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         btn_PainListarAgendamento.setOnClickListener(this);
         btn_PainEditarAgendamento = findViewById(R.id.btnPainelEditarAgendamento);
         btn_PainEditarAgendamento.setOnClickListener(this);
+        btn_PainExcluirAgendamento = findViewById(R.id.btnPainelExcluirAgendamento);
+        btn_PainExcluirAgendamento.setOnClickListener(this);
+
+
+        //ORDEM DE SERVIÇO
+        btn_PainCadOrdemServico = findViewById(R.id.btnPainelOrdem);
+        btn_PainCadOrdemServico.setOnClickListener(this);
+        btn_PainListarOrdemServico = findViewById(R.id.btnPainelListarOrdensServicos);
+        btn_PainListarOrdemServico.setOnClickListener(this);
+        btn_PainOrdemServicoEditInput = findViewById(R.id.btnPainelEditarOrdem);
+        btn_PainOrdemServicoEditInput.setOnClickListener(this);
+        btn_PainOrdemServicoDeletar = findViewById(R.id.btnPainelExcluirOrdem);
+        btn_PainOrdemServicoDeletar.setOnClickListener(this);
 
 
 
@@ -132,6 +157,28 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
         else if (v==btn_PainEditarAgendamento){
             Intent tela12 = new Intent(this, AgendamentoEditarInput.class);
             startActivity(tela12);
+        }
+        else if (v==btn_PainExcluirAgendamento){
+            Intent tela13 = new Intent(this, AgendamentoDeletar.class);
+            startActivity(tela13);
+        }
+
+        //açoes da ordem de serviço
+        else if (v==btn_PainCadOrdemServico){
+            Intent tela14 = new Intent(this, OrdemServicoCadastrar.class);
+            startActivity(tela14);
+        }
+        else if (v==btn_PainListarOrdemServico){
+            Intent tela15 = new Intent(this, OrdemServicoListar.class);
+            startActivity(tela15);
+        }
+        else if (v==btn_PainOrdemServicoEditInput){
+            Intent tela16 = new Intent(this, OrdemServicoEditarInput.class);
+            startActivity(tela16);
+        }
+        else if (v==btn_PainOrdemServicoDeletar){
+            Intent tela17 = new Intent(this, DeletarOrdemServico.class);
+            startActivity(tela17);
         }
 
     }

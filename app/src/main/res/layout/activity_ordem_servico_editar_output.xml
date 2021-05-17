@@ -1,0 +1,223 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:padding="15px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Telas.PainelControle.OrdemServicoEditarOutput">
+
+    <TextView
+        android:id="@+id/txtOrdemServicoOUTPUT_MESSAGE"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:textAlignment="center"
+        android:textColor="#0027FF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServicoOUTPUT_MESSAGE" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_id" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_id" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_dataInicio"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_dataInicio" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_dataInicio"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_dataInicio" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_dataFim"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_dataFim" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_dataFim"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_dataFim" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_horaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_horaInicio" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_horaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_horaInicio" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_horaFim"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_horaFim" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_horaFim"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_horaFim" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_status"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_status" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_status"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_status" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_valor"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_valor" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_valor"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_valor" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_agendamento_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_agendamento_id" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_agendamento_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_agendamento_id" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_servico_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_servico_id" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_servico_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_servico_id" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_funcionario_cpf_responsavelOS"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_funcionario_cpf_responsavelOS" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_funcionario_cpf_responsavelOS"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_funcionario_cpf_responsavelOS" />
+
+    <TextView
+        android:id="@+id/txtOrdemServivoOUTPUT_funcionario_cpf_responsavelSERVICO"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#0027FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/txtOrdemServivoOUTPUT_funcionario_cpf_responsavelSERVICO" />
+
+    <EditText
+        android:id="@+id/edtOrdemServivoOUTPUT_funcionario_cpf_responsavelSERVICO"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/edtOrdemServivoOUTPUT_funcionario_cpf_responsavelSERVICO" />
+
+    <Button
+        android:id="@+id/btnOrdemServicoOUTPUT_ALTERAR"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnOrdemServicoOUTPUT_ALTERAR" />
+
+    <Button
+        android:id="@+id/btnOrdemServicoOUTPUT_VOLTAR"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:text="@string/btnOrdemServicoOUTPUT_VOLTAR" />
+</LinearLayout>
+</ScrollView>

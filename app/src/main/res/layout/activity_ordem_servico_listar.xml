@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15px"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15px"
-    tools:context=".Telas.PainelControle.painelAgendamento.AgendamentoListar">
+    tools:context=".Telas.PainelControle.OrdemServicoListar">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="113dp"
-        android:text="Listar Agendamentos" />
+        android:layout_height="130dp"
+        android:text="LISTAGEM DAS ORDENS DE SERVIÇO" />
 
     <Button
-        android:id="@+id/btnAgendamentoListar_voltar"
+        android:id="@+id/btnOrdemServicoListar_VOLTAR"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnAgendamentoListar_voltar" />
+        android:text="@string/btnOrdemServicoListar_VOLTAR" />
 </LinearLayout>
