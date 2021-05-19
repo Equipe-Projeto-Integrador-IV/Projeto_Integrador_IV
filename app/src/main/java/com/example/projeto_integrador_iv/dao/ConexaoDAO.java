@@ -14,7 +14,9 @@ public class ConexaoDAO {
 
 
     private final String TABELA = "cliente";
-    private final String[] CAMPOS = {"cpf, nome, telefone, email, uf"};
+
+    private final String[] CAMPOS = {"cpf_cliente, nome, telefone, email, uf"};
+
 
     private SQLiteDatabase banco;
     private Conexao conexao;
@@ -25,6 +27,10 @@ public class ConexaoDAO {
         banco = conexao.getWritableDatabase();
     }
 
+
+    //DAO REFERENTE AO CLIENTE
+
+    //preencher do cliente
     private ContentValues preencherValoresCadastroCliente(Cliente cliente){
 
         ContentValues values = new ContentValues();
@@ -38,14 +44,21 @@ public class ConexaoDAO {
         return values;
     }
 
-
-
-
-
-    public long inserir(Cliente cliente){
+    //inserir cliente no banco
+    public long inserirCliente(Cliente cliente){
 
         ContentValues values = preencherValoresCadastroCliente(cliente);
+
         return banco.insert(TABELA, null, values);
+    }
+
+
+
+    //excluir cliente no banco
+    public long excluir(Cliente cliente){
+
+        return banco.delete(TABELA,"cpf_cliente=?", new String[]{cliente.getCpfCliente()});
+
     }
 
     public List<Cliente>  listar(){
