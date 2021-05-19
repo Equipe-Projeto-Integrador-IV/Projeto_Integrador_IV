@@ -21,10 +21,12 @@ public class ListarUsuarios extends AppCompatActivity implements View.OnClickLis
     TextView listar;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_usuarios);
+
 
         listar = findViewById(R.id.textView);
 
@@ -34,6 +36,7 @@ public class ListarUsuarios extends AppCompatActivity implements View.OnClickLis
         
 
         //listar.setText(Cdao.listar().toString());
+
 
 
 

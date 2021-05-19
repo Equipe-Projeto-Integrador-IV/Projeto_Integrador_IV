@@ -11,11 +11,13 @@
     android:padding="15px"
     tools:context=".Telas.PainelControle.painelUsuario.ListarUsuarios">
 
-    <TextView
-        android:id="@+id/textView"
+    <ListView
+        android:id="@+id/listaUsuarios_ls"
         android:layout_width="match_parent"
+
         android:layout_height="328dp"
         android:text="TextView" />
+
 
     <Button
         android:id="@+id/btnVoltar_TelaListarUsuarios"
