@@ -6,15 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.projeto_integrador_iv.MainActivity;
 import com.example.projeto_integrador_iv.R;
+import com.example.projeto_integrador_iv.dao.ConexaoDAO;
+import com.example.projeto_integrador_iv.models.Funcionario;
 
 public class TelaCadastrarFuncionario extends AppCompatActivity implements View.OnClickListener {
 
 
     Button btnVoltar;
     Button btnCadastrarFunc;
+
+    EditText edtCPF_FUNCIONARIO_Cad;
+    EditText edtSENHA_FUNCIONARIO_Cad;
+
+    ConexaoDAO Cdao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,9 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
         }
         else if(v==btnCadastrarFunc){
             //A SER IMPLEMENTADO AINDA
+
+            Funcionario funcionario = new Funcionario();
+
         }
 
     }

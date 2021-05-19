@@ -15,13 +15,12 @@ public class ListarUsuarios extends AppCompatActivity implements View.OnClickLis
 
     Button btnVoltar_TelaListarUsuarios;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_usuarios);
 
-        btnVoltar_TelaListarUsuarios = findViewById(R.id.btnVoltar_TelaListarUsuarios);
-        btnVoltar_TelaListarUsuarios.setOnClickListener(this);
 
     }
 
