@@ -61,11 +61,11 @@ public class Cliente implements Serializable {
         this.uf = uf;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "CPF: " + getCpfCliente() + "\n" + " Nome: " + getNome() + "\n " +
                 "Fone: " + getTelefone() + "\n " + "E-mail: " + getEmail() + "\n " +
                 "UF: " + getUf();
     }
-
+   */
 }
