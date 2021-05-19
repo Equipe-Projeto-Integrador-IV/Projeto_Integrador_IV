@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import com.example.projeto_integrador_iv.Telas.TelaCadastrarFuncionario;
 import com.example.projeto_integrador_iv.Telas.TelaLogin;
-import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,7 +16,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnCadastrar;
     Button btnEntrar;
-
 
 
 

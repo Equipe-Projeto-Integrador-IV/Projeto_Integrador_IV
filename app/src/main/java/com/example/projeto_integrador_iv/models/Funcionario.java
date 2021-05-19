@@ -13,6 +13,10 @@ public class Funcionario implements Serializable {
 
     }
 
+    public String getCpf_funcionario() {
+        return cpf_funcionario;
+    }
+
     public Funcionario(String cpf_funcionario, String senha, String email, String telefone, Float comissao) {
         this.cpf_funcionario = cpf_funcionario;
         this.senha = senha;
