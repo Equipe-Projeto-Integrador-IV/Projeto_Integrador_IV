@@ -28,10 +28,7 @@ public class ListarUsuarios extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_listar_usuarios);
 
 
-        listar = findViewById(R.id.textView);
-
-        Cliente c= new Cliente();
-        Cdao = new ConexaoDAO(this);
+       
 
         
 
