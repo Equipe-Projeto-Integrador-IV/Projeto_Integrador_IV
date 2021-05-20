@@ -88,10 +88,12 @@
 
 
     <!--Tags referente a tela ListarUsuarios -->
+    <string name="btnVoltar">Voltar</string>
     <!--TxtView-->
+    <string name="lista_clientes">Lista Clientes</string>
     <!--EditView-->
     <!--Button-->
-    <string name="btnVoltar_TelaListarUsuarios">Voltar</string>
+
 
 
     <!--EditarUsuarioInput-->

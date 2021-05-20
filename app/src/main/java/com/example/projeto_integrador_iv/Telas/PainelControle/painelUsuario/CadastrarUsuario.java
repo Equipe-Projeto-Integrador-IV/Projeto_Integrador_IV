@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
-import com.example.projeto_integrador_iv.dao.ConexaoDAO;
+import com.example.projeto_integrador_iv.dao.ClienteDAO;
 import com.example.projeto_integrador_iv.models.Cliente;
 
 public class CadastrarUsuario extends AppCompatActivity implements View.OnClickListener {
@@ -23,7 +23,7 @@ public class CadastrarUsuario extends AppCompatActivity implements View.OnClickL
     EditText edtCadastrarUsuCad_telefone;
     EditText edtCadastrarUsuCad_email;
     EditText edtCadastrarUsuCad_uf;
-    ConexaoDAO Cdao;
+    ClienteDAO Cdao;
 
 
     @Override
@@ -59,7 +59,7 @@ public class CadastrarUsuario extends AppCompatActivity implements View.OnClickL
         }
         else if (v==btnCadastrarUsuCad){
 
-            Cdao = new ConexaoDAO(this);
+            Cdao = new ClienteDAO(this);
             Cliente c = new Cliente();
             c.setCpfCliente(edtCadastrarUsuCad_cpf.getText().toString());
             c.setNome(edtCadastrarUsuCad_nome.getText().toString());

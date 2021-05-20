@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.example.projeto_integrador_iv.MainActivity;
 import com.example.projeto_integrador_iv.R;
-import com.example.projeto_integrador_iv.dao.ConexaoDAO;
+import com.example.projeto_integrador_iv.dao.ClienteDAO;
 import com.example.projeto_integrador_iv.models.Funcionario;
 
 public class TelaCadastrarFuncionario extends AppCompatActivity implements View.OnClickListener {
@@ -22,7 +22,7 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
     EditText edtCPF_FUNCIONARIO_Cad;
     EditText edtSENHA_FUNCIONARIO_Cad;
 
-    ConexaoDAO Cdao;
+    ClienteDAO Cdao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

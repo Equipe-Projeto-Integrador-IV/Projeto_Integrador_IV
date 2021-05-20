@@ -10,13 +10,12 @@ import android.widget.TextView;
 
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
-import com.example.projeto_integrador_iv.dao.ConexaoDAO;
-import com.example.projeto_integrador_iv.models.Cliente;
+import com.example.projeto_integrador_iv.dao.ClienteDAO;
 
 public class ListarUsuarios extends AppCompatActivity implements View.OnClickListener{
 
 
-    ConexaoDAO Cdao;
+    ClienteDAO Cdao;
     Button btnVoltar_TelaListarUsuarios;
     TextView listar;
 

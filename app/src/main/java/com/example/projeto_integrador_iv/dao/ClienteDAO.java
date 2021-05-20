@@ -10,7 +10,7 @@ import com.example.projeto_integrador_iv.models.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConexaoDAO {
+public class ClienteDAO {
 
 
     private final String TABELA = "cliente";
@@ -21,7 +21,7 @@ public class ConexaoDAO {
     private SQLiteDatabase banco;
     private Conexao conexao;
 
-    public ConexaoDAO(Context context){
+    public ClienteDAO(Context context){
 
         conexao = new Conexao(context);
         banco = conexao.getWritableDatabase();
@@ -31,7 +31,7 @@ public class ConexaoDAO {
     //DAO REFERENTE AO CLIENTE
 
     //preencher do cliente
-    private ContentValues preencherValoresCadastroCliente(Cliente cliente){
+    private ContentValues preencherValoresCliente(Cliente cliente){
 
         ContentValues values = new ContentValues();
 
@@ -47,7 +47,7 @@ public class ConexaoDAO {
     //inserir cliente no banco
     public long inserirCliente(Cliente cliente){
 
-        ContentValues values = preencherValoresCadastroCliente(cliente);
+        ContentValues values = preencherValoresCliente(cliente);
 
         return banco.insert(TABELA, null, values);
     }
