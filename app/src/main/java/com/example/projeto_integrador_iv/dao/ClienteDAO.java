@@ -46,16 +46,16 @@
         //inserir cliente no banco
         @Override
         public long insert(Cliente cliente){
-
             ContentValues values = preencherValoresCliente(cliente);
-
-            return banco.insert(TABELA, null, values);
+            long clienteCad = banco.insert(TABELA, null, values);
+            return clienteCad;
         }
 
         @Override
         public long update(Cliente cliente) {
             ContentValues values = preencherValoresCliente(cliente);
-            return banco.update(TABELA, values, "cpf_cliente = ?", new String[]{String.valueOf(cliente.getCpfCliente())});
+            long clienteUpdate =  banco.update(TABELA, values, "cpf_cliente = ?", new String[]{String.valueOf(cliente.getCpfCliente())});
+            return clienteUpdate;
         }
 
         @Override
@@ -78,7 +78,8 @@
 
         @Override
         public long remove(Cliente cliente) {
-            return banco.delete(TABELA,"cpf_cliente = ?", new String[]{cliente.getCpfCliente()});
+            long clienteRemoved = banco.delete(TABELA,"cpf_cliente = ?", new String[]{cliente.getCpfCliente()});
+            return clienteRemoved;
         }
 
         @Override
