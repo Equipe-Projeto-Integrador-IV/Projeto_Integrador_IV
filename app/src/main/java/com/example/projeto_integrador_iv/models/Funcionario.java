@@ -4,6 +4,7 @@ import java.io.Serializable;
 public class Funcionario implements Serializable {
 
     private String cpf_funcionario;
+    private String nome;
     private String senha;
     private String email;
     private String telefone;
@@ -13,12 +14,9 @@ public class Funcionario implements Serializable {
 
     }
 
-    public String getCpf_funcionario() {
-        return cpf_funcionario;
-    }
-
-    public Funcionario(String cpf_funcionario, String senha, String email, String telefone, Float comissao) {
+    public Funcionario(String cpf_funcionario, String nome, String senha, String email, String telefone, Float comissao) {
         this.cpf_funcionario = cpf_funcionario;
+        this.nome = nome;
         this.senha = senha;
         this.email = email;
         this.telefone = telefone;
@@ -32,6 +30,10 @@ public class Funcionario implements Serializable {
     public void setCpfFuncionario(String cpf_funcionario) {
         this.cpf_funcionario = cpf_funcionario;
     }
+
+    public String getNome() { return nome; }
+
+    public void setNome(String nome) { this.nome = nome; }
 
     public String getSenha() {
         return senha;
@@ -67,7 +69,7 @@ public class Funcionario implements Serializable {
 
     @Override
     public String toString() {
-        return "CPF: " + getCpfFuncionario() + "\n" + " E-mail: " + getEmail() + "\n " +
-                "Fone: " + getTelefone() + "\n " + "Comissão: " + getComissao();
+        return "CPF: " + getCpfFuncionario() + "\n" + " Nome:" + getNome() + "\n" + " E-mail: " +
+                getEmail() + "\n " + " Fone: " + getTelefone() + "\n " + " Comissão: " + getComissao();
     }
 }
