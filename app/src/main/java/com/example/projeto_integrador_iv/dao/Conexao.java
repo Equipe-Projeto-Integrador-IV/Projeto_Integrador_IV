@@ -8,13 +8,8 @@ import androidx.annotation.Nullable;
 
 public class Conexao extends SQLiteOpenHelper {
 
-
-
     private static final String NAME = "banco.db";
     private static final int VERSION = 1;
-
-
-
 
     private static final String SQLCREATECLIENTE = "CREATE TABLE cliente (\n" +
             "    cpf_cliente VARCHAR PRIMARY KEY\n" +
@@ -57,9 +52,6 @@ public class Conexao extends SQLiteOpenHelper {
             "                                                 REFERENCES servico (id_servico) \n" +
             ");";
 
-
-
-
     private static final String SQLCREATEORDEMSERVICO="CREATE TABLE ordem_servico (\n" +
             "    id_os                      INTEGER PRIMARY KEY AUTOINCREMENT\n" +
             "                                       NOT NULL,\n" +
@@ -77,8 +69,6 @@ public class Conexao extends SQLiteOpenHelper {
             "                                       REFERENCES funcionario (cpf_funcionario),\n" +
             "    cpf_funcionario_fk_servico VARCHAR NOT NULL\n" +
             "                                       REFERENCES funcionario (cpf_funcionario));";
-
-
 
     //Construtor
     public Conexao(@Nullable Context context) { super(context, NAME, null, VERSION); }
