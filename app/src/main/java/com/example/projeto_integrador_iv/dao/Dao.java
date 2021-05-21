@@ -14,6 +14,6 @@ public interface Dao<S> {
 
 //    public long remove(String cpf);
 
-    public S get(String cpf);
+//    public S get(String cpf);
 
 }

@@ -12,11 +12,9 @@
 
     public class ClienteDAO implements Dao<Cliente> {
 
-
         private final String TABELA = "cliente";
-
+      
         private final String[] CAMPOS = {"cpf_cliente, nome, telefone, email, uf"};
-
 
         private SQLiteDatabase banco;
         private Conexao conexao;
@@ -82,10 +80,10 @@
             return clienteRemoved;
         }
 
-        @Override
         public Cliente get(String cpf) {
             Cursor c = banco.query(TABELA, CAMPOS,
-                    "id = ?", new String[] {String.valueOf(cpf)}, null, null, null);
+                    "cpf_cliente = ?", new String[] {String.valueOf(cpf)}, null, null, null);
+
             if (c.moveToNext()) {
                 Cliente cliente = new Cliente();
                 cliente.setCpfCliente(c.getString(0));
@@ -101,4 +99,3 @@
         }
 
     }
-
