@@ -48,7 +48,7 @@ public class DeletarUsuario extends AppCompatActivity implements View.OnClickLis
             Cdao = new ClienteDAO(this);
             Cliente c = new Cliente();
             c.setCpfCliente(edtDELETE.getText().toString());
-            Cdao.excluir(c);
+//            Cdao.excluir(c);
 
 
         }

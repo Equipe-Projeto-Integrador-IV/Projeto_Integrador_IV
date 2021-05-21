@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        btnEntrar = findViewById(R.id.btn_Entrar);
-        btnEntrar.setOnClickListener(this);
-
-        btnCadastrar = findViewById(R.id.btn_Cadastrar);
-        btnCadastrar.setOnClickListener(this);
+//        btnEntrar = findViewById(R.id.btn_Entrar);
+//        btnEntrar.setOnClickListener(this);
+//
+//        btnCadastrar = findViewById(R.id.btn_Cadastrar);
+//        btnCadastrar.setOnClickListener(this);
 
     }
 

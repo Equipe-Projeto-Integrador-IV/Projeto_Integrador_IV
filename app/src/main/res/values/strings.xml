@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projeto_Integrador_IV</string>
+    <string name="app_name">Salão de Beleza</string>
 
     <!-- Tags referentes a TelaInicial.java e activity_main.xml -->
     <string name="txtBoasvindas">Aplicativo Android</string>
@@ -350,7 +350,10 @@
     <string name="btnOrdemServicoDELETAR_voltar">Voltar</string>
 
 
-
+    <string name="sign_in">sign_in</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="Porque_Você_Vale_a_Pena">Porque Você Vale a Pena</string>
 
 
 </resources>
