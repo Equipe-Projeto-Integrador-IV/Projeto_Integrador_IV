@@ -81,10 +81,11 @@ public class FuncionarioDAO implements Dao<Funcionario> {
                 new String[]{funcionario.getCpfFuncionario()});
         return funcionarioRemoved;
     }
-
+  
     public Funcionario get(String cpf) {
         Cursor c = banco.query(TABELA, CAMPOS,
                 "cpf_funcionario = ?", new String[] {String.valueOf(cpf)}, null, null, null);
+
         if (c.moveToNext()) {
             Funcionario funcionario = new Funcionario();
             funcionario.setCpfFuncionario(c.getString(0));
