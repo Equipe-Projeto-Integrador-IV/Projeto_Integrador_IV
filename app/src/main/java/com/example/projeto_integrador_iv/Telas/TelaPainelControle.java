@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.projeto_integrador_iv.MainActivity;
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.Telas.PainelControle.DeletarOrdemServico;
 import com.example.projeto_integrador_iv.Telas.PainelControle.OrdemServicoCadastrar;
@@ -109,7 +110,7 @@ public class TelaPainelControle extends AppCompatActivity implements View.OnClic
 
         //açoes do usuario
         if(v==btn_PainVoltar){
-            Intent tela = new Intent(this, TelaLogin.class);
+            Intent tela = new Intent(this, MainActivity.class);
             startActivity(tela);
         }
         else if(v==btn_PainCadUsu){
