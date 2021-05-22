@@ -29,9 +29,9 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastrar_funcionario);
 
-        btnVoltar = findViewById(R.id.btn_VoltarCad);
+        //btnVoltar = findViewById(R.id.btn_VoltarCad);
         btnVoltar.setOnClickListener(this);
-        btnCadastrarFunc = findViewById(R.id.btn_CadFunc);
+        //btnCadastrarFunc = findViewById(R.id.btn_CadFunc);
         btnCadastrarFunc.setOnClickListener(this);
     }
 
