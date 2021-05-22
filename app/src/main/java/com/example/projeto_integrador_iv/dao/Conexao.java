@@ -23,6 +23,7 @@ public class Conexao extends SQLiteOpenHelper {
     private static final String SQLCREATEFUNCIONARIO="CREATE TABLE funcionario (\n" +
             "    cpf_funcionario VARCHAR PRIMARY KEY\n" +
             "                            NOT NULL,\n" +
+            "    nome           VARCHAR NOT NULL,\n" +
             "    email           VARCHAR NOT NULL,\n" +
             "    fone            VARCHAR NOT NULL,\n" +
             "    comissao        NUMERIC NOT NULL\n" +

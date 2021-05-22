@@ -67,7 +67,7 @@ public class CadastrarUsuario extends AppCompatActivity implements View.OnClickL
             c.setEmail(edtCadastrarUsuCad_email.getText().toString());
             c.setUf(edtCadastrarUsuCad_uf.getText().toString());
 
-//            Cdao.inserirCliente(c);
+             Cdao.insert(c);
 
             
 

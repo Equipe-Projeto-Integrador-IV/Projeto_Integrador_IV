@@ -88,7 +88,7 @@
                 android:layout_marginEnd="18dp"
                 android:layout_marginBottom="18dp"
                 android:hint="@string/email"
-                android:inputType="text"
+                android:inputType="email"
                 android:imeOptions="actionDone"
                 android:paddingStart="18dp"
                 android:paddingEnd="18dp"
