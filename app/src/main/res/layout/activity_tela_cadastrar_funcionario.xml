@@ -1,127 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15px"
-    tools:context=".Telas.TelaCadastrarFuncionario">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtMsgFunc"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/slogan"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:text="@string/txtMsgFunc"
-        android:textAlignment="center"
-        android:textColor="#5C00FF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/txtCPFFunc"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/txtCPFFunc"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_layer_gradient"
+        />
 
-    <EditText
-        android:id="@+id/edt_CPFFunc"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:maxLength="11"
-        android:text="@string/edt_CPFFunc" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
-    <TextView
-        android:id="@+id/txtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/txtSenha"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0303"
-        android:textStyle="bold" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
 
-    <EditText
-        android:id="@+id/edt_Senha"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_Senha" />
+            <TextView
+                android:id="@+id/txt_slogan"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="18dp"
+                android:text="@string/Porque_Você_Vale_a_Pena"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toTopOf="@id/edit_text_cpf"
+                app:layout_constraintEnd_toEndOf="parent"
 
-    <TextView
-        android:id="@+id/txtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/txtEmail"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold" />
+                />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                android:hint="@string/cpf"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/bg_edittext_normal"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_name"
+                />
 
-    <EditText
-        android:id="@+id/edt_Email"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_Email" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                android:hint="@string/nome"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/bg_edittext_normal"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_credentials"
+                />
 
-    <TextView
-        android:id="@+id/txtFone"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/txtFone"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_credentials"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                android:hint="@string/email"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/bg_edittext_normal"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_telefone"
+                />
 
-    <EditText
-        android:id="@+id/edt_Fone"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_Fone" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                android:hint="@string/telefone"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/bg_edittext_normal"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_comissao"
+                />
 
-    <TextView
-        android:id="@+id/txtComissao"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/txtComissao"
-        android:textAlignment="viewStart"
-        android:textColor="#FF0000"
-        android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_comissao"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="18dp"
+                android:hint="@string/comissao"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/bg_edittext_normal"
+                app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
+                />
 
-    <EditText
-        android:id="@+id/edt_Comissao"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/edt_Comissao" />
 
-    <Button
-        android:id="@+id/btn_CadFunc"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:text="@string/btn_CadFunc" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="36dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/bg_edittext_normal"
+                app:layout_constraintBottom_toTopOf="@+id/btn_register"
+                />
 
-    <Button
-        android:id="@+id/btn_VoltarCad"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="@string/btn_VoltarCad" />
 
-</LinearLayout>
-</ScrollView>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="75dp"
+                android:text="@string/register"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_button_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

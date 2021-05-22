@@ -11,7 +11,7 @@
     import java.util.List;
 
     public class ClienteDAO implements Dao<Cliente> {
-      
+
         private final String TABELA = "cliente";
         private final String[] CAMPOS = {"cpf_cliente, nome, telefone, email, uf"};
 
@@ -96,5 +96,4 @@
                 return null;
             }
         }
-
     }
