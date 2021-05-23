@@ -8,13 +8,13 @@ public class Funcionario implements Serializable {
     private String senha;
     private String email;
     private String telefone;
-    private Float comissao;
+    private String comissao;
 
     public Funcionario() {
 
     }
 
-    public Funcionario(String cpf_funcionario, String nome, String senha, String email, String telefone, Float comissao) {
+    public Funcionario(String cpf_funcionario, String nome, String senha, String email, String telefone, String comissao) {
         this.cpf_funcionario = cpf_funcionario;
         this.nome = nome;
         this.senha = senha;
@@ -59,11 +59,11 @@ public class Funcionario implements Serializable {
         this.telefone = telefone;
     }
 
-    public Float getComissao() {
+    public String getComissao() {
         return comissao;
     }
 
-    public void setComissao(Float comissao) {
+    public void setComissao(String comissao) {
         this.comissao = comissao;
     }
 

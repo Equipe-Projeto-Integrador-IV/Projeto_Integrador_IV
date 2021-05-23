@@ -67,7 +67,7 @@ public class FuncionarioDAO implements Dao<Funcionario> {
             funcionario.setNome(c.getString(1));
             funcionario.setEmail(c.getString(2));
             funcionario.setTelefone(c.getString(3));
-            funcionario.setComissao(c.getFloat(4));
+            funcionario.setComissao(c.getString(4));
             lista.add(funcionario);
 
         }
@@ -92,7 +92,7 @@ public class FuncionarioDAO implements Dao<Funcionario> {
             funcionario.setNome(c.getString(1));
             funcionario.setEmail(c.getString(2));
             funcionario.setTelefone(c.getString(3));
-            funcionario.setComissao(c.getFloat(4));
+            funcionario.setComissao(c.getString(4));
             return funcionario;
         }
         else {

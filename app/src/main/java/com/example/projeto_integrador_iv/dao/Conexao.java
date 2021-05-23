@@ -25,8 +25,9 @@ public class Conexao extends SQLiteOpenHelper {
             "                            NOT NULL,\n" +
             "    nome           VARCHAR NOT NULL,\n" +
             "    email           VARCHAR NOT NULL,\n" +
-            "    fone            VARCHAR NOT NULL,\n" +
-            "    comissao        NUMERIC NOT NULL\n" +
+            "    telefone         VARCHAR NOT NULL,\n" +
+            "    comissao        VARCHAR NOT NULL,\n" +
+            "    senha         VARCHAR NOT NULL\n" +
             ");";
 
     private static final String SQLCREATESERVICO="CREATE TABLE servico (\n" +
