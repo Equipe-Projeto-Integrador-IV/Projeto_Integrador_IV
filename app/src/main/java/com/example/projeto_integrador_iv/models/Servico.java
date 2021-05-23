@@ -6,18 +6,18 @@ public class Servico implements Serializable {
     private Long id_servico;
     private String nome;
     private String descricao;
-    private Float precoCusto;
-    private Float precoVenda;
+    private Float preco_custo;
+    private Float preco_venda;
 
     public Servico() {
 
     }
 
-   public Servico(Long id_servico, String nome, Float precoCusto, Float precoVenda) {
+   public Servico(Long id_servico, String nome, Float preco_custo, Float preco_venda) {
         this.id_servico = id_servico;
         this.nome = nome;
-        this.precoCusto = precoCusto;
-        this.precoVenda = precoVenda;
+        this.preco_custo = preco_custo;
+        this.preco_venda = preco_venda;
     }
 
     public Long getIdServico() {
@@ -45,26 +45,31 @@ public class Servico implements Serializable {
         this.descricao = descricao;
     }
 
-    public Float getPrecoCusto() {
-        return precoCusto;
+    public Float getPreco_custo() {
+        return preco_custo;
     }
 
-    public void setPrecoCusto(Float precoCusto) {
-        this.precoCusto = precoCusto;
+    public void setPreco_custo(Float preco_custo) {
+        this.preco_custo = preco_custo;
     }
 
-    public Float getPrecoVenda() {
-        return precoVenda;
+    public Float getPreco_venda() {
+        return preco_venda;
     }
 
-    public void setPrecoVenda(Float precoVenda) {
-        this.precoVenda = precoVenda;
+    public void setPreco_venda(Float preco_venda) {
+        this.preco_venda = preco_venda;
     }
+
 
     @Override
-    public String toString() {        
-        return "ID: " + getIdServico() + "\n" + " Nome: " + getNome() + "\n " +
-                "Descrição: " + getDescricao() + "\n " + "Preço-Custo: " + getPrecoCusto() + "\n " +
-                "Preço-Venda: " + getPrecoVenda();
+    public String toString() {
+        return "Servico{" +
+                "id_servico=" + id_servico +
+                ", nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", preco_custo=" + preco_custo +
+                ", preco_venda=" + preco_venda +
+                '}';
     }
 }

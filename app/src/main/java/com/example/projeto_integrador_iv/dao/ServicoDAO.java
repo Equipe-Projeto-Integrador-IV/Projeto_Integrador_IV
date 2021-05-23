@@ -12,12 +12,12 @@
 
     public class ServicoDAO implements Dao<Servico> {
         private final String TABELA = "servico";
-        private final String[] CAMPOS = {"id_servico, nome, descricao, precoCusto, precoVenda"};
+        private final String[] CAMPOS = {"id_servico, nome, descricao, preco_custo, preco_venda"};
 
         private SQLiteDatabase banco;
         private Conexao conexao;
 
-        private ServicoDAO(Context context) {
+        public ServicoDAO(Context context) {
             conexao = new Conexao(context);
             banco = conexao.getWritableDatabase();
         }
@@ -28,8 +28,8 @@
             values.put("id_servico",servico.getIdServico());
             values.put("nome",servico.getNome());
             values.put("descricao", servico.getDescricao());
-            values.put("precoCusto",servico.getPrecoCusto());
-            values.put("precoVenda",servico.getPrecoVenda());
+            values.put("preco_custo",servico.getPreco_custo());
+            values.put("preco_venda",servico.getPreco_venda());
 
             return values;
         }
@@ -58,11 +58,13 @@
             List<Servico> lista = new ArrayList<>();
             while(c.moveToNext()){
                 Servico servico = new Servico();
+
                 servico.setIdServico(c.getLong(0));
                 servico.setNome(c.getString(1));
                 servico.setDescricao(c.getString(2));
-                servico.setPrecoCusto(c.getFloat(3));
-                servico.setPrecoVenda(c.getFloat(4));
+                servico.setPreco_custo(c.getFloat(3));
+                servico.setPreco_venda(c.getFloat(4));
+
                 lista.add(servico);
 
             }
@@ -85,8 +87,8 @@
                 servico.setIdServico(c.getLong(0));
                 servico.setNome(c.getString(1));
                 servico.setDescricao(c.getString(2));
-                servico.setPrecoVenda(c.getFloat(3));
-                servico.setPrecoCusto(c.getFloat(4));
+                servico.setPreco_venda(c.getFloat(3));
+                servico.setPreco_custo(c.getFloat(4));
                 return servico;
             }
             else {

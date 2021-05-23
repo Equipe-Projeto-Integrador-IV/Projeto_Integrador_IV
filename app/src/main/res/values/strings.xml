@@ -151,10 +151,13 @@
     <string name="btnServicoCadastrarServicoCad">Cadastrar Serviço</string>
     <string name="btnServicoVoltarServicoCad">Voltar</string>
 
-    <!--Cadastrar Servico referente a tela ServicoListar -->
+    <!--Listar Servico referente a tela ServicoListar -->
     <!--TextView-->
+    <string name="txtServicoListarNAME">Listar Serviços</string>
     <!--Button-->
     <string name="btnServicoVoltarListar">Voltar</string>
+    <!--listView -->
+    <string name="listView_ServicoLISTAR"></string>
 
 
     <!--Editar Servico tela ServicoEditarInput -->
@@ -298,6 +301,9 @@
     <!-- Listar da Classe OrdemServicoListar-->
     <!--Buttom-->
     <string name="btnOrdemServicoListar_VOLTAR">Voltar</string>
+    <!--ListViw-->
+    <string name="txtListView">Lista Ordens de Serviço</string>
+    <string name="listViewOrdemServicoLISTAR"></string>
 
     <!--Editar da Classe OrdemServicoEditarInput-->
     <!--textView-->

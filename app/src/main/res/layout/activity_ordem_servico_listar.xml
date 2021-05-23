@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="15px"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".Telas.PainelControle.OrdemServicoListar">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:text="LISTAGEM DAS ORDENS DE SERVIÇO" />
+        android:layout_height="54dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOrdemServicoListar_VOLTAR"
+        <TextView
+            android:id="@+id/txtServicoListarNAME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:text="@string/txtListView"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnServicoVoltarListar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnOrdemServicoListar_VOLTAR"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:backgroundTint="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_ServicoLISTAR"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
-        android:text="@string/btnOrdemServicoListar_VOLTAR" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>
