@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Agendamento implements Serializable {
     private Long id;
-    private Date date;
+    private Date data;
     private Date hora;
     private String status;
     private String obs;
@@ -20,7 +20,7 @@ public class Agendamento implements Serializable {
     public Agendamento(Long id, Date date, Date hora, String status, String obs,
                        Funcionario respAgendamento, Servico servico) {
         this.id = id;
-        this.date = date;
+        this.data = date;
         this.hora = hora;
         this.status = status;
         this.obs = obs;
@@ -36,15 +36,16 @@ public class Agendamento implements Serializable {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getData() {
+        return data;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.data = date;
     }
 
     public Date getHora() {
+
         return hora;
     }
 
@@ -96,7 +97,7 @@ public class Agendamento implements Serializable {
     public String toString() {
         return "Agendamento{" +
                 "id=" + id +
-                ", date=" + date +
+                ", date=" + data +
                 ", hora=" + hora +
                 ", status='" + status + '\'' +
                 ", obs='" + obs + '\'' +

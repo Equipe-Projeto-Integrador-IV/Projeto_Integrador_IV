@@ -64,12 +64,11 @@ public class Servico implements Serializable {
 
     @Override
     public String toString() {
-        return "Servico{" +
-                "id_servico=" + id_servico +
-                ", nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", preco_custo=" + preco_custo +
-                ", preco_venda=" + preco_venda +
-                '}';
+        return "Servico: \n" +
+                "Id = " + id_servico  +"\n"+
+                "Nome = " + nome + " \n" +
+                "Descricao = " + descricao + "\n" +
+                "Preço de Custo = " + preco_custo + "\n"+
+                "Preco de Venda = " + preco_venda + "\n";
     }
 }

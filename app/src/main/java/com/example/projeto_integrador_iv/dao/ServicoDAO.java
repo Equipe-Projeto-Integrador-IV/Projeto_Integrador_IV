@@ -11,6 +11,7 @@
     import java.util.List;
 
     public class ServicoDAO implements Dao<Servico> {
+
         private final String TABELA = "servico";
         private final String[] CAMPOS = {"id_servico, nome, descricao, preco_custo, preco_venda"};
 

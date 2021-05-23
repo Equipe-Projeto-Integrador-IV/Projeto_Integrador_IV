@@ -53,13 +53,15 @@
         android:id="@+id/btnPainelListarCLiente"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelListarCLiente" />
+        android:text="@string/btnPainelListarCLiente"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelEditarCliente"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelEditarCliente" />
+        android:text="@string/btnPainelEditarCliente"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelExcluirCliente"
@@ -89,13 +91,15 @@
         android:id="@+id/btnPainelServicoListar"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelServicoListar" />
+        android:text="@string/btnPainelServicoListar"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelServicoEditar"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelServicoEditar" />
+        android:text="@string/btnPainelServicoEditar"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelServicoExcluir"
@@ -125,13 +129,15 @@
         android:id="@+id/btnPainelListarAgendamentos"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelListarAgendamentos" />
+        android:text="@string/btnPainelListarAgendamentos"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelEditarAgendamento"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelEditarAgendamento" />
+        android:text="@string/btnPainelEditarAgendamento"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelExcluirAgendamento"
@@ -161,13 +167,15 @@
         android:id="@+id/btnPainelListarOrdensServicos"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelListarOrdensServicos" />
+        android:text="@string/btnPainelListarOrdensServicos"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelEditarOrdem"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:text="@string/btnPainelEditarOrdem" />
+        android:text="@string/btnPainelEditarOrdem"
+        app:backgroundTint="#3F51B5" />
 
     <Button
         android:id="@+id/btnPainelExcluirOrdem"
