@@ -48,12 +48,7 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
         edit_text_credentials = findViewById(R.id.edit_text_credentials);
         edit_text_password = findViewById(R.id.edit_text_password);
 
-
-
-
-
-
-        btnVoltar = findViewById(R.id.func_voltar_style);
+        btnVoltar = findViewById(R.id.btn_voltar);
         btnVoltar.setOnClickListener(this);
         btnCadastrarFunc = findViewById(R.id.btn_register);
         btnCadastrarFunc.setOnClickListener(this);
