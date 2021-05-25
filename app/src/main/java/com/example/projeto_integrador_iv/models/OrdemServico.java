@@ -16,6 +16,11 @@
         private Funcionario respOS;
         private Funcionario execServico;
 
+        /*
+         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+         String data = df.format(lancamento.getData());
+         */
+
         public OrdemServico() {
 
         }

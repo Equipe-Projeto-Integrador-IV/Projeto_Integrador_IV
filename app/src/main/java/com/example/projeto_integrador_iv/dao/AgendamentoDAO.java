@@ -59,32 +59,25 @@ public class AgendamentoDAO implements Dao<Agendamento>{
         return 0;
     }
 
-    @Override
-    public List<Agendamento> list() {
-        return null;
-    }
 
-    /*
+
+
      @Override
      public List<Agendamento> list() {
 
          Cursor c = banco.query(TABELA, CAMPOS, null, null, null, null, null);
 
-
          List<Agendamento> lista = new ArrayList<>();
          while(c.moveToNext()){
              Agendamento agendamento = new Agendamento();
              agendamento.setId(c.getLong(0));
-             agendamento.setDate(c.getString(1));
-
+             agendamento.setDate(new java.util.Date(c.getLong(1)));
+             //new java.util.Date(c.getLong(8)
              lista.add(agendamento);
-
-
-
          }
          return lista;
      }
- */
+
     @Override
     public long remove(Agendamento t) {
         return 0;
