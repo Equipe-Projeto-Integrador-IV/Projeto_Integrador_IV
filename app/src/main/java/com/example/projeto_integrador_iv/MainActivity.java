@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.projeto_integrador_iv.Telas.TelaCadastrarFuncionario;
-import com.example.projeto_integrador_iv.Telas.TelaLogin;
-import com.example.projeto_integrador_iv.Telas.TelaPainelControle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,19 +16,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnCadastrar;
     Button btnEntrar;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        btnEntrar = findViewById(R.id.btn_sign_in);
+       btnEntrar = findViewById(R.id.btn_sign_in);
        btnEntrar.setOnClickListener(this);
 //
-        btnCadastrar = findViewById(R.id.cad_func_style);
+        btnCadastrar = findViewById(R.id.btn_register);
         btnCadastrar.setOnClickListener(this);
 
     }
@@ -42,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent telaCadastrar = new Intent(this, TelaCadastrarFuncionario.class);
             startActivity(telaCadastrar);
         }
-        else if (v==btnEntrar){
-
-            Intent telaEntrar = new Intent(this, TelaPainelControle.class);
-            startActivity(telaEntrar);
-        }
+//        else if (v==btnEntrar){
+//
+//            Intent telaEntrar = new Intent(this, TelaPainelControle.class);
+//            startActivity(telaEntrar);
+//        }
 
 
     }
