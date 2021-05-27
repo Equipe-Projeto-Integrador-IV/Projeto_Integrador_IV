@@ -95,7 +95,6 @@
     <!--Button-->
 
 
-
     <!--EditarUsuarioInput-->
     <!--TextView-->
     <string name="TextViewTelaEditUsuario">Editar Cliente</string>
@@ -355,14 +354,14 @@
     <string name="btnOrdemServicoDELETAR_deletar">Excluir</string>
     <string name="btnOrdemServicoDELETAR_voltar">Voltar</string>
 
-<!--    Sign-in-->
+    <!--    Sign-in-->
     <string name="sign_in">Entrar</string>
     <string name="cad_func_style">Cadastrar</string>
     <string name="password">senha</string>
     <string name="email">email</string>
     <string name="Porque_Você_Vale_a_Pena">Porque Você Vale a Pena</string>
 
-<!--    Register Funcionario-->
+    <!--    Register Funcionario-->
     <string name="nome">Nome</string>
     <string name="cpf">CPF</string>
     <string name="register">Cadastrar</string>

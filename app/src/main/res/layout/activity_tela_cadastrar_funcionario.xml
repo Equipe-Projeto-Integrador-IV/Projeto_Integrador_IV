@@ -12,7 +12,8 @@
         android:layout_width="412dp"
         android:layout_height="857dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/slogan" />
+        android:src="@drawable/slogan"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="match_parent"

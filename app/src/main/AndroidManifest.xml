@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Integrador_IV">
-        <activity android:name=".Telas.PainelControle.DeletarOrdemServico"></activity>
+        <activity android:name=".Telas.AtvPainel_controle"></activity>
+        <activity android:name=".Telas.PainelControle.DeletarOrdemServico" />
         <activity android:name=".Telas.PainelControle.OrdemServicoEditarOutput" />
         <activity android:name=".Telas.PainelControle.OrdemServicoEditarInput" />
         <activity android:name=".Telas.PainelControle.OrdemServicoListar" />
