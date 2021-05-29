@@ -369,6 +369,12 @@
     <string name="comissao">Comissão</string>
     <string name="func_voltar_style">Voltar</string>
     <string name="Voltar">Voltar</string>
+    <string name="Painel_Controle">Painel Controle</string>
+    <string name="txt_cliente">Cliente</string>
+    <string name="txt_funcionario">Funcionario</string>
+    <string name="txt_servico">Serviço</string>
+    <string name="txt_agendamento">Agendamento</string>
+    <string name="txt_ordem_servico">Ordem Serviço</string>
 
 
 </resources>

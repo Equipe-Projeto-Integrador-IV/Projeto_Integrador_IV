@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.projeto_integrador_iv.Telas.AtvPainel_controle;
 import com.example.projeto_integrador_iv.Telas.TelaCadastrarFuncionario;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -35,12 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v==btnCadastrar) {
             Intent telaCadastrar = new Intent(this, TelaCadastrarFuncionario.class);
             startActivity(telaCadastrar);
-        }
-//        else if (v==btnEntrar){
-//
-//            Intent telaEntrar = new Intent(this, TelaPainelControle.class);
-//            startActivity(telaEntrar);
-//        }
+       }
+         else if (v==btnEntrar){
+
+        Intent telaEntrar = new Intent(this, AtvPainel_controle.class);
+           startActivity(telaEntrar);
+      }
 
 
     }
