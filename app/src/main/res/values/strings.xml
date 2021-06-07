@@ -382,6 +382,12 @@
     <string name="btn_gravar">Alterar</string>
     <string name="btn_excluir">Excluir</string>
     <string name="btn_Voltar">Voltar</string>
+    <string name="lista_servicos">Serviços</string>
+    <string name="titulo_cadastro_servico">Serviço</string>
+    <string name="txt_id">ID</string>
+    <string name="preco_custo">Preço-Custo</string>
+    <string name="preco_venda">Preço-Venda</string>
+    <string name="descricao">Descrição</string>
 
 
 </resources>
