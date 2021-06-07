@@ -29,11 +29,11 @@
             android:id="@+id/btnCad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
             android:text="@string/btnCad"
             android:textColor="@android:color/white"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             />
 
