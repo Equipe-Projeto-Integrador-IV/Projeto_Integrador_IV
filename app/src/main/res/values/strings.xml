@@ -357,8 +357,8 @@
     <!--    Sign-in-->
     <string name="sign_in">Entrar</string>
     <string name="cad_func_style">Cadastrar</string>
-    <string name="password">senha</string>
-    <string name="email">email</string>
+    <string name="password">Senha</string>
+    <string name="email">E-mail</string>
     <string name="Porque_Você_Vale_a_Pena">Porque Você Vale a Pena</string>
 
     <!--    Register Funcionario-->
@@ -369,12 +369,19 @@
     <string name="comissao">Comissão</string>
     <string name="func_voltar_style">Voltar</string>
     <string name="Voltar">Voltar</string>
-    <string name="Painel_Controle">Painel Controle</string>
+    <string name="Painel_Controle">Painel de Controle</string>
     <string name="txt_cliente">Cliente</string>
     <string name="txt_funcionario">Funcionario</string>
     <string name="txt_servico">Serviço</string>
     <string name="txt_agendamento">Agendamento</string>
     <string name="txt_ordem_servico">Ordem Serviço</string>
+    <string name="btnCad">Cadastrar</string>
+    <string name="txt_cpf">CPF</string>
+    <string name="uf">UF</string>
+    <string name="titulo_cadastro_cliente">Cliente</string>
+    <string name="btn_gravar">Alterar</string>
+    <string name="btn_excluir">Excluir</string>
+    <string name="btn_Voltar">Voltar</string>
 
 
 </resources>

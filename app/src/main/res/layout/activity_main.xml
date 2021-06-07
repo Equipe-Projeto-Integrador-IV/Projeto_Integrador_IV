@@ -102,7 +102,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="18dp"
             android:background="@drawable/bg_button_normal"
-            android:text="@string/Voltar"
+            android:text="@string/register"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="18sp"
