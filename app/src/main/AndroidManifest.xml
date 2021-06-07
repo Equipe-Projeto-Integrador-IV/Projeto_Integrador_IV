@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Integrador_IV">
-        <activity android:name=".Telas.AtvPainel_controle"></activity>
+        <activity android:name=".Telas.atv_cadastro_cliente"></activity>
+        <activity android:name=".Telas.AtvCliente" />
+        <activity android:name=".Telas.AtvPainel_controle" />
         <activity android:name=".Telas.TelaCadastrarFuncionario" />
         <activity android:name=".MainActivity">
             <intent-filter>
