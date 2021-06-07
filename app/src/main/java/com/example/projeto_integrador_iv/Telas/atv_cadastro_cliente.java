@@ -92,6 +92,7 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
             } else {
                 long cpf = dao.update(c);
                 Toast.makeText(this, "Cliente " + c.getNome() + " foi alterado com sucesso!",
+
                         Toast.LENGTH_LONG).show();
             }
 
