@@ -6,8 +6,8 @@ public class Servico implements Serializable {
     private Long id_servico;
     private String nome;
     private String descricao;
-    private Float preco_custo;
-    private Float preco_venda;
+    private Float preco_custo = 0f;
+    private Float preco_venda = 0f;
 
     public Servico() {
 
@@ -64,11 +64,11 @@ public class Servico implements Serializable {
 
     @Override
     public String toString() {
-        return "Servico: \n" +
-                "Id = " + id_servico  +"\n"+
-                "Nome = " + nome + " \n" +
-                "Descricao = " + descricao + "\n" +
-                "Preço de Custo = " + preco_custo + "\n"+
-                "Preco de Venda = " + preco_venda + "\n";
+        return "Servico: " + getNome() +  "\n" + "Id: " + getIdServico()  + "\n"
+                +"Preço de Custo: " + getPreco_custo() + "\n"+
+                "Preco de Venda: " + getPreco_venda() + "\n" +
+                "Descricao: " + getDescricao() + "\n" ;
+
     }
+
 }

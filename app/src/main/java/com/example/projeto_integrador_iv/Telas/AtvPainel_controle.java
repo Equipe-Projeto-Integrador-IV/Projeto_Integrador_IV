@@ -48,7 +48,7 @@ public class AtvPainel_controle extends AppCompatActivity implements View.OnClic
             Intent funcionario = new Intent(this, AtvCliente.class);
             startActivity(funcionario);
         } else if (v == cardServico) {
-            Intent servico = new Intent(this, AtvCliente.class);
+            Intent servico = new Intent(this, atvServico.class);
             startActivity(servico);
         } else if (v == cardAgendamento) {
             Intent agendamento = new Intent(this, AtvCliente.class);

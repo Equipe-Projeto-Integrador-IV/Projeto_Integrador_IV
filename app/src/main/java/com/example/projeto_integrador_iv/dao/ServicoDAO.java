@@ -26,7 +26,6 @@
         private ContentValues preencherValoresServicos(Servico servico){
             ContentValues values = new ContentValues();
 
-            values.put("id_servico",servico.getIdServico());
             values.put("nome",servico.getNome());
             values.put("descricao", servico.getDescricao());
             values.put("preco_custo",servico.getPreco_custo());
