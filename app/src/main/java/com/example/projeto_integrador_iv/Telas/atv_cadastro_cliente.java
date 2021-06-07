@@ -75,7 +75,7 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
             finish();
         } else if (v == btnExcluir) {
             long cpf = dao.remove(c);
-            Toast.makeText(this, "Cliente" + c.getNome() + " foi excluído com sucesso!",
+            Toast.makeText(this, "Cliente " + c.getNome() + " foi excluído com sucesso!",
                     Toast.LENGTH_SHORT).show();
             finish();
         } else if (v == btnGravar) {
@@ -87,11 +87,11 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
 
             if (acao.equals("Inserir")) {
                 long cpf = dao.insert(c);
-                Toast.makeText(this, "Cliente" + c.getNome() + " foi cadastrado com sucesso!",
+                Toast.makeText(this, "Cliente " + c.getNome() + " foi cadastrado com sucesso!",
                         Toast.LENGTH_LONG).show();
             } else {
                 long cpf = dao.update(c);
-                Toast.makeText(this, "Cliente" + c.getNome() + " foi alterado com sucesso!",
+                Toast.makeText(this, "Cliente " + c.getNome() + " foi alterado com sucesso!",
                         Toast.LENGTH_LONG).show();
             }
 
