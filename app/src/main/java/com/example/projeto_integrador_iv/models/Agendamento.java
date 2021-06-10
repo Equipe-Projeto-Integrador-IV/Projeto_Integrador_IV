@@ -102,15 +102,19 @@ public class Agendamento implements Serializable {
 
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
         String hora = sdf.format(this.hora);
-        return "Agendamento{" +
-                "id=" + id +
-                ", date=" + data +
-                ", hora=" + hora +
-                ", status='" + status + '\'' +
-                ", obs='" + obs + '\'' +
-                ", cliente=" + cliente +
-                ", respAgendamento=" + respAgendamento +
-                ", servico=" + servico +
-                '}';
+        return " Agendamento: " + "\n" +
+                " Id: " + id + "\n" +
+                " Date: " + data + "\n" +
+                " Hora: " + hora + "\n" +
+                " Status: " + status + "\n" +
+                "------------Dados Cliente-----------" + "\n" +
+                " Cliente: " + cliente + "\n" +
+                "------------Dados Funcionário------------" + "\n" +
+                " responsável-agendamento: " + "\n" +
+                 respAgendamento + "\n" +
+                "------------Dados Serviços------------" + "\n" +
+                  servico + "\n" +
+                "\n" +
+                " Obs: " + obs ;
     }
 }

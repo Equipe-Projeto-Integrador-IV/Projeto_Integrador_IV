@@ -64,10 +64,7 @@ public class Servico implements Serializable {
 
     @Override
     public String toString() {
-        return "Servico: " + getNome() +  "\n" + "Id: " + getIdServico()  + "\n"
-                +"Preço de Custo: " + getPreco_custo() + "\n"+
-                "Preco de Venda: " + getPreco_venda() + "\n" +
-                "Descricao: " + getDescricao() + "\n" ;
+        return " Servico: " + getNome() +  "\n" + " Id: " + getIdServico();
 
     }
 
