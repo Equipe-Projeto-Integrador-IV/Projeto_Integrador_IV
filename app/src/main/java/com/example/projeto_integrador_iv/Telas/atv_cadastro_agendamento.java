@@ -197,6 +197,9 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
 //                agendamento.setHora((Date) edtHora.getText());
                 agendamento.setStatus(edtStatus.getText().toString());
 
+                Cliente cliente = (Cliente) spinCliente.getSelectedItem();
+                agendamento.setCliente(cliente);
+
                 Funcionario func = (Funcionario) spinFuncionario.getSelectedItem();
                 agendamento.setRespAgendamento(func);
 
