@@ -51,6 +51,7 @@ public class AgendamentoDAO implements Dao<Agendamento>{
         }
         values.put("status", agendamento.getStatus());
         values.put("observacao", agendamento.getObs());
+
         if(agendamento.getCliente() != null){
         values.put("cpf_cliente_fk_agendamento", agendamento.getCliente().getCpfCliente());
         }
