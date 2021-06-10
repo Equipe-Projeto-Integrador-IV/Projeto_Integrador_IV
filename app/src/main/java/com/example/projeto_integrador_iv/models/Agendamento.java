@@ -1,6 +1,8 @@
 package com.example.projeto_integrador_iv.models;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Agendamento implements Serializable {
@@ -95,6 +97,8 @@ public class Agendamento implements Serializable {
 
     @Override
     public String toString() {
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        String data = df.format(this.data);
         return "Agendamento{" +
                 "id=" + id +
                 ", date=" + data +

@@ -42,20 +42,20 @@ public class AtvPainel_controle extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View v) {
         if(v == cardCliente) {
-            Intent cliente = new Intent(this, AtvCliente.class);
-            startActivity(cliente);
+            Intent telaCliente = new Intent(this, AtvCliente.class);
+            startActivity(telaCliente);
         } else if (v == cardFuncionario) {
-            Intent funcionario = new Intent(this, AtvCliente.class);
-            startActivity(funcionario);
+            Intent telaFuncionario = new Intent(this, AtvCliente.class);
+            startActivity(telaFuncionario);
         } else if (v == cardServico) {
-            Intent servico = new Intent(this, atvServico.class);
-            startActivity(servico);
+            Intent telaServico = new Intent(this, atvServico.class);
+            startActivity(telaServico);
         } else if (v == cardAgendamento) {
-            Intent agendamento = new Intent(this, AtvCliente.class);
-            startActivity(agendamento);
+            Intent telaAgendamento = new Intent(this, atvAgendamento.class);
+            startActivity(telaAgendamento);
         } else if (v == cardOrdemServico) {
-            Intent ordServico = new Intent(this, AtvCliente.class);
-            startActivity(ordServico);
+            Intent telaOrdServico = new Intent(this, AtvCliente.class);
+            startActivity(telaOrdServico);
         }
     }
 }
