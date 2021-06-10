@@ -388,6 +388,12 @@
     <string name="preco_custo">Preço-Custo</string>
     <string name="preco_venda">Preço-Venda</string>
     <string name="descricao">Descrição</string>
+    <string name="txt_data">Data</string>
+    <string name="txt_hora">Hora</string>
+    <string name="txt_status">Status</string>
+    <string name="txt_obs">Obs</string>
+    <string name="titulo_cadastro_agendamento">Agendamento</string>
+    <string name="lista_agendamentos">Agendamentos</string>
 
 
 </resources>
