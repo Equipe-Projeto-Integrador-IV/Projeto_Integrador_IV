@@ -43,10 +43,10 @@ public class Conexao extends SQLiteOpenHelper {
     private static final String SQLCREATEAGENDAMENTO="CREATE TABLE agendamento (\n" +
             "    id                             INTEGER       PRIMARY KEY AUTOINCREMENT\n" +
             "                                                 NOT NULL,\n" +
-            "    data                           DATE          NOT NULL,\n" +
-            "    hora                           TIME          NOT NULL,\n" +
+            "    data                           DATE          ,\n" +
+            "    hora                           TIME          ,\n" +
             "    status                         VARCHAR (50)  NOT NULL,\n" +
-            "    observacao                     VARCHAR (100) NOT NULL,\n" +
+            "    observacao                     VARCHAR (100) ,\n" +
             "    cpf_cliente_fk_agendamento     VARCHAR       REFERENCES cliente (cpf_cliente),\n" +
             "    cpf_funcionario_fk_agendamento VARCHAR       NOT NULL\n" +
             "                                                 REFERENCES funcionario (cpf_funcionario),\n" +

@@ -19,10 +19,10 @@ public class Agendamento implements Serializable {
 
     }
 
-    public Agendamento(Long id, Date date, Date hora, String status, String obs,
+    public Agendamento(Long id, Date data, Date hora, String status, String obs,
                        Funcionario respAgendamento, Servico servico) {
         this.id = id;
-        this.data = date;
+        this.data = data;
         this.hora = hora;
         this.status = status;
         this.obs = obs;
@@ -99,15 +99,18 @@ public class Agendamento implements Serializable {
     public String toString() {
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String data = df.format(this.data);
-        
-        return "Agendamento:" +
-                "Id = " + id +"\n"+
-                "Date = " + data +"\n"+
-                "Hora = " + hora +"\n"+
-                "Status = " + status + "\n"+
-                "Obs = " + obs + "\n"+
-                "Cliente =" + cliente +"\n"+
-                "RespAgendamento = " + respAgendamento +"\n"+
-                "Serviço = " + servico;
+
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+        String hora = sdf.format(this.hora);
+        return "Agendamento{" +
+                "id=" + id +
+                ", date=" + data +
+                ", hora=" + hora +
+                ", status='" + status + '\'' +
+                ", obs='" + obs + '\'' +
+                ", cliente=" + cliente +
+                ", respAgendamento=" + respAgendamento +
+                ", servico=" + servico +
+                '}';
     }
 }
