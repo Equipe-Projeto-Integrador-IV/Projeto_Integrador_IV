@@ -99,8 +99,8 @@ public class Agendamento implements Serializable {
     public String toString() {
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String data = df.format(this.data);
-
-        return "Agendamento:" + "\n"+
+        
+        return "Agendamento:" +
                 "Id = " + id +"\n"+
                 "Date = " + data +"\n"+
                 "Hora = " + hora +"\n"+
