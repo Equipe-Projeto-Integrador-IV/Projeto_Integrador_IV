@@ -46,21 +46,20 @@ public class AgendamentoDAO implements Dao<Agendamento>{
         if (agendamento.getHora() != null) {
             DateFormat df = new SimpleDateFormat("hh:mm:ss a");
             String hora = df.format(agendamento.getHora().getTime());
-            Log.i("HOUR", "hora inseirda" + hora);
+            Log.i("HOUR", "hora inserida" + hora);
             values.put("hora", hora);
         }
-//        values.put("hora", agendamento.getHora().getTime());
         values.put("status", agendamento.getStatus());
         values.put("observacao", agendamento.getObs());
         if(agendamento.getCliente() != null){
         values.put("cpf_cliente_fk_agendamento", agendamento.getCliente().getCpfCliente());
         }
-        if(agendamento.getRespAgendamento() != null) {
+
             values.put("cpf_funcionario_fk_agendamento", agendamento.getRespAgendamento().getCpfFuncionario());
-        }
-        if(agendamento.getServico() != null) {
+
+
             values.put("id_servico_fk_agendamento", agendamento.getServico().getIdServico());
-        }
+
 
         return values;
     }
@@ -69,9 +68,9 @@ public class AgendamentoDAO implements Dao<Agendamento>{
     public long insert(Agendamento agendamento) {
 
         ContentValues values = preencherValoresAgendamento(agendamento);
-        long agendamentoCad = banco.insert(TABELA, null, values);
-        agendamento.setId(agendamentoCad);
-        return agendamentoCad;
+        long test = banco.insert(TABELA, null, values);
+        agendamento.setId(test);
+        return test;
     }
 
     @Override
@@ -101,10 +100,12 @@ public class AgendamentoDAO implements Dao<Agendamento>{
                 agendamento.setDate(null);
                 e.printStackTrace();
             }
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+
             try {
                 String hour = c.getString(2);
                 Log.i("HOUR", "hour " + hour);
-                agendamento.setHora(df.parse(hour));
+                agendamento.setHora(sdf.parse(hour));
             } catch (ParseException e) {
                 agendamento.setHora(null);
                 e.printStackTrace();

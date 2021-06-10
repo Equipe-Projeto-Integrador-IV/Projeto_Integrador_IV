@@ -100,6 +100,17 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
         spinServico.setAdapter(baseAdapter);
     }
 
+    int retornarIndiceCliente(String cpf) {
+        int indice = 0;
+        for (Cliente obj: listaCliente) {
+            if (obj.getCpfCliente() == cpf) {
+                return indice;
+            }
+            indice++;
+        }
+        return 0;
+    }
+
     int retornarIndiceFuncionario(String cpf) {
         int indice = 0;
         for (Funcionario obj: listaFuncionario) {
@@ -150,12 +161,18 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
 //               agendamento.setDate(hour);
 
             edtStatus.setText(agendamento.getStatus());
+            edtObs.setText(agendamento.getObs());
+//
+//            int cliente = retornarIndiceCliente(agendamento.getCliente().getCpfCliente());
+//            spinServico.setSelection(cliente);
+//
+//          int func = retornarIndiceFuncionario(agendamento.getRespAgendamento().getCpfFuncionario());
+//          spinFuncionario.setSelection(func);
+//
+//           int servico = retornarIndiceServico(agendamento.getServico().getIdServico());
+//           spinServico.setSelection(servico);
 
-//            int func = retornarIndiceFuncionario(agendamento.getRespAgendamento().getCpfFuncionario());
-//            spinFuncionario.setSelection(func);
 
-//            int servico = retornarIndiceServico(agendamento.getServico().getIdServico());
-//            spinServico.setSelection(servico);
 
 
         }
@@ -183,9 +200,20 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
             }
             agendamento.setDate(date);
 
-//                agendamento.setDate( edtData.getText().toString());
-//                agendamento.setHora((Date) edtHora.getText());
+            String strHour = edtHora.getText().toString();
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+            Date hora = new Date();
+            try {
+                hora = sdf.parse(strHour);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            agendamento.setHora(hora);
+
                 agendamento.setStatus(edtStatus.getText().toString());
+
+                Cliente cliente = (Cliente) spinCliente.getSelectedItem();
+                 agendamento.setCliente(cliente);
 
                 Funcionario func = (Funcionario) spinFuncionario.getSelectedItem();
                 agendamento.setRespAgendamento(func);
