@@ -37,7 +37,7 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
     EditText edtIdAgendamento;
     EditText edtData;
     EditText edtHora;
-    EditText edtStatus;
+    Spinner spinStatus;
     Spinner spinFuncionario;
     Spinner spinServico;
     Spinner spinCliente;
@@ -63,7 +63,7 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
         edtIdAgendamento = findViewById(R.id.edtIdAgendamento);
         edtData = findViewById(R.id.edtData);
         edtHora = findViewById(R.id.edtHora);
-        edtStatus = findViewById(R.id.edtStatus);
+        spinStatus = findViewById(R.id.spinStatus);
         spinCliente = findViewById(R.id.spinCliente);
         spinFuncionario = findViewById(R.id.spinFuncionario);
         spinServico = findViewById(R.id.spinServico);
@@ -83,6 +83,8 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
             btnExcluir.setVisibility(View.INVISIBLE);
         else
             btnExcluir.setVisibility(View.VISIBLE);
+
+//        agendamento.setStatus(spinStatus.getSelectedItem().toString());
 
         clienteDAO = new ClienteDAO(this);
         listaCliente = clienteDAO.list();
@@ -160,7 +162,6 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
 //               hour = dfHour.parse(strHour);
 //               agendamento.setDate(hour);
 
-            edtStatus.setText(agendamento.getStatus());
             edtObs.setText(agendamento.getObs());
 //
 //            int cliente = retornarIndiceCliente(agendamento.getCliente().getCpfCliente());
@@ -210,7 +211,7 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
             }
             agendamento.setHora(hora);
 
-                agendamento.setStatus(edtStatus.getText().toString());
+                agendamento.setStatus(spinStatus.getSelectedItem().toString());
 
                 Cliente cliente = (Cliente) spinCliente.getSelectedItem();
                  agendamento.setCliente(cliente);

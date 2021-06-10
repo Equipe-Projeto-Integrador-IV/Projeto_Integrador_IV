@@ -42,7 +42,7 @@ public class AgendamentoDAO implements Dao<Agendamento>{
             Log.i("DAO", "data inserida" + data);
             values.put("data", data);
         }
-//        values.put("data", agendamento.getData().toString());
+
         if (agendamento.getHora() != null) {
             DateFormat df = new SimpleDateFormat("hh:mm:ss a");
             String hora = df.format(agendamento.getHora().getTime());
@@ -56,11 +56,13 @@ public class AgendamentoDAO implements Dao<Agendamento>{
         values.put("cpf_cliente_fk_agendamento", agendamento.getCliente().getCpfCliente());
         }
 
+        if(agendamento.getRespAgendamento() != null) {
             values.put("cpf_funcionario_fk_agendamento", agendamento.getRespAgendamento().getCpfFuncionario());
+        }
 
-
+        if(agendamento.getServico() != null) {
             values.put("id_servico_fk_agendamento", agendamento.getServico().getIdServico());
-
+        }
 
         return values;
     }

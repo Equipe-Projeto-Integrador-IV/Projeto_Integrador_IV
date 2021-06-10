@@ -114,12 +114,13 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/txt_status" />
 
-            <EditText
-                android:id="@+id/edtStatus"
+            <Spinner
+                android:id="@+id/spinStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text" />
+                android:entries="@array/status"
+                />
 
             <TextView
                 android:id="@+id/txtCliente"
