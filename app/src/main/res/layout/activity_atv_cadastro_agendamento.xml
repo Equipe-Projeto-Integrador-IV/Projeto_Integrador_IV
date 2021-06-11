@@ -118,7 +118,8 @@
                 android:id="@+id/spinStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_marginBottom="5pt"
+
                 android:entries="@array/status"
                 />
 
@@ -147,7 +148,8 @@
                 android:id="@+id/spinFuncionario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_marginBottom="5pt"
+
                 />
 
             <TextView
@@ -161,7 +163,8 @@
                 android:id="@+id/spinServico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_marginBottom="5pt"
+
                 />
 
             <TextView

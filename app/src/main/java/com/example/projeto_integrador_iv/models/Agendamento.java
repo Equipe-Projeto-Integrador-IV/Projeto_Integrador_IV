@@ -107,12 +107,12 @@ public class Agendamento implements Serializable {
                 " Date: " + data + "\n" +
                 " Hora: " + hora + "\n" +
                 " Status: " + status + "\n" +
-                "------------Dados Cliente-----------" + "\n" +
+                "------------Dados Cliente----------------" + "\n" +
                 " Cliente: " + cliente + "\n" +
                 "------------Dados Funcionário------------" + "\n" +
-                " responsável-agendamento: " + "\n" +
+                " Responsável-Agendamento: " + "\n" +
                  respAgendamento + "\n" +
-                "------------Dados Serviços------------" + "\n" +
+                "------------Dados Serviços---------------" + "\n" +
                   servico + "\n" +
                 "\n" +
                 " Obs: " + obs ;
