@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class Conexao extends SQLiteOpenHelper {
 
-    private static final String NAME = "banco.db";
+    public static final String NAME = "banco.db";
     private static final int VERSION = 1;
 
     private static final String SQLCREATECLIENTE = "CREATE TABLE cliente (\n" +
