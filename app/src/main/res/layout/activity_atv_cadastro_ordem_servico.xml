@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Telas.atv_cadastro_agendamento"
+    tools:context=".Telas.atv_cadastro_ordem_servico"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="2dp"
-            android:text="@string/titulo_agendar"
+            android:text="@string/lista_ordemServico"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -65,13 +66,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtIdAgendamento"
+                android:id="@+id/txtOrdServico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/txt_id" />
             <EditText
-                android:id="@+id/edtIdAgendamento"
+                android:id="@+id/edtOrdServico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:editable="false"
@@ -80,28 +81,56 @@
                 android:inputType="number" />
 
             <TextView
-                android:id="@+id/txtData"
+                android:id="@+id/txtDataInicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/txt_data" />
+                android:text="@string/txt_data_inicio" />
 
             <EditText
-                android:id="@+id/edtData"
+                android:id="@+id/edtDataInicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="date" />
 
             <TextView
-                android:id="@+id/txtHora"
+                android:id="@+id/txtDataFim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/txt_hora" />
+                android:text="@string/txt_data_fim" />
 
             <EditText
-                android:id="@+id/edtHora"
+                android:id="@+id/edtDataFim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/txtHoraInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txt_hora_inicio" />
+
+            <EditText
+                android:id="@+id/edtHoraInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="datetime" />
+
+            <TextView
+                android:id="@+id/txtHoraFim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txt_hora_fim" />
+
+            <EditText
+                android:id="@+id/edtHoraFim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -119,41 +148,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5pt"
-
-                android:entries="@array/status"
+                android:entries="@array/statusOrd"
                 />
 
             <TextView
-                android:id="@+id/txtCliente"
+                android:id="@+id/txtValor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/txt_cliente" />
+                android:text="@string/txt_valor" />
 
-            <Spinner
-                android:id="@+id/spinCliente"
+            <EditText
+                android:id="@+id/edtValor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+
+            <TextView
+                android:id="@+id/txt_agendamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txt_agendamento" />
+
+            <Spinner
+                android:id="@+id/spinAgendamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5pt"
                 android:ems="10"
                 />
 
             <TextView
-                android:id="@+id/txtFuncionario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/txt_funcionario" />
-
-            <Spinner
-                android:id="@+id/spinFuncionario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5pt"
-
-                />
-
-            <TextView
-                android:id="@+id/txtServico"
+                android:id="@+id/txt_servico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -164,24 +193,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5pt"
-
                 />
 
+
             <TextView
-                android:id="@+id/txtObs"
+                android:id="@+id/txtFuncionario_OS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/txt_obs" />
+                android:text="@string/txt_funcionarioOS" />
 
-            <EditText
-                android:id="@+id/edtObs"
+            <Spinner
+                android:id="@+id/spinFuncionarioOS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textMultiLine|textPersonName"
-                android:lines="5"/>
+                android:layout_marginBottom="5pt"
+                />
+
+            <TextView
+                android:id="@+id/txtFuncionario_SV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/txt_funcionarioSV" />
+
+            <Spinner
+                android:id="@+id/spinFuncionarioSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5pt"
+                />
+
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

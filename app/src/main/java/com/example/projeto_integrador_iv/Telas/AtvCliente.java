@@ -23,6 +23,7 @@ public class AtvCliente extends AppCompatActivity
 
     ListView lstCliente;
     Button btnCad;
+    Button btnVoltar;
 
     List<Cliente> listaClientes = new ArrayList<>();
     ListAdapter listAdapter;
@@ -36,6 +37,9 @@ public class AtvCliente extends AppCompatActivity
 
         btnCad = findViewById(R.id.btnCad);
         btnCad.setOnClickListener(this);
+
+        btnVoltar = findViewById(R.id.btnVoltar);
+        btnVoltar.setOnClickListener(this);
 
         lstCliente = findViewById(R.id.lstCliente);
         lstCliente.setOnItemClickListener(this);
@@ -62,6 +66,8 @@ public class AtvCliente extends AppCompatActivity
         if (v == btnCad) {
             Cliente c = new Cliente();
             abrirCadastro("Inserir", c);
+        } else if (v == btnVoltar) {
+            finish();
         }
     }
 

@@ -394,6 +394,15 @@
     <string name="txt_obs">Obs</string>
     <string name="titulo_cadastro_agendamento">Agendamento</string>
     <string name="lista_agendamentos">Agendamentos</string>
+    <string name="titulo_agendar">Agendar</string>
+    <string name="lista_ordemServico">Ordem Serviço</string>
+    <string name="txt_data_inicio">Data/Início</string>
+    <string name="txt_data_fim">Data/Fim</string>
+    <string name="txt_hora_inicio">Hora/Início</string>
+    <string name="txt_hora_fim">Hora/Fim</string>
+    <string name="txt_valor">Valor do serviço</string>
+    <string name="txt_funcionarioOS">Responsável pela OS</string>
+    <string name="txt_funcionarioSV">Responsável pelo serviço</string>
 
 
 </resources>

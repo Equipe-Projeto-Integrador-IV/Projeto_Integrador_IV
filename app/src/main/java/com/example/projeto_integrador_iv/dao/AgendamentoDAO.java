@@ -8,7 +8,6 @@ import android.util.Log;
 
 import com.example.projeto_integrador_iv.models.Agendamento;
 import com.example.projeto_integrador_iv.models.Cliente;
-import com.example.projeto_integrador_iv.models.Funcionario;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -71,9 +70,9 @@ public class AgendamentoDAO implements Dao<Agendamento>{
     public long insert(Agendamento agendamento) {
 
         ContentValues values = preencherValoresAgendamento(agendamento);
-        long test = banco.insert(TABELA, null, values);
-        agendamento.setId(test);
-        return test;
+        long insertAgendamento = banco.insert(TABELA, null, values);
+        agendamento.setId(insertAgendamento);
+        return insertAgendamento;
     }
 
     @Override
@@ -98,9 +97,9 @@ public class AgendamentoDAO implements Dao<Agendamento>{
             try {
                 String data = c.getString(1);
                 Log.i("DAO", "data " + data);
-                agendamento.setDate(df.parse(data));
+                agendamento.setData(df.parse(data));
             } catch (ParseException e) {
-                agendamento.setDate(null);
+                agendamento.setData(null);
                 e.printStackTrace();
             }
             SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
@@ -143,9 +142,9 @@ public class AgendamentoDAO implements Dao<Agendamento>{
              try {
                 String data = c.getString(1);
                 Log.i("DAO", "data " + data);
-                agendamento.setDate(df.parse(data));
+                agendamento.setData(df.parse(data));
              } catch (ParseException e) {
-                 agendamento.setDate(null);
+                 agendamento.setData(null);
                  e.printStackTrace();
              }
              try {
@@ -166,6 +165,45 @@ public class AgendamentoDAO implements Dao<Agendamento>{
          }
          return lista;
      }
+
+    public Agendamento get(Long id) {
+        Cursor c = banco.query(TABELA, CAMPOS,
+                "id = ?", new String[] {String.valueOf(id)}, null, null, null);
+//data, hora, status, observacao, cpf_cliente_fk_agendamento, cpf_funcionario_fk_agendamento, id_servico_fk_agendamento"
+        if (c.moveToNext()) {
+            Agendamento agendamento = new Agendamento();
+            agendamento.setId(Long.valueOf(c.getString(0)));
+
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                String data = c.getString(1);
+                Log.i("DAO", "data " + data);
+                agendamento.setData(df.parse(data));
+            } catch (ParseException e) {
+                agendamento.setData(null);
+                e.printStackTrace();
+            }
+            try {
+                String hour = c.getString(2);
+                Log.i("HOUR", "hour " + hour);
+                agendamento.setHora(df.parse(hour));
+            } catch (ParseException e) {
+                agendamento.setHora(null);
+                e.printStackTrace();
+            }
+
+            agendamento.setStatus(c.getString(3));
+            agendamento.setObs(c.getString(4));
+            agendamento.setCliente(new ClienteDAO(context).get(c.getString(5)));
+            agendamento.setRespAgendamento(new FuncionarioDAO(context).get(c.getString(6)));
+            agendamento.setServico(new ServicoDAO(context).get(c.getLong(7)));
+
+           return agendamento;
+        }
+        else {
+            return null;
+        }
+    }
 
 
 }

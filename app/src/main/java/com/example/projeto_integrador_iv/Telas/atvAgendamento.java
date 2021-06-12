@@ -23,6 +23,7 @@ public class atvAgendamento extends AppCompatActivity implements View.OnClickLis
 
     ListView lstAgendamento;
     Button btnCad;
+    Button btnVoltar;
 
     List<Agendamento> listaAgendamento = new ArrayList<>();
     ListAdapter listAdapter;
@@ -32,6 +33,9 @@ public class atvAgendamento extends AppCompatActivity implements View.OnClickLis
     private void criarComponentes() {
         btnCad = findViewById(R.id.btnCad);
         btnCad.setOnClickListener(this);
+
+        btnVoltar = findViewById(R.id.btnVoltar);
+        btnVoltar.setOnClickListener(this);
 
         lstAgendamento = findViewById(R.id.lstAgendamento);
         lstAgendamento.setOnItemClickListener(this);
@@ -66,6 +70,8 @@ public class atvAgendamento extends AppCompatActivity implements View.OnClickLis
             Agendamento agendamento = new Agendamento();
             agendamento.setId(1L);
             abrirCadastro("Inserir", agendamento);
+        } else if (v == btnVoltar) {
+            finish();
         }
     }
 

@@ -199,7 +199,7 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            agendamento.setDate(date);
+            agendamento.setData(date);
 
             String strHour = edtHora.getText().toString();
             SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
