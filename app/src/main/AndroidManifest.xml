@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projeto_Integrador_IV">
-        <activity android:name=".Telas.atvAgendamento"></activity>
+        <activity android:name=".Telas.atv_cadastro_ordem_servico"></activity>
+        <activity android:name=".Telas.atvOrdemServico" />
+        <activity android:name=".Telas.atvAgendamento" />
         <activity android:name=".Telas.atv_cadastro_agendamento" />
         <activity android:name=".Telas.atv_cadastro_servico" />
         <activity android:name=".Telas.atvServico" />

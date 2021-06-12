@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Telas.atvAgendamento"
+    tools:context=".Telas.atvOrdemServico"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:layout_marginLeft="5dp"
-            android:text="@string/lista_agendamentos"
+            android:text="@string/lista_ordemServico"
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -51,7 +51,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/lstAgendamento"
+        android:id="@+id/lstOrdemServico"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="@color/white"

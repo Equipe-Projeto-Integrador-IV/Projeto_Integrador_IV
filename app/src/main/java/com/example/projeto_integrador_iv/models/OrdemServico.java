@@ -1,6 +1,8 @@
     package com.example.projeto_integrador_iv.models;
 
     import java.io.Serializable;
+    import java.text.DateFormat;
+    import java.text.SimpleDateFormat;
     import java.util.Date;
 
     public class OrdemServico implements Serializable {
@@ -10,16 +12,11 @@
         private Date hora_inicio;
         private Date hora_fim;
         private String status;
-        private Float valor;
+        private Float valor = 0f;
         private Agendamento agendamento;
         private Servico servico;
         private Funcionario respOS;
         private Funcionario execServico;
-
-        /*
-         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-         String data = df.format(lancamento.getData());
-         */
 
         public OrdemServico() {
 
@@ -132,13 +129,22 @@
 
         @Override
         public String toString() {
+            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+            String data_inicio = df.format(this.data_inicio);
+            String data_fim = df.format(this.data_fim);
+
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+            String hora_inicio = sdf.format(this.hora_inicio);
+            String hora_fim = sdf.format(this.hora_fim);
+
+
             return "OrdemServico{" +
                     "id_os=" + id_os +
                     ", data_inicio=" + data_inicio +
                     ", data_fim=" + data_fim +
                     ", hora_inicio=" + hora_inicio +
                     ", hora_fim=" + hora_fim +
-                    ", status='" + status + '\'' +
+                    ", status='" + status + '\n' +
                     ", valor=" + valor +
                     ", agendamento=" + agendamento +
                     ", servico=" + servico +
