@@ -33,8 +33,6 @@ public class OrdemServicoDAO implements Dao<OrdemServico> {
     private ContentValues preencherValoresOrdemServico(OrdemServico ordemServico){
         ContentValues values = new ContentValues();
 
-        values.put("id_os",ordemServico.getId_os());
-
         if(ordemServico.getData_inicio() != null) {
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             String data_inicio = df.format(ordemServico.getData_inicio());
