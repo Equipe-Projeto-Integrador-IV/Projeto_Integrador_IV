@@ -130,13 +130,12 @@
         @Override
         public String toString() {
             DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-            String data_inicio = df.format(this.data_inicio);
-            String data_fim = df.format(this.data_fim);
+            String data_inicio = this.data_inicio == null ? "" : df.format(this.data_inicio);
+            String data_fim = this.data_fim == null ? "" : df.format(this.data_fim);
 
             SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
-            String hora_inicio = sdf.format(this.hora_inicio);
-            String hora_fim = sdf.format(this.hora_fim);
-
+            String hora_inicio = this.hora_inicio == null ? "" : sdf.format(this.hora_inicio);
+            String hora_fim = this.hora_fim == null ? "" : sdf.format(this.hora_fim);
 
             return "OrdemServico{" +
                     "id_os=" + id_os +
