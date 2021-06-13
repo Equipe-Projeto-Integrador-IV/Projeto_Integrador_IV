@@ -2,6 +2,7 @@ package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,10 +14,20 @@ import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.dao.ClienteDAO;
 import com.example.projeto_integrador_iv.dao.FuncionarioDAO;
 import com.example.projeto_integrador_iv.models.Funcionario;
+import com.example.projeto_integrador_iv.services.ConexaoService;
+import com.example.projeto_integrador_iv.services.FuncionarioService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class TelaCadastrarFuncionario extends AppCompatActivity implements View.OnClickListener {
 
-
+    private Retrofit retrofit;
+    FuncionarioService Fservice;
+    Context context;
 
     EditText edit_text_cpf;
     EditText edit_text_name;
@@ -40,6 +51,18 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastrar_funcionario);
+
+
+        //RETROFIT
+        ConexaoService conexaoService = new ConexaoService();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(conexaoService.getUrlConexao())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        Fservice = retrofit.create(FuncionarioService.class);
+        context = this;
+//FIM RETROFIT
+
 
         edit_text_telefone = findViewById(R.id.edit_text_telefone);
         edit_text_cpf = findViewById(R.id.edit_text_cpf);
@@ -74,6 +97,22 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
             f.setSenha(edit_text_password.getText().toString());
 
             Fdao.insert(f);
+            Call<Funcionario> call = Fservice.postFuncionario(f);
+
+            call.enqueue(new Callback<Funcionario>() {
+                @Override
+                public void onResponse(Call<Funcionario> call, Response<Funcionario> response) {
+
+                    if(response.isSuccessful()) {
+                        Funcionario funcSalvo = response.body();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Funcionario> call, Throwable t) {
+
+                }
+            });
 
         }
 

@@ -2,6 +2,7 @@ package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -20,13 +21,25 @@ import com.example.projeto_integrador_iv.models.Agendamento;
 import com.example.projeto_integrador_iv.models.Funcionario;
 import com.example.projeto_integrador_iv.models.OrdemServico;
 import com.example.projeto_integrador_iv.models.Servico;
+import com.example.projeto_integrador_iv.services.ConexaoService;
+import com.example.projeto_integrador_iv.services.OrdemServicoService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class atv_cadastro_ordem_servico extends AppCompatActivity implements View.OnClickListener {
+
+    private Retrofit retrofit;
+    OrdemServicoService oService;
+    Context context;
 
     Button btnGravar;
     Button btnVoltar;
@@ -116,6 +129,17 @@ public class atv_cadastro_ordem_servico extends AppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atv_cadastro_ordem_servico);
 
+
+        //RETROFIT
+        ConexaoService conexaoService = new ConexaoService();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(conexaoService.getUrlConexao())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        oService = retrofit.create(OrdemServicoService.class);
+        context = this;
+        //FIM RETROFIT
+
         acao = getIntent().getExtras().getString("acao");
         dao = new OrdemServicoDAO(this);
         criarComponentes();
@@ -191,6 +215,22 @@ public class atv_cadastro_ordem_servico extends AppCompatActivity implements Vie
 
                 if (acao.equals("Inserir")) {
                     long id = dao.insert(ordemServico);
+                    ordemServico.setId_os(id);
+                    Call<OrdemServico> call = oService.postOrdemServico(ordemServico);
+                    call.enqueue(new Callback<OrdemServico>() {
+                        @Override
+                        public void onResponse(Call<OrdemServico> call, Response<OrdemServico> response) {
+                            if(response.isSuccessful()){
+                                OrdemServico ordemservicoSalvo = response.body();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<OrdemServico> call, Throwable t) {
+
+                        }
+                    });
+
                     Toast.makeText(this, "Ordem de Serviço foi inserido com o id = " + ordemServico.getId_os(),
                             Toast.LENGTH_LONG).show();
                 } else {

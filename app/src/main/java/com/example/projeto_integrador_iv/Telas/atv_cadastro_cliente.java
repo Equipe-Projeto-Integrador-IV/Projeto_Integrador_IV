@@ -2,7 +2,9 @@ package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +13,16 @@ import android.widget.Toast;
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.dao.ClienteDAO;
 import com.example.projeto_integrador_iv.models.Cliente;
+import com.example.projeto_integrador_iv.services.ClienteService;
+
+import java.nio.channels.CancelledKeyException;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class atv_cadastro_cliente extends AppCompatActivity implements View.OnClickListener {
     Button btnGravar;
@@ -26,6 +38,10 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
     String acao;
     Cliente c;
     ClienteDAO dao;
+
+    private Retrofit retrofit;
+    ClienteService Cservice;
+    Context context;
 
     private void criarComponentes() {
         btnGravar = findViewById(R.id.btnGravar);
@@ -55,6 +71,14 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atv_cadastro_cliente);
 
+//RETROFIT
+        retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.160.7:8080/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        Cservice = retrofit.create(ClienteService.class);
+        context = this;
+//FIM RETROFIT
         acao = getIntent().getExtras().getString("acao");
         dao =  new ClienteDAO(this);
         criarComponentes();
@@ -87,6 +111,30 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
 
             if (acao.equals("Inserir")) {
                 long cpf = dao.insert(c);
+                Call<Cliente> call = Cservice.postCliente(c);
+
+                call.enqueue(new Callback<Cliente>() {
+                    @Override
+                    public void onResponse(Call<Cliente> call, Response<Cliente> response) {
+                        if(response.isSuccessful()){
+
+                            Cliente clienteSalvo = response.body();
+                            Toast.makeText(atv_cadastro_cliente.this, "Fabricante inserido com sucesso!!", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Log.e("Erro", response.toString());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Cliente> call, Throwable t) {
+
+                        Toast.makeText(atv_cadastro_cliente.this,"Ocorreu um erro na requisicao", Toast.LENGTH_SHORT).show();
+                        Log.e("Erro",t.getMessage());
+                    }
+                });
+
+
                 Toast.makeText(this, "Cliente " + c.getNome() + " foi cadastrado com sucesso!",
                         Toast.LENGTH_LONG).show();
             } else {
@@ -96,7 +144,13 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
                         Toast.LENGTH_LONG).show();
             }
 
+
+
+
+
             finish();
         }
     }
+
+
 }

@@ -2,17 +2,34 @@ package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import java.lang.Float;
+import java.math.BigDecimal;
+
 import com.example.projeto_integrador_iv.R;
 import com.example.projeto_integrador_iv.dao.ServicoDAO;
 import com.example.projeto_integrador_iv.models.Servico;
+import com.example.projeto_integrador_iv.services.ConexaoService;
+import com.example.projeto_integrador_iv.services.ServicoService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class atv_cadastro_servico extends AppCompatActivity implements View.OnClickListener {
+
+
+    private Retrofit retrofit;
+    ServicoService Sservice;
+    Context context;
+
     Button btnGravar;
     Button btnVoltar;
     Button btnExcluir;
@@ -55,6 +72,18 @@ public class atv_cadastro_servico extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atv_cadastro_servico);
 
+
+        //RETROFIT
+        ConexaoService conexaoService = new ConexaoService();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(conexaoService.getUrlConexao())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        Sservice = retrofit.create(ServicoService.class);
+        context = this;
+        //FIM RETROFIT
+
+
         acao = getIntent().getExtras().getString("acao");
         dao = new ServicoDAO(this);
         criarComponentes();
@@ -79,6 +108,7 @@ public class atv_cadastro_servico extends AppCompatActivity implements View.OnCl
                     Toast.LENGTH_LONG).show();
             finish();
         } else if (v == btnGravar) {
+
             s.setNome(edtNomeServico.getText().toString());
             s.setPreco_custo(Float.valueOf(edtPrecoCusto.getText().toString()));
             s.setPreco_venda(Float.valueOf(edtPrecoVenda.getText().toString()));
@@ -86,6 +116,24 @@ public class atv_cadastro_servico extends AppCompatActivity implements View.OnCl
 
             if (acao.equals("Inserir")) {
                 long id = dao.insert(s);
+                s.setIdServico(id);
+                Call<Servico> call = Sservice.postServico(s);
+
+                call.enqueue(new Callback<Servico>() {
+                    @Override
+                    public void onResponse(Call<Servico> call, Response<Servico> response) {
+                        if(response.isSuccessful()){
+                            Servico servicoSalvo = response.body();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Servico> call, Throwable t) {
+
+                    }
+                });
+
+
                 Toast.makeText(this, "Serviço " + s.getNome() + " foi inserido com o id = " + id,
                         Toast.LENGTH_LONG).show();
             } else {
