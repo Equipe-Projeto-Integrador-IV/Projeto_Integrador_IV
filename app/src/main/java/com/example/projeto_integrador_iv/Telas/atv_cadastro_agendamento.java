@@ -2,6 +2,7 @@ package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -22,13 +23,28 @@ import com.example.projeto_integrador_iv.models.Agendamento;
 import com.example.projeto_integrador_iv.models.Cliente;
 import com.example.projeto_integrador_iv.models.Funcionario;
 import com.example.projeto_integrador_iv.models.Servico;
+import com.example.projeto_integrador_iv.services.AgendamentoService;
+import com.example.projeto_integrador_iv.services.ConexaoService;
+
+
 import java.lang.String;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class atv_cadastro_agendamento extends AppCompatActivity implements View.OnClickListener {
+
+
+    private Retrofit retrofit;
+    AgendamentoService aService;
+    Context context;
 
     Button btnGravar;
     Button btnVoltar;
@@ -140,6 +156,17 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atv_cadastro_agendamento);
 
+
+        //RETROFIT
+        ConexaoService conexaoService = new ConexaoService();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(conexaoService.getUrlConexao())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        aService = retrofit.create(AgendamentoService.class);
+        context = this;
+        //FIM RETROFIT
+
         acao = getIntent().getExtras().getString("acao");
         dao = new AgendamentoDAO(this);
         criarComponentes();
@@ -225,7 +252,27 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
                 agendamento.setObs(edtObs.getText().toString());
 
                 if (acao.equals("Inserir")) {
+
                     long id = dao.insert(agendamento);
+                    agendamento.setId(id);
+
+                    Call<Agendamento> call = aService.postAgendamento(agendamento);
+
+                    call.enqueue(new Callback<Agendamento>() {
+                        @Override
+                        public void onResponse(Call<Agendamento> call, Response<Agendamento> response) {
+                            if(response.isSuccessful()){
+                                Agendamento agendamentoSalvo = response.body();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<Agendamento> call, Throwable t) {
+
+                        }
+                    });
+
+
                     Toast.makeText(this, "Agendamento foi inserido com o id = " + agendamento.getId(),
                             Toast.LENGTH_LONG).show();
                 } else {
