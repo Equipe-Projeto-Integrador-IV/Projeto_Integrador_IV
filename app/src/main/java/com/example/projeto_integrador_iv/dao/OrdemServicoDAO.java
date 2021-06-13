@@ -141,11 +141,11 @@ public class OrdemServicoDAO implements Dao<OrdemServico> {
             }
 
             ordemServico.setStatus(c.getString(5));
-
-           ordemServico.setAgendamento(new AgendamentoDAO(context).get(Long.valueOf(c.getString(6))));
-           ordemServico.setServico(new ServicoDAO(context).get(Long.valueOf(c.getString(7))));
-           ordemServico.setRespOS(new FuncionarioDAO(context).get(c.getString(8)));
-           ordemServico.setExecServico(new FuncionarioDAO(context).get(c.getString(9)));
+            ordemServico.setValor(c.getFloat(6));
+           ordemServico.setAgendamento(new AgendamentoDAO(context).get(Long.valueOf(c.getString(7))));
+           ordemServico.setServico(new ServicoDAO(context).get(Long.valueOf(c.getString(8))));
+           ordemServico.setRespOS(new FuncionarioDAO(context).get(c.getString(9)));
+           ordemServico.setExecServico(new FuncionarioDAO(context).get(c.getString(10)));
 
             lista.add(ordemServico);
         }
