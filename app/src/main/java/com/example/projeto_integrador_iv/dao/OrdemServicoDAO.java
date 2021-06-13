@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.projeto_integrador_iv.models.Funcionario;
 import com.example.projeto_integrador_iv.models.OrdemServico;
 
 import java.text.DateFormat;
@@ -152,8 +153,10 @@ public class OrdemServicoDAO implements Dao<OrdemServico> {
     }
 
     @Override
-    public long remove(OrdemServico t) {
-        return 0;
+    public long remove(OrdemServico ordemServico) {
+        long ordServiceRemoved = banco.delete(TABELA, "id_os = ?", new String[] {String.valueOf(ordemServico.getId_os())});
+        return ordServiceRemoved;
     }
 
 }
+
