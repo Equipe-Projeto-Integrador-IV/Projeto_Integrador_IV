@@ -42,10 +42,6 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
     Button btnVoltar;
     Button btnCadastrarFunc;
 
-    EditText edtCPF_FUNCIONARIO_Cad;
-    EditText edtSENHA_FUNCIONARIO_Cad;
-
-    ClienteDAO Cdao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

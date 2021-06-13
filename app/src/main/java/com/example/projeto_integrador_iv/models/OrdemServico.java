@@ -137,18 +137,21 @@
             String hora_inicio = this.hora_inicio == null ? "" : sdf.format(this.hora_inicio);
             String hora_fim = this.hora_fim == null ? "" : sdf.format(this.hora_fim);
 
-            return "OrdemServico{" +
-                    "id_os=" + id_os +
-                    ", data_inicio=" + data_inicio +
-                    ", data_fim=" + data_fim +
-                    ", hora_inicio=" + hora_inicio +
-                    ", hora_fim=" + hora_fim +
-                    ", status='" + status + '\n' +
-                    ", valor=" + valor +
-                    ", agendamento=" + agendamento +
-                    ", servico=" + servico +
-                    ", respOS=" + respOS +
-                    ", execServico=" + execServico +
-                    '}';
+            return "OrdemServico: " + "\n" +
+                    "Id :" + id_os + "\n" +
+                    "Data_Inicio :" + data_inicio + "\n" +
+                    "Data_Fim: " + data_fim + "\n" +
+                    "Hora_Inicio: " + hora_inicio + "\n" +
+                    "Hora_Fim :" + hora_fim + "\n" +
+                    "Status='" + status + '\n' +
+                    "Valor :" + valor + "\n" +
+                    "-----------------Dados Agendamento-------------------" + "\n" +
+                    agendamento + "\n" +
+                    "-----------------Dados Agendamento-------------------" + "\n" +
+                    "\n" +
+                    "-------------------Informações-------------------" + "\n" +
+                    "Serviço: " + servico.getNome() + "\n" +
+                    "Responsável pela OS: " + respOS.getNome() + "\n" +
+                    "Responsável pelo Serviço: " + execServico.getNome() ;
         }
     }

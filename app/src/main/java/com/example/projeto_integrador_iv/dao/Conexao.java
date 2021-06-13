@@ -11,7 +11,7 @@ public class Conexao extends SQLiteOpenHelper {
     private static final String NAME = "banco.db";
     private static final int VERSION = 1;
 
-    private static final String SQLCREATECLIENTE = "CREATE TABLE cliente (\n" +
+    private static final String SQLCREATECLIENTE = "CREATE TABLE if not exists cliente (\n" +
             "    cpf_cliente VARCHAR PRIMARY KEY\n" +
             "                        NOT NULL,\n" +
             "    nome        VARCHAR NOT NULL,\n" +
@@ -20,7 +20,7 @@ public class Conexao extends SQLiteOpenHelper {
             "    uf          VARCHAR NOT NULL\n" +
             ");";
 
-    private static final String SQLCREATEFUNCIONARIO="CREATE TABLE funcionario (\n" +
+    private static final String SQLCREATEFUNCIONARIO="CREATE TABLE if not exists funcionario (\n" +
             "    cpf_funcionario VARCHAR PRIMARY KEY\n" +
             "                            NOT NULL,\n" +
             "    nome           VARCHAR NOT NULL,\n" +
@@ -30,7 +30,7 @@ public class Conexao extends SQLiteOpenHelper {
             "    senha         VARCHAR NOT NULL\n" +
             ");";
 
-    private static final String SQLCREATESERVICO="CREATE TABLE servico (\n" +
+    private static final String SQLCREATESERVICO="CREATE TABLE if not exists servico (\n" +
             "    id_servico  INTEGER       PRIMARY KEY AUTOINCREMENT\n" +
             "                              NOT NULL,\n" +
             "    nome        VARCHAR (50)  NOT NULL,\n" +
@@ -40,7 +40,7 @@ public class Conexao extends SQLiteOpenHelper {
             ");";
 
 
-    private static final String SQLCREATEAGENDAMENTO="CREATE TABLE agendamento (\n" +
+    private static final String SQLCREATEAGENDAMENTO="CREATE TABLE if not exists agendamento (\n" +
             "    id                             INTEGER       PRIMARY KEY AUTOINCREMENT\n" +
             "                                                 NOT NULL,\n" +
             "    data                           DATE          ,\n" +
@@ -54,7 +54,7 @@ public class Conexao extends SQLiteOpenHelper {
             "                                                 REFERENCES servico (id_servico) \n" +
             ");";
 
-    private static final String SQLCREATEORDEMSERVICO="CREATE TABLE ordem_servico (\n" +
+    private static final String SQLCREATEORDEMSERVICO="CREATE TABLE if not exists ordem_servico (\n" +
             "    id_os                      INTEGER PRIMARY KEY AUTOINCREMENT\n" +
             "                                       NOT NULL,\n" +
             "    data_inicio                DATE    NOT NULL,\n" +
