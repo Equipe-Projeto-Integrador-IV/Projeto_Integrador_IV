@@ -69,7 +69,7 @@ public class Funcionario implements Serializable {
 
     @Override
     public String toString() {
-        return " CPF: " + getCpfFuncionario() + "\n" + " Nome:" + getNome() + "\n" + " E-mail: " +
+        return " CPF: " + getCpfFuncionario() + "\n" + " Nome: " + getNome() + "\n" + " E-mail: " +
                 getEmail();
     }
 }

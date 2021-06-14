@@ -404,6 +404,7 @@
     <string name="txt_funcionarioOS">Responsável pela OS</string>
     <string name="txt_funcionarioSV">Responsável pelo serviço</string>
     <string name="txt_logout">Sair do App</string>
+    <string name="lista_funcionarios">Funcionarios</string>
 
 
 </resources>
