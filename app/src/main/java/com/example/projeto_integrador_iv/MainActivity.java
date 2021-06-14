@@ -36,20 +36,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edtCredentials = findViewById(R.id.edtCredentials);
         edtPassword = findViewById(R.id.edtPassword);
 
-        btnEntrar = findViewById(R.id.btn_sign_in);
+        btnEntrar = findViewById(R.id.btnEntrar);
         btnEntrar.setOnClickListener(this);
 
-        btnCadastrar = findViewById(R.id.btn_register);
+        btnCadastrar = findViewById(R.id.btnCadastrar);
         btnCadastrar.setOnClickListener(this);
 
         funcionarioLogin =  new FuncionarioLogin(this);
 
-        funcionarioLogado();
+//        funcionarioLogado();
     }
 
     private void funcionarioLogado() {
         String cpf = funcionarioLogin.logadoCpf();
-        if (cpf !=  null) {
+        if (cpf != null) {
             entrarPainelControle();
         }
     }
@@ -79,18 +79,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent telaCadastrar = new Intent(this, TelaCadastrarFuncionario.class);
             startActivity(telaCadastrar);
        }
-         else if (v == btnEntrar){
-             String email = edtCredentials.getText().toString();
-             String senha = edtPassword.getText().toString();
+         else if (v == btnEntrar) {
+            String email = edtCredentials.getText().toString();
+            String senha = edtPassword.getText().toString();
 
-             Funcionario funcionario = searchFuncionario(email, senha);
+            Funcionario funcionario = searchFuncionario(email, senha);
 
-             if(funcionario != null) {
-                 funcionarioLogin.RealizarLogin(funcionario);
-                 entrarPainelControle();
-             } else {
-                 Toast.makeText(this, "Email ou senha inválido...", Toast.LENGTH_SHORT).show();
-             }
+            if(funcionario != null) {
+                if((email) == null && (senha) == null) {
+                    Toast.makeText(this, "Preencha os campos", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                funcionarioLogin.RealizarLogin(funcionario);
+                entrarPainelControle();
+            } else {
+                Toast.makeText(this, "Email ou senha inválido...", Toast.LENGTH_SHORT).show();
+            }
       }
 
     }

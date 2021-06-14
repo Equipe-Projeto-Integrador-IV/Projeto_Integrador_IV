@@ -114,9 +114,10 @@ public class Agendamento implements Serializable {
                 " Responsável-Agendamento: " + "\n" +
                  respAgendamento + "\n" +
                 "------------Dados Serviços---------------" + "\n" +
-                 "Servico: " + servico.getIdServico() + "\n" +
+                 "Servico:" + "\n" +
+                 "Id: " + servico.getIdServico() + "\n" +
                 "Tipo: " + servico.getNome() + "\n" +
-                "Preço de venda " + servico.getPreco_venda() + "\n" +
+                "Preço de venda: " + servico.getPreco_venda() + "\n" +
                 "Descrição: " + servico.getDescricao() + "\n" +
                 "------------Observação---------------" + "\n" +
                 "Obs: " + obs ;

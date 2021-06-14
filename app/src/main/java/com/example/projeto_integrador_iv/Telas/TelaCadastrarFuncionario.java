@@ -3,15 +3,12 @@ package com.example.projeto_integrador_iv.Telas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.projeto_integrador_iv.MainActivity;
 import com.example.projeto_integrador_iv.R;
-import com.example.projeto_integrador_iv.dao.ClienteDAO;
 import com.example.projeto_integrador_iv.dao.FuncionarioDAO;
 import com.example.projeto_integrador_iv.models.Funcionario;
 import com.example.projeto_integrador_iv.services.ConexaoService;
@@ -36,18 +33,35 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
     EditText edit_text_comissao;
     EditText edit_text_password;
 
-    FuncionarioDAO Fdao;
-
-
     Button btnVoltar;
     Button btnCadastrarFunc;
 
+    String acao;
+    Funcionario funcionario;
+    FuncionarioDAO dao;
+
+    private void criarComponentes() {
+
+        edit_text_telefone = findViewById(R.id.edit_text_telefone);
+        edit_text_cpf = findViewById(R.id.edit_text_cpf);
+        edit_text_comissao = findViewById(R.id.edit_text_comissao);
+        edit_text_name = findViewById(R.id.edit_text_name);
+        edit_text_credentials = findViewById(R.id.edit_text_credentials);
+        edit_text_password = findViewById(R.id.edit_text_password);
+
+        btnVoltar = findViewById(R.id.btn_voltar);
+        btnVoltar.setOnClickListener(this);
+
+        btnCadastrarFunc = findViewById(R.id.btn_register);
+        btnCadastrarFunc.setOnClickListener(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastrar_funcionario);
 
+        criarComponentes();
 
         //RETROFIT
         ConexaoService conexaoService = new ConexaoService();
@@ -60,40 +74,28 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
 //FIM RETROFIT
 
 
-        edit_text_telefone = findViewById(R.id.edit_text_telefone);
-        edit_text_cpf = findViewById(R.id.edit_text_cpf);
-        edit_text_comissao = findViewById(R.id.edit_text_comissao);
-        edit_text_name = findViewById(R.id.edit_text_name);
-        edit_text_credentials = findViewById(R.id.edit_text_credentials);
-        edit_text_password = findViewById(R.id.edit_text_password);
-
-        btnVoltar = findViewById(R.id.btn_voltar);
-        btnVoltar.setOnClickListener(this);
-        btnCadastrarFunc = findViewById(R.id.btn_register);
-        btnCadastrarFunc.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        if(v==btnVoltar){
-            Intent voltar = new Intent(this, MainActivity.class);
-            startActivity(voltar);
+        if(v == btnVoltar){
+            finish();
         }
-        else if(v==btnCadastrarFunc){
-            //A SER IMPLEMENTADO AINDA
-            Fdao = new FuncionarioDAO(this);
-            Funcionario f = new Funcionario();
+        else if(v == btnCadastrarFunc){
 
-            f.setTelefone(edit_text_telefone.getText().toString());
-            f.setCpfFuncionario(edit_text_cpf.getText().toString());
-            f.setComissao(edit_text_comissao.getText().toString());
-            f.setNome(edit_text_name.getText().toString());
-            f.setEmail(edit_text_credentials.getText().toString());
-            f.setSenha(edit_text_password.getText().toString());
+            dao = new FuncionarioDAO(this);
+            funcionario = new Funcionario();
 
-            Fdao.insert(f);
-            Call<Funcionario> call = Fservice.postFuncionario(f);
+            funcionario.setTelefone(edit_text_telefone.getText().toString());
+            funcionario.setCpfFuncionario(edit_text_cpf.getText().toString());
+            funcionario.setComissao(edit_text_comissao.getText().toString());
+            funcionario.setNome(edit_text_name.getText().toString());
+            funcionario.setEmail(edit_text_credentials.getText().toString());
+            funcionario.setSenha(edit_text_password.getText().toString());
+
+            dao.insert(funcionario);
+            Call<Funcionario> call = Fservice.postFuncionario(funcionario);
 
             call.enqueue(new Callback<Funcionario>() {
                 @Override
@@ -110,6 +112,7 @@ public class TelaCadastrarFuncionario extends AppCompatActivity implements View.
                 }
             });
 
+            finish();
         }
 
     }

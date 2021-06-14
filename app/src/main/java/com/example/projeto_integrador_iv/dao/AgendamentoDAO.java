@@ -34,18 +34,15 @@ public class AgendamentoDAO implements Dao<Agendamento>{
 
         ContentValues values = new ContentValues();
 
-//        values.put("id", agendamento.getId());
         if(agendamento.getData() != null) {
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             String data = df.format(agendamento.getData());
-            Log.i("DAO", "data inserida" + data);
             values.put("data", data);
         }
 
         if (agendamento.getHora() != null) {
             DateFormat df = new SimpleDateFormat("hh:mm:ss a");
             String hora = df.format(agendamento.getHora().getTime());
-            Log.i("HOUR", "hora inserida" + hora);
             values.put("hora", hora);
         }
         values.put("status", agendamento.getStatus());
@@ -96,7 +93,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             try {
                 String data = c.getString(1);
-                Log.i("DAO", "data " + data);
                 agendamento.setData(df.parse(data));
             } catch (ParseException e) {
                 agendamento.setData(null);
@@ -106,7 +102,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
 
             try {
                 String hour = c.getString(2);
-                Log.i("HOUR", "hour " + hour);
                 agendamento.setHora(sdf.parse(hour));
             } catch (ParseException e) {
                 agendamento.setHora(null);
@@ -141,7 +136,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
              DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
              try {
                 String data = c.getString(1);
-                Log.i("DAO", "data " + data);
                 agendamento.setData(df.parse(data));
              } catch (ParseException e) {
                  agendamento.setData(null);
@@ -149,7 +143,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
              }
              try {
                  String hour = c.getString(2);
-                 Log.i("HOUR", "hour " + hour);
                  agendamento.setHora(df.parse(hour));
              } catch (ParseException e) {
                  agendamento.setHora(null);
@@ -169,7 +162,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
     public Agendamento get(Long id) {
         Cursor c = banco.query(TABELA, CAMPOS,
                 "id = ?", new String[] {String.valueOf(id)}, null, null, null);
-//data, hora, status, observacao, cpf_cliente_fk_agendamento, cpf_funcionario_fk_agendamento, id_servico_fk_agendamento"
         if (c.moveToNext()) {
             Agendamento agendamento = new Agendamento();
             agendamento.setId(Long.valueOf(c.getString(0)));
@@ -177,7 +169,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             try {
                 String data = c.getString(1);
-                Log.i("DAO", "data " + data);
                 agendamento.setData(df.parse(data));
             } catch (ParseException e) {
                 agendamento.setData(null);
@@ -185,7 +176,6 @@ public class AgendamentoDAO implements Dao<Agendamento>{
             }
             try {
                 String hour = c.getString(2);
-                Log.i("HOUR", "hour " + hour);
                 agendamento.setHora(df.parse(hour));
             } catch (ParseException e) {
                 agendamento.setHora(null);
