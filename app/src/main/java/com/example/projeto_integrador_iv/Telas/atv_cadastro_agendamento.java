@@ -277,8 +277,26 @@ public class atv_cadastro_agendamento extends AppCompatActivity implements View.
                             Toast.LENGTH_LONG).show();
                 } else {
                     long id = dao.update(agendamento);
+                    //agendamento.setId(id);
+                    Call<Agendamento> call = aService.postAgendamento(agendamento);
+
                     Toast.makeText(this, "Agendamento " + agendamento.getId() + " foi alterado com sucesso!",
                             Toast.LENGTH_LONG).show();
+
+                    call.enqueue(new Callback<Agendamento>() {
+                        @Override
+                        public void onResponse(Call<Agendamento> call, Response<Agendamento> response) {
+                            if(response.isSuccessful()){
+                                Agendamento agendamentoSalvo = response.body();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<Agendamento> call, Throwable t) {
+
+                        }
+                    });
+
                 }
                 finish();
             }

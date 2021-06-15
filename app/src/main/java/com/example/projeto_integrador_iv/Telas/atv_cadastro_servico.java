@@ -138,8 +138,26 @@ public class atv_cadastro_servico extends AppCompatActivity implements View.OnCl
                         Toast.LENGTH_LONG).show();
             } else {
                 long id = dao.update(s);
+                s.setIdServico(id);
+                Call<Servico> call = Sservice.postServico(s);
+
+
                 Toast.makeText(this, "Serviço " + s.getNome() + " foi alterado com sucesso!",
-                        Toast.LENGTH_LONG).show();
+                                Toast.LENGTH_LONG).show();
+
+                call.enqueue(new Callback<Servico>() {
+                    @Override
+                    public void onResponse(Call<Servico> call, Response<Servico> response) {
+                        if(response.isSuccessful()){
+                            Servico servicoSalvo = response.body();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Servico> call, Throwable t) {
+
+                    }
+                });
             }
             finish();
         }

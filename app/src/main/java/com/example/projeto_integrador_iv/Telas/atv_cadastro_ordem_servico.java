@@ -235,8 +235,23 @@ public class atv_cadastro_ordem_servico extends AppCompatActivity implements Vie
                             Toast.LENGTH_LONG).show();
                 } else {
                     long id = dao.update(ordemServico);
+                    Call<OrdemServico> call = oService.postOrdemServico(ordemServico);
                     Toast.makeText(this, "Ordem de Serviço " + ordemServico.getId_os() + " foi alterado com sucesso!",
                             Toast.LENGTH_LONG).show();
+
+                    call.enqueue(new Callback<OrdemServico>() {
+                        @Override
+                        public void onResponse(Call<OrdemServico> call, Response<OrdemServico> response) {
+                            if(response.isSuccessful()){
+                                OrdemServico ordemservicoSalvo = response.body();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<OrdemServico> call, Throwable t) {
+
+                        }
+                    });
                 }
 
             } catch (ParseException e) {

@@ -99,6 +99,7 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
             finish();
         } else if (v == btnExcluir) {
             long cpf = dao.remove(c);
+
             Toast.makeText(this, "Cliente " + c.getNome() + " foi excluído com sucesso!",
                     Toast.LENGTH_SHORT).show();
             finish();
@@ -139,9 +140,25 @@ public class atv_cadastro_cliente extends AppCompatActivity implements View.OnCl
                         Toast.LENGTH_LONG).show();
             } else {
                 long cpf = dao.update(c);
+                Call<Cliente> call = Cservice.postCliente(c);
                 Toast.makeText(this, "Cliente " + c.getNome() + " foi alterado com sucesso!",
 
                         Toast.LENGTH_LONG).show();
+
+                call.enqueue(new Callback<Cliente>() {
+                    @Override
+                    public void onResponse(Call<Cliente> call, Response<Cliente> response) {
+                        if(response.isSuccessful()) {
+
+                            Cliente clienteSalvo = response.body();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Cliente> call, Throwable t) {
+
+                    }
+                });
             }
 
 
