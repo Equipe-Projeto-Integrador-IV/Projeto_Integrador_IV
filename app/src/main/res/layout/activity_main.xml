@@ -40,12 +40,12 @@
         android:layout_marginBottom="18dp"
         android:text="@string/Porque_Você_Vale_a_Pena"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@id/edit_text_credentials"
+        app:layout_constraintBottom_toTopOf="@id/edtCredentials"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_text_credentials"
+        android:id="@+id/edtCredentials"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="18dp"
@@ -59,11 +59,11 @@
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:background="@drawable/bg_edittext_normal"
-        app:layout_constraintBottom_toTopOf="@+id/edit_text_password"
+        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
         />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_text_password"
+        android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="18dp"
@@ -77,27 +77,28 @@
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:background="@drawable/bg_edittext_normal"
-        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
         />
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_sign_in"
+            android:id="@+id/btnEntrar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="18dp"
             android:background="@drawable/bg_button_normal"
             android:text="@string/sign_in"
+            android:onClick="onClick"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_register" />
+            app:layout_constraintBottom_toTopOf="@+id/btnCadastrar" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_register"
+            android:id="@+id/btnCadastrar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="18dp"

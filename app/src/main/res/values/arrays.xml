@@ -5,4 +5,10 @@
         <item>Cancelado</item>
         <item>Confirmado</item>
     </string-array>
+
+    <string-array name="statusOrd" >
+        <item>Aberto</item>
+        <item>Cancelado</item>
+        <item>Em Execução</item>
+    </string-array>
 </resources>

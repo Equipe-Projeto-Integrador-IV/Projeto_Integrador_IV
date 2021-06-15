@@ -16,6 +16,7 @@ public class AtvPainel_controle extends AppCompatActivity implements View.OnClic
     CardView cardServico;
     CardView cardAgendamento;
     CardView cardOrdemServico;
+    CardView cardLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,9 @@ public class AtvPainel_controle extends AppCompatActivity implements View.OnClic
 
         cardOrdemServico = findViewById(R.id.cardOrdemServico);
         cardOrdemServico.setOnClickListener(this);
+
+        cardLogout = findViewById(R.id.cardLogout);
+        cardLogout.setOnClickListener(this);
     }
 
 
@@ -45,7 +49,7 @@ public class AtvPainel_controle extends AppCompatActivity implements View.OnClic
             Intent telaCliente = new Intent(this, AtvCliente.class);
             startActivity(telaCliente);
         } else if (v == cardFuncionario) {
-            Intent telaFuncionario = new Intent(this, AtvCliente.class);
+            Intent telaFuncionario = new Intent(this, atv_lista_funcionario.class);
             startActivity(telaFuncionario);
         } else if (v == cardServico) {
             Intent telaServico = new Intent(this, atvServico.class);
@@ -54,8 +58,10 @@ public class AtvPainel_controle extends AppCompatActivity implements View.OnClic
             Intent telaAgendamento = new Intent(this, atvAgendamento.class);
             startActivity(telaAgendamento);
         } else if (v == cardOrdemServico) {
-            Intent telaOrdServico = new Intent(this, AtvCliente.class);
+            Intent telaOrdServico = new Intent(this, atvOrdemServico.class);
             startActivity(telaOrdServico);
+        } else if (v == cardLogout) {
+            finish();
         }
     }
 }

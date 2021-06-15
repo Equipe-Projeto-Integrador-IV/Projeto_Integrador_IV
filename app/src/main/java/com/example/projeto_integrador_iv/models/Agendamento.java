@@ -7,8 +7,8 @@ import java.util.Date;
 
 public class Agendamento implements Serializable {
     private Long id;
-    private Date data;
-    private Date hora;
+    private Date data = null;
+    private Date hora = null;
     private String status;
     private String obs;
     private Cliente cliente;
@@ -43,7 +43,7 @@ public class Agendamento implements Serializable {
         return data;
     }
 
-    public void setDate(Date date) {
+    public void setData(Date date) {
         this.data = date;
     }
 
@@ -99,10 +99,11 @@ public class Agendamento implements Serializable {
     @Override
     public String toString() {
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        String data = df.format(this.data);
+        String data = this.data == null ? "" : df.format(this.data);
 
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
-        String hora = sdf.format(this.hora);
+        String hora = this.hora == null ? "" : sdf.format(this.hora);
+
         return " Agendamento: " + "\n" +
                 " Id: " + id + "\n" +
                 " Date: " + data + "\n" +
@@ -114,8 +115,12 @@ public class Agendamento implements Serializable {
                 " Responsável-Agendamento: " + "\n" +
                  respAgendamento + "\n" +
                 "------------Dados Serviços---------------" + "\n" +
-                  servico + "\n" +
-                "\n" +
-                " Obs: " + obs ;
+                 "Servico:" + "\n" +
+                 "Id: " + servico.getIdServico() + "\n" +
+                "Tipo: " + servico.getNome() + "\n" +
+                "Preço de venda: " + servico.getPreco_venda() + "\n" +
+                "Descrição: " + servico.getDescricao() + "\n" +
+                "------------Observação---------------" + "\n" +
+                "Obs: " + obs ;
     }
 }

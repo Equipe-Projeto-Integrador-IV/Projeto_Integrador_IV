@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Telas.atvAgendamento"
+    tools:context=".Telas.atv_lista_funcionario"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,21 +18,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:layout_marginLeft="5dp"
-            android:text="@string/lista_agendamentos"
+            android:text="@string/lista_funcionarios"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
-
-        <Button
-            android:id="@+id/btnCad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/btnCad"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
             android:textStyle="bold"
             />
 
@@ -48,10 +36,11 @@
             android:textStyle="bold"
             />
 
+
     </LinearLayout>
 
     <ListView
-        android:id="@+id/lstAgendamento"
+        android:id="@+id/lstFuncionario"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="@color/white"

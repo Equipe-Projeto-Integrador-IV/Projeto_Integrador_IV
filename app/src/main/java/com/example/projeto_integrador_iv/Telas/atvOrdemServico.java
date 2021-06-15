@@ -1,7 +1,6 @@
 package com.example.projeto_integrador_iv.Telas;
 
 import androidx.appcompat.app.AppCompatActivity;
-import java.lang.Float;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,23 +12,24 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.projeto_integrador_iv.R;
-import com.example.projeto_integrador_iv.dao.ServicoDAO;
+import com.example.projeto_integrador_iv.dao.OrdemServicoDAO;
+import com.example.projeto_integrador_iv.models.OrdemServico;
 import com.example.projeto_integrador_iv.models.Servico;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class atvServico extends AppCompatActivity implements View.OnClickListener,
-        AdapterView.OnItemClickListener{
+public class atvOrdemServico extends AppCompatActivity implements View.OnClickListener,
+        AdapterView.OnItemClickListener {
 
-    ListView lstServico;
+    ListView lstOrdemServico;
     Button btnCad;
     Button btnVoltar;
 
-    List<Servico> listaServicos = new ArrayList<>();
+    List<OrdemServico> listaOrdem = new ArrayList<>();
     ListAdapter listAdapter;
     int indice;
-    ServicoDAO dao;
+    OrdemServicoDAO dao;
 
     private void criarComponentes() {
         btnCad = findViewById(R.id.btnCad);
@@ -38,17 +38,17 @@ public class atvServico extends AppCompatActivity implements View.OnClickListene
         btnVoltar = findViewById(R.id.btnVoltar);
         btnVoltar.setOnClickListener(this);
 
-        lstServico = findViewById(R.id.lstServico);
-        lstServico.setOnItemClickListener(this);
+        lstOrdemServico = findViewById(R.id.lstOrdemServico);
+        lstOrdemServico.setOnItemClickListener(this);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_atv_servico);
+        setContentView(R.layout.activity_atv_ordem_servico);
 
         criarComponentes();
-        dao = new ServicoDAO(this);
+        dao = new OrdemServicoDAO(this);
 
         atualizarLista();
     }
@@ -60,17 +60,17 @@ public class atvServico extends AppCompatActivity implements View.OnClickListene
     }
 
     protected void atualizarLista() {
-        listaServicos = dao.list();
-        listAdapter = new ArrayAdapter<Servico>( this, android.R.layout.simple_list_item_1, listaServicos);
-        lstServico.setAdapter(listAdapter);
+        listaOrdem = dao.list();
+        listAdapter = new ArrayAdapter<OrdemServico>( this, android.R.layout.simple_list_item_1, listaOrdem);
+        lstOrdemServico.setAdapter(listAdapter);
     }
 
     @Override
     public void onClick(View v) {
         if(v == btnCad) {
-            Servico s = new Servico();
-            s.setIdServico(1L);
-            abrirCadastro("Inserir", s);
+            OrdemServico ord = new OrdemServico();
+            ord.setId_os(1L);
+            abrirCadastro("Inserir", ord);
         }else if (v == btnVoltar) {
             finish();
         }
@@ -79,16 +79,16 @@ public class atvServico extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         indice = position;
-        Servico s = (Servico) lstServico.getAdapter().getItem(position);
-        abrirCadastro("Alterar", s);
+        OrdemServico ord = (OrdemServico) lstOrdemServico.getAdapter().getItem(position);
+        abrirCadastro("Alterar", ord);
     }
 
-    private void abrirCadastro(String acao, Servico obj) {
-        Intent telaCadServ = new Intent(this, atv_cadastro_servico.class);
+    private void abrirCadastro(String acao, OrdemServico obj) {
+        Intent telaCadOrd = new Intent(this, atv_cadastro_ordem_servico.class);
         Bundle extras = new Bundle();
         extras.putString("acao", acao);
         extras.putSerializable("obj", obj);
-        telaCadServ.putExtras(extras);
-        startActivity(telaCadServ);
+        telaCadOrd.putExtras(extras);
+        startActivity(telaCadOrd);
     }
 }

@@ -1,6 +1,8 @@
     package com.example.projeto_integrador_iv.models;
 
     import java.io.Serializable;
+    import java.text.DateFormat;
+    import java.text.SimpleDateFormat;
     import java.util.Date;
 
     public class OrdemServico implements Serializable {
@@ -10,16 +12,11 @@
         private Date hora_inicio;
         private Date hora_fim;
         private String status;
-        private Float valor;
+        private Float valor = 0f;
         private Agendamento agendamento;
         private Servico servico;
         private Funcionario respOS;
         private Funcionario execServico;
-
-        /*
-         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-         String data = df.format(lancamento.getData());
-         */
 
         public OrdemServico() {
 
@@ -132,18 +129,29 @@
 
         @Override
         public String toString() {
-            return "OrdemServico{" +
-                    "id_os=" + id_os +
-                    ", data_inicio=" + data_inicio +
-                    ", data_fim=" + data_fim +
-                    ", hora_inicio=" + hora_inicio +
-                    ", hora_fim=" + hora_fim +
-                    ", status='" + status + '\'' +
-                    ", valor=" + valor +
-                    ", agendamento=" + agendamento +
-                    ", servico=" + servico +
-                    ", respOS=" + respOS +
-                    ", execServico=" + execServico +
-                    '}';
+            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+            String data_inicio = this.data_inicio == null ? "" : df.format(this.data_inicio);
+            String data_fim = this.data_fim == null ? "" : df.format(this.data_fim);
+
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
+            String hora_inicio = this.hora_inicio == null ? "" : sdf.format(this.hora_inicio);
+            String hora_fim = this.hora_fim == null ? "" : sdf.format(this.hora_fim);
+
+            return "OrdemServico: " + "\n" +
+                    "Id :" + id_os + "\n" +
+                    "Data_Inicio :" + data_inicio + "\n" +
+                    "Data_Fim: " + data_fim + "\n" +
+                    "Hora_Inicio: " + hora_inicio + "\n" +
+                    "Hora_Fim :" + hora_fim + "\n" +
+                    "Status='" + status + '\n' +
+                    "Valor :" + valor + "\n" +
+                    "-----------------Dados Agendamento-------------------" + "\n" +
+                    agendamento + "\n" +
+                    "-----------------Dados Agendamento-------------------" + "\n" +
+                    "\n" +
+                    "-------------------Informações-------------------" + "\n" +
+                    "Serviço: " + servico.getNome() + "\n" +
+                    "Responsável pela OS: " + respOS.getNome() + "\n" +
+                    "Responsável pelo Serviço: " + execServico.getNome() ;
         }
     }
