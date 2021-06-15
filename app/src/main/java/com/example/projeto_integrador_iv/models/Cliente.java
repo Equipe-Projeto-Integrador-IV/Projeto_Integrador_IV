@@ -3,6 +3,7 @@ package com.example.projeto_integrador_iv.models;
 import java.io.Serializable;
 
 public class Cliente implements Serializable {
+
     private String cpf_cliente;
     private String nome;
     private String telefone;
@@ -57,8 +58,12 @@ public class Cliente implements Serializable {
         return uf;
     }
 
-    public void setUf(String uf) {
-        this.uf = uf;
+    public void setUf(String uf)  {
+        if (uf.length() == 2){
+            this.uf = uf;
+        }else {
+            System.out.println("UF incorreta");
+        }
     }
 
     @Override
