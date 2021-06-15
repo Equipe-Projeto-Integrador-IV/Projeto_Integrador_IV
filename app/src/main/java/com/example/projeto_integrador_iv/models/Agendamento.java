@@ -20,12 +20,13 @@ public class Agendamento implements Serializable {
     }
 
     public Agendamento(Long id, Date data, Date hora, String status, String obs,
-                       Funcionario respAgendamento, Servico servico) {
+                       Cliente cliente, Funcionario respAgendamento, Servico servico) {
         this.id = id;
         this.data = data;
         this.hora = hora;
         this.status = status;
         this.obs = obs;
+        this.cliente = cliente;
         this.respAgendamento = respAgendamento;
         this.servico = servico;
     }

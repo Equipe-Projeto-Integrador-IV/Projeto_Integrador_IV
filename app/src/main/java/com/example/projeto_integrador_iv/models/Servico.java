@@ -20,6 +20,14 @@ public class Servico implements Serializable {
         this.preco_venda = preco_venda;
     }
 
+    public Servico(Long id_servico, String nome,String descricao, Float preco_custo, Float preco_venda) {
+        this.id_servico = id_servico;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco_custo = preco_custo;
+        this.preco_venda = preco_venda;
+    }
+
     public Long getIdServico() {
         return id_servico;
     }
